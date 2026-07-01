@@ -375,3 +375,65 @@ details p {
     justify-content: flex-start;
   }
 }
+
+.page-hero {
+  padding: 120px 0 80px;
+}
+
+.page-hero h1 {
+  max-width: 900px;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.05;
+  margin: 0 0 24px;
+}
+
+.page-hero p {
+  max-width: 680px;
+  font-size: 20px;
+}
+
+.service-nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.service-nav a {
+  display: inline-block;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 18px;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.service-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.large-card {
+  min-height: 220px;
+}
+
+.service-section {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 900px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
