@@ -782,3 +782,132 @@ details p {
     padding: 24px;
   }
 }
+
+.issues-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  padding: 110px 0 95px;
+  min-height: 760px;
+}
+
+.issues-container {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+}
+
+.issues-section h1 {
+  margin: 0 0 56px;
+  color: #00798a;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.issues-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  column-gap: 110px;
+  row-gap: 26px;
+}
+
+.issues-list a {
+  color: #00798a;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.issues-list a:hover {
+  color: var(--accent-dark);
+  transform: translateX(4px);
+}
+
+.issues-divider {
+  height: 2px;
+  margin: 58px 0 48px;
+  background: #e4ded4;
+}
+
+.issues-divider span {
+  display: block;
+  width: 66%;
+  height: 2px;
+  background: #b89f7a;
+}
+
+.issues-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  color: #b89f7a;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.issues-more-icon {
+  width: 76px;
+  height: 76px;
+  border: 1px solid #b89f7a;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.issues-side-image {
+  position: absolute;
+  top: 76px;
+  bottom: 0;
+  width: 130px;
+  background: linear-gradient(180deg, #dbeef5, #c9d7cf);
+  opacity: 0.75;
+}
+
+.issues-side-image-left {
+  left: 0;
+}
+
+.issues-side-image-right {
+  right: 0;
+  background: linear-gradient(180deg, #e6e2dc, #cfc8bf);
+}
+
+@media (max-width: 1200px) {
+  .issues-side-image {
+    display: none;
+  }
+
+  .issues-container {
+    max-width: var(--container);
+  }
+}
+
+@media (max-width: 800px) {
+  .issues-section {
+    padding: 80px 0 70px;
+  }
+
+  .issues-list {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .issues-list a {
+    font-size: 15px;
+    letter-spacing: 0.16em;
+  }
+
+  .issues-more-icon {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+
