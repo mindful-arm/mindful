@@ -505,3 +505,21 @@ details p {
     height: 300px;
   }
 }
+
+.therapy-block {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.therapy-block p {
+  font-size: 19px;
+}
+
+@media (max-width: 900px) {
+  .therapy-block {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
