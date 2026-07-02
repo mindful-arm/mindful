@@ -76,7 +76,7 @@ h2 {
 .eyebrow {
   margin: 0 0 14px;
   color: var(--accent-dark);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -508,69 +508,85 @@ details p {
    11. Issues / Problems Page
 ========================= */
 
-.issues-section {
+.issues-showcase {
+  display: grid;
+  grid-template-columns: minmax(220px, 27vw) minmax(560px, 1fr) minmax(80px, 4vw);
+  min-height: calc(100vh - 82px);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.issues-photo {
   position: relative;
   overflow: hidden;
-  background: var(--white);
-  padding: 96px 0 82px;
-  min-height: calc(100vh - 82px);
+  background: #e8e1d8;
 }
 
-.issues-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1060px;
+.issues-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
-.issues-section .eyebrow {
+.issues-photo-left img {
+  object-position: center;
+}
+
+.issues-photo-right img {
+  object-position: center;
+}
+
+.issues-content {
+  padding: 76px 72px 70px;
+  max-width: 980px;
+}
+
+.issues-content .eyebrow {
   color: var(--accent-dark);
-  letter-spacing: 0.08em;
+  margin-bottom: 18px;
 }
 
-.issues-section h1 {
-  margin: 0 0 48px;
+.issues-content h1 {
+  margin: 0 0 44px;
   color: var(--teal);
-  font-size: clamp(46px, 5vw, 72px);
+  font-size: clamp(38px, 4.2vw, 58px);
   font-weight: 400;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
 }
 
 .issues-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  column-gap: 110px;
-  row-gap: 0;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  column-gap: 78px;
+  row-gap: 18px;
 }
 
 .issues-list a {
-  display: block;
-  padding: 15px 0;
-  border-bottom: 1px solid rgba(184, 159, 122, 0.25);
   color: var(--teal);
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 800;
   line-height: 1.45;
-  letter-spacing: 0.01em;
-  text-transform: none;
-  transition: color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .issues-list a:hover {
   color: var(--accent-dark);
-  transform: translateX(5px);
-  border-color: rgba(184, 159, 122, 0.65);
+  transform: translateX(4px);
 }
 
 .issues-divider {
   height: 2px;
-  margin: 54px 0 42px;
-  background: #e4ded4;
+  margin: 46px 0 38px;
+  background: #e6dfd5;
 }
 
 .issues-divider span {
   display: block;
-  width: 66%;
+  width: 62%;
   height: 2px;
   background: var(--gold);
 }
@@ -580,39 +596,20 @@ details p {
   align-items: center;
   gap: 24px;
   color: var(--gold);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .issues-more-icon {
-  width: 68px;
-  height: 68px;
+  width: 62px;
+  height: 62px;
   border: 1px solid var(--gold);
   display: grid;
   place-items: center;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 400;
-}
-
-.issues-side-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 72px;
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-.issues-side-image-left {
-  left: 0;
-  background: linear-gradient(180deg, #dbeef5, #c9d7cf);
-}
-
-.issues-side-image-right {
-  right: 0;
-  background: linear-gradient(180deg, #e6e2dc, #cfc8bf);
 }
 
 
@@ -903,12 +900,17 @@ details p {
 ========================= */
 
 @media (max-width: 1200px) {
-  .issues-side-image {
+  .issues-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .issues-photo {
     display: none;
   }
 
-  .issues-container {
-    max-width: var(--container);
+  .issues-content {
+    padding: 76px 40px 70px;
+    max-width: none;
   }
 }
 
@@ -977,29 +979,28 @@ details p {
 }
 
 @media (max-width: 800px) {
-  .issues-section {
-    padding: 76px 0 68px;
-    min-height: auto;
+  .issues-content {
+    padding: 64px 24px;
   }
 
   .issues-list {
     grid-template-columns: 1fr;
+    row-gap: 16px;
   }
 
   .issues-list a {
-    font-size: 18px;
-    padding: 14px 0;
-    letter-spacing: 0;
+    font-size: 15px;
+    letter-spacing: 0.04em;
   }
 
-  .issues-section h1 {
-    font-size: clamp(42px, 12vw, 58px);
+  .issues-content h1 {
+    font-size: clamp(40px, 12vw, 56px);
     margin-bottom: 34px;
   }
 
   .issues-more-icon {
-    width: 62px;
-    height: 62px;
+    width: 58px;
+    height: 58px;
   }
 }
 
@@ -1018,4 +1019,3 @@ details p {
     gap: 10px;
   }
 }
-
