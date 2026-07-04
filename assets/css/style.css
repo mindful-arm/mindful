@@ -30,10 +30,12 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans Armenian", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -507,9 +509,6 @@ details p {
 /* =========================
    11. Issues / Problems Page
 ========================= */
-/* =========================
-   11. Issues / Problems Page
-========================= */
 
 .issues-showcase {
   display: grid;
@@ -537,11 +536,6 @@ details p {
   max-width: 980px;
 }
 
-.issues-content .eyebrow {
-  color: var(--accent-dark);
-  margin-bottom: 18px;
-}
-
 .issues-content h1 {
   margin: 0 0 42px;
   color: var(--teal);
@@ -567,9 +561,9 @@ details p {
 .issues-column a {
   color: var(--teal);
   font-size: 15px;
-  font-weight: 700;
-  line-height: 1.45;
-  letter-spacing: 0.035em;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
   text-transform: none;
   transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -613,20 +607,22 @@ details p {
   font-weight: 400;
 }
 
+
 /* =========================
    12. Problem Detail Pages
 ========================= */
 
 .problem-detail-hero {
   background: var(--white);
-  padding: 105px 0 90px;
+  padding: 82px 0 76px;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
 .problem-detail-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 80px;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 64px;
   align-items: end;
 }
 
@@ -634,46 +630,68 @@ details p {
   display: inline-block;
   margin-bottom: 34px;
   color: var(--accent-dark);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.problem-detail-hero .eyebrow {
+  margin-bottom: 18px;
+  color: var(--accent-dark);
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .problem-detail-hero h1 {
+  max-width: 920px;
   margin: 0 0 24px;
   color: var(--teal);
-  font-size: clamp(54px, 8vw, 110px);
+  font-size: clamp(46px, 6vw, 86px);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.05em;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  overflow-wrap: anywhere;
 }
 
 .problem-detail-hero p {
-  max-width: 680px;
-  font-size: 20px;
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 .problem-detail-card {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 30px;
-  padding: 34px;
+  border-radius: 28px;
+  padding: 30px;
 }
 
 .problem-detail-card span {
   display: inline-block;
+  margin-bottom: 44px;
   color: var(--gold);
-  font-weight: 800;
-  margin-bottom: 50px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .problem-detail-card h2 {
-  font-size: 32px;
-  margin-bottom: 14px;
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.problem-detail-card p {
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .article-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 86px;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 78px;
   align-items: start;
 }
 
@@ -686,7 +704,8 @@ details p {
 
 .article-side a {
   color: var(--teal);
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .article-content {
@@ -694,19 +713,25 @@ details p {
 }
 
 .article-section {
-  padding: 0 0 58px;
-  margin-bottom: 58px;
+  padding: 0 0 52px;
+  margin-bottom: 52px;
   border-bottom: 1px solid var(--border);
   scroll-margin-top: 120px;
 }
 
 .article-section h2 {
-  font-size: clamp(32px, 4vw, 52px);
+  margin-bottom: 18px;
+  color: var(--text);
+  font-size: clamp(30px, 3.2vw, 46px);
+  font-weight: 500;
+  line-height: 1.15;
 }
 
 .article-section p,
 .article-section li {
-  font-size: 19px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 
@@ -933,6 +958,23 @@ details p {
     align-items: flex-start;
   }
 
+  .problem-detail-hero {
+    padding: 64px 0 56px;
+  }
+
+  .problem-detail-hero h1 {
+    font-size: clamp(42px, 12vw, 62px);
+  }
+
+  .problem-detail-card {
+    padding: 24px;
+  }
+
+  .article-section p,
+  .article-section li {
+    font-size: 16px;
+  }
+
   .main-nav {
     flex-wrap: wrap;
     gap: 12px 18px;
@@ -994,7 +1036,7 @@ details p {
 
   .issues-column a {
     font-size: 15px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
   }
 
   .issues-content h1 {
@@ -1009,6 +1051,7 @@ details p {
 }
 
 @media (max-width: 680px) {
+
   .team-grid,
   .corporate-grid {
     grid-template-columns: 1fr;
