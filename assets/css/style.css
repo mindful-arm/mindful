@@ -472,7 +472,6 @@ details p {
   background: rgba(184, 159, 122, 0.45);
 }
 
-
 .services-sublist a,
 .services-group-single a {
   color: var(--teal);
@@ -1096,87 +1095,149 @@ details p {
    13. Corporate Page
 ========================= */
 
-.corporate-intro {
+.corporate-showcase {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 70px;
+  grid-template-columns: minmax(220px, 27vw) minmax(560px, 1fr) minmax(80px, 4vw);
+  min-height: calc(100vh - 82px);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.corporate-photo {
+  position: relative;
+  overflow: hidden;
+  background: #e8e1d8;
+}
+
+.corporate-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.corporate-content {
+  padding: 76px 72px 70px;
+  max-width: 980px;
+}
+
+.corporate-content h1 {
+  margin: 0 0 42px;
+  color: var(--teal);
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.corporate-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  column-gap: 78px;
+  row-gap: 24px;
   align-items: start;
 }
 
-.corporate-intro p {
-  font-size: 19px;
-}
-
-.corporate-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.corporate-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 28px;
-  min-height: 280px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.corporate-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent);
-}
-
-.corporate-card span {
-  display: inline-block;
-  margin-bottom: 30px;
-  color: var(--accent-dark);
+.corporate-list a {
+  display: block;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(184, 159, 122, 0.28);
+  color: var(--teal);
+  font-size: 17px;
   font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.corporate-card h3 {
+.corporate-list a:hover {
+  color: var(--accent-dark);
+  transform: translateX(4px);
+}
+
+.corporate-divider {
+  height: 2px;
+  margin: 46px 0 38px;
+  background: #e6dfd5;
+}
+
+.corporate-divider span {
+  display: block;
+  width: 62%;
+  height: 2px;
+  background: var(--gold);
+}
+
+.corporate-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.corporate-more-icon {
+  width: 62px;
+  height: 62px;
+  border: 1px solid var(--gold);
+  display: grid;
+  place-items: center;
   font-size: 24px;
-  line-height: 1.2;
-  margin: 0 0 14px;
+  font-weight: 400;
 }
 
-.corporate-card p {
+.corporate-detail-hero {
+  background: var(--white);
+  padding: 72px 0 66px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.corporate-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 48px;
+  align-items: center;
+}
+
+.corporate-detail-hero h1 {
+  max-width: 720px;
+  margin: 0 0 22px;
+  color: var(--teal);
+  font-size: clamp(34px, 3vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.corporate-detail-hero p {
+  max-width: 680px;
   margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
 }
 
-.process-grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 80px;
-}
-
-.process-list {
-  display: grid;
-  gap: 18px;
-}
-
-.process-item {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  gap: 22px;
+.corporate-detail-card {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 24px;
+  border-radius: 26px;
+  padding: 28px;
 }
 
-.process-item span {
-  color: var(--accent-dark);
-  font-weight: 700;
+.corporate-detail-card h2 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1.2;
 }
 
-.process-item h3 {
-  margin: 0 0 8px;
-  font-size: 24px;
-}
-
-.process-item p {
-  margin: 0;
+.corporate-detail-card p {
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 
@@ -1282,22 +1343,24 @@ details p {
 ========================= */
 
 @media (max-width: 1200px) {
-
   .issues-showcase,
   .therapies-showcase,
-  .services-showcase {
+  .services-showcase,
+  .corporate-showcase {
     grid-template-columns: 1fr;
   }
 
   .issues-photo,
   .therapies-photo,
-  .services-photo {
+  .services-photo,
+  .corporate-photo {
     display: none;
   }
 
   .issues-content,
   .therapies-content,
-  .services-content {
+  .services-content,
+  .corporate-content {
     padding: 76px 40px 70px;
     max-width: none;
   }
@@ -1338,9 +1401,8 @@ details p {
   .problem-detail-grid,
   .therapy-detail-grid,
   .service-detail-grid,
+  .corporate-detail-grid,
   .article-layout,
-  .corporate-intro,
-  .process-grid,
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -1348,19 +1410,22 @@ details p {
 
   .problem-detail-hero,
   .therapy-detail-hero,
-  .service-detail-hero {
+  .service-detail-hero,
+  .corporate-detail-hero {
     padding: 64px 0 56px;
   }
 
   .problem-detail-hero h1,
   .therapy-detail-hero h1,
-  .service-detail-hero h1 {
+  .service-detail-hero h1,
+  .corporate-detail-hero h1 {
     font-size: clamp(34px, 9vw, 48px);
   }
 
   .problem-detail-card,
   .therapy-detail-card,
-  .service-detail-card {
+  .service-detail-card,
+  .corporate-detail-card {
     padding: 24px;
   }
 
@@ -1393,16 +1458,17 @@ details p {
 }
 
 @media (max-width: 800px) {
-
   .issues-content,
   .therapies-content,
-  .services-content {
+  .services-content,
+  .corporate-content {
     padding: 64px 24px;
   }
 
   .issues-list,
   .therapies-list,
-  .services-groups {
+  .services-groups,
+  .corporate-list {
     grid-template-columns: 1fr;
     row-gap: 18px;
   }
@@ -1414,30 +1480,31 @@ details p {
   .issues-column a,
   .therapies-list a,
   .services-sublist a,
-  .services-group-single a {
+  .services-group-single a,
+  .corporate-list a {
     font-size: 15px;
     letter-spacing: 0;
   }
 
   .issues-content h1,
   .therapies-content h1,
-  .services-content h1 {
+  .services-content h1,
+  .corporate-content h1 {
     font-size: clamp(40px, 12vw, 56px);
     margin-bottom: 34px;
   }
 
   .issues-more-icon,
   .therapies-more-icon,
-  .services-more-icon {
+  .services-more-icon,
+  .corporate-more-icon {
     width: 58px;
     height: 58px;
   }
 }
 
 @media (max-width: 680px) {
-
-  .team-grid,
-  .corporate-grid {
+  .team-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1450,3 +1517,4 @@ details p {
     gap: 10px;
   }
 }
+
