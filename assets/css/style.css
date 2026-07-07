@@ -397,20 +397,203 @@ details p {
    8. Services Page
 ========================= */
 
-.service-nav {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+.services-showcase {
+  display: grid;
+  grid-template-columns: minmax(220px, 27vw) minmax(560px, 1fr) minmax(80px, 4vw);
+  min-height: calc(100vh - 82px);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
 }
 
-.service-nav a {
-  display: inline-block;
+.services-photo {
+  position: relative;
+  overflow: hidden;
+  background: #e8e1d8;
+}
+
+.services-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.services-content {
+  padding: 76px 72px 70px;
+  max-width: 980px;
+}
+
+.services-content h1 {
+  margin: 0 0 42px;
+  color: var(--teal);
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.services-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  column-gap: 78px;
+  row-gap: 24px;
+  align-items: start;
+}
+
+.services-group {
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(184, 159, 122, 0.28);
+}
+
+.services-group h2 {
+  margin: 0 0 14px;
+  color: var(--teal);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+}
+
+.services-sublist {
+  display: grid;
+  gap: 9px;
+  padding-left: 22px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.services-sublist::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: rgba(184, 159, 122, 0.45);
+}
+
+
+.services-sublist a,
+.services-group-single a {
+  color: var(--teal);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.services-sublist a {
+  opacity: 0.9;
+}
+
+.services-sublist a:hover,
+.services-group-single a:hover {
+  color: var(--accent-dark);
+  transform: translateX(4px);
+}
+
+.services-group-single {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+}
+
+.services-group-single a {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.services-divider {
+  height: 2px;
+  margin: 46px 0 38px;
+  background: #e6dfd5;
+}
+
+.services-divider span {
+  display: block;
+  width: 62%;
+  height: 2px;
+  background: var(--gold);
+}
+
+.services-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.services-more-icon {
+  width: 62px;
+  height: 62px;
+  border: 1px solid var(--gold);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.service-detail-hero {
+  background: var(--white);
+  padding: 72px 0 66px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 48px;
+  align-items: center;
+}
+
+.detail-label {
+  margin: 0 0 14px;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.service-detail-hero h1 {
+  max-width: 720px;
+  margin: 0 0 22px;
+  color: var(--teal);
+  font-size: clamp(34px, 3vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.service-detail-hero p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.service-detail-card {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 12px 18px;
-  color: var(--accent-dark);
-  font-weight: 700;
+  border-radius: 26px;
+  padding: 28px;
+}
+
+.service-detail-card h2 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.service-detail-card p {
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 .service-layout {
@@ -604,6 +787,57 @@ details p {
 .therapy-block p {
   font-size: 18px;
   line-height: 1.7;
+}
+
+.therapy-detail-hero {
+  background: var(--white);
+  padding: 72px 0 66px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.therapy-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 48px;
+  align-items: center;
+}
+
+.therapy-detail-hero h1 {
+  max-width: 720px;
+  margin: 0 0 22px;
+  color: var(--teal);
+  font-size: clamp(34px, 3vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.therapy-detail-hero p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.therapy-detail-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 28px;
+}
+
+.therapy-detail-card h2 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.therapy-detail-card p {
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 
@@ -1048,18 +1282,22 @@ details p {
 ========================= */
 
 @media (max-width: 1200px) {
+
   .issues-showcase,
-  .therapies-showcase {
+  .therapies-showcase,
+  .services-showcase {
     grid-template-columns: 1fr;
   }
 
   .issues-photo,
-  .therapies-photo {
+  .therapies-photo,
+  .services-photo {
     display: none;
   }
 
   .issues-content,
-  .therapies-content {
+  .therapies-content,
+  .services-content {
     padding: 76px 40px 70px;
     max-width: none;
   }
@@ -1098,6 +1336,8 @@ details p {
   .service-layout,
   .therapy-block,
   .problem-detail-grid,
+  .therapy-detail-grid,
+  .service-detail-grid,
   .article-layout,
   .corporate-intro,
   .process-grid,
@@ -1106,15 +1346,21 @@ details p {
     gap: 36px;
   }
 
-  .problem-detail-hero {
+  .problem-detail-hero,
+  .therapy-detail-hero,
+  .service-detail-hero {
     padding: 64px 0 56px;
   }
 
-  .problem-detail-hero h1 {
+  .problem-detail-hero h1,
+  .therapy-detail-hero h1,
+  .service-detail-hero h1 {
     font-size: clamp(34px, 9vw, 48px);
   }
 
-  .problem-detail-card {
+  .problem-detail-card,
+  .therapy-detail-card,
+  .service-detail-card {
     padding: 24px;
   }
 
@@ -1147,13 +1393,16 @@ details p {
 }
 
 @media (max-width: 800px) {
+
   .issues-content,
-  .therapies-content {
+  .therapies-content,
+  .services-content {
     padding: 64px 24px;
   }
 
   .issues-list,
-  .therapies-list {
+  .therapies-list,
+  .services-groups {
     grid-template-columns: 1fr;
     row-gap: 18px;
   }
@@ -1163,25 +1412,30 @@ details p {
   }
 
   .issues-column a,
-  .therapies-list a {
+  .therapies-list a,
+  .services-sublist a,
+  .services-group-single a {
     font-size: 15px;
     letter-spacing: 0;
   }
 
   .issues-content h1,
-  .therapies-content h1 {
+  .therapies-content h1,
+  .services-content h1 {
     font-size: clamp(40px, 12vw, 56px);
     margin-bottom: 34px;
   }
 
   .issues-more-icon,
-  .therapies-more-icon {
+  .therapies-more-icon,
+  .services-more-icon {
     width: 58px;
     height: 58px;
   }
 }
 
 @media (max-width: 680px) {
+
   .team-grid,
   .corporate-grid {
     grid-template-columns: 1fr;
@@ -1194,79 +1448,5 @@ details p {
   .process-item {
     grid-template-columns: 1fr;
     gap: 10px;
-  }
-}
-
-/* =========================
-   16. Therapy Detail Pages
-========================= */
-
-.therapy-detail-hero {
-  background: var(--white);
-  padding: 72px 0 66px;
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-}
-
-.therapy-detail-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 390px;
-  gap: 48px;
-  align-items: center;
-}
-
-.therapy-detail-hero h1 {
-  max-width: 720px;
-  margin: 0 0 22px;
-  color: var(--teal);
-  font-size: clamp(34px, 3vw, 52px);
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-}
-
-.therapy-detail-hero p {
-  max-width: 680px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.65;
-}
-
-.therapy-detail-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 26px;
-  padding: 28px;
-}
-
-.therapy-detail-card h2 {
-  margin: 0 0 18px;
-  color: var(--text);
-  font-size: 26px;
-  line-height: 1.2;
-}
-
-.therapy-detail-card p {
-  font-size: 16px;
-  line-height: 1.65;
-}
-
-@media (max-width: 900px) {
-  .therapy-detail-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .therapy-detail-hero {
-    padding: 64px 0 56px;
-  }
-
-  .therapy-detail-hero h1 {
-    font-size: clamp(34px, 9vw, 48px);
-  }
-
-  .therapy-detail-card {
-    padding: 24px;
   }
 }
