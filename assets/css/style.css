@@ -94,10 +94,10 @@ h2 {
   z-index: 100;
   min-height: 147px;
   background:
-    linear-gradient(rgba(31, 42, 46, 0.58), rgba(31, 42, 46, 0.28)),
+    linear-gradient(rgba(247, 243, 238, 0.12), rgba(247, 243, 238, 0.08)),
     url("../images/header-bg.png");
   background-size: cover;
-  background-position: center 42%;
+  background-position: center 34%;
   border-bottom: 0;
 }
 
@@ -119,7 +119,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  margin-left: 0;
+  margin-left: 55px;
 }
 
 .logo img {
@@ -127,7 +127,7 @@ h2 {
   width: 128px;
   height: 90px;
   object-fit: contain;
-  filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.32));
+  filter: none;
 }
 
 .main-nav {
@@ -142,24 +142,23 @@ h2 {
 }
 
 .main-nav a {
-  color: rgba(255, 255, 255, 0.94);
+  color: var(--accent-dark);
   white-space: nowrap;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.42);
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.75);
 }
 
 .main-nav a:hover {
-  color: var(--white);
+  color: var(--teal);
 }
 
 .lang-switch {
   margin-top: 0;
-  border: 1px solid rgba(255, 255, 255, 0.62);
-  color: var(--white);
+  border: 1px solid rgba(79, 102, 89, 0.35);
+  color: var(--accent-dark);
   padding: 10px 16px;
   border-radius: 999px;
   font-size: 14px;
-  background: rgba(31, 42, 46, 0.22);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  background: rgba(247, 243, 238, 0.58);
 }
 
 
@@ -769,8 +768,12 @@ details p {
 }
 
 .therapies-content {
+  min-height: calc(100vh - 147px);
   padding: 76px 72px 70px;
   max-width: 980px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .therapies-content h1 {
@@ -807,7 +810,7 @@ details p {
 
 .therapies-divider {
   height: 2px;
-  margin: 46px 0 38px;
+  margin: auto 0 38px;
   background: #e6dfd5;
 }
 
@@ -937,12 +940,16 @@ details p {
 }
 
 .issues-content {
-  padding: 76px 72px 70px;
+  min-height: calc(100vh - 147px);
+  padding: 70px 72px 70px;
   max-width: 980px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .issues-content h1 {
-  margin: 0 0 42px;
+  margin: 0 0 40px;
   color: var(--teal);
   font-size: clamp(38px, 4.2vw, 58px);
   font-weight: 400;
@@ -955,19 +962,20 @@ details p {
   grid-template-columns: repeat(2, minmax(220px, 1fr));
   column-gap: 78px;
   align-items: start;
+  margin-bottom: 46px;
 }
 
 .issues-column {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 
 .issues-column a {
   color: var(--teal);
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.55;
+  line-height: 1.45;
   letter-spacing: 0.005em;
   text-transform: none;
   transition: color 0.2s ease, transform 0.2s ease;
@@ -980,7 +988,7 @@ details p {
 
 .issues-divider {
   height: 2px;
-  margin: 46px 0 38px;
+  margin: auto 0 38px;
   background: #e6dfd5;
 }
 
@@ -1000,6 +1008,7 @@ details p {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 .issues-more-icon {
@@ -1188,8 +1197,12 @@ details p {
 }
 
 .corporate-content {
+  min-height: calc(100vh - 147px);
   padding: 76px 72px 70px;
   max-width: 980px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .corporate-content h1 {
@@ -1228,7 +1241,7 @@ details p {
 
 .corporate-divider {
   height: 2px;
-  margin: 46px 0 38px;
+  margin: auto 0 38px;
   background: #e6dfd5;
 }
 
