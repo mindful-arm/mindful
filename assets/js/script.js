@@ -240,3 +240,298 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Real page-to-page transition */
+(function () {
+  const navOrder = [
+    "index.html",
+    "team.html",
+    "services.html",
+    "therapies.html",
+    "problems.html",
+    "corporate.html",
+    "contact.html"
+  ];
+
+  let transitionIsRunning = false;
+
+  function pageName(urlValue) {
+    const url = new URL(urlValue, window.location.href);
+    let page = url.pathname.split("/").pop();
+
+    if (!page || page === "am") {
+      page = "index.html";
+    }
+
+    return page;
+  }
+
+  function directionTo(targetHref) {
+    const current = pageName(window.location.href);
+    const target = pageName(targetHref);
+
+    const currentIndex = navOrder.indexOf(current);
+    const targetIndex = navOrder.indexOf(target);
+
+    if (currentIndex === -1 || targetIndex === -1) {
+      return "forward";
+    }
+
+    return targetIndex > currentIndex ? "forward" : "backward";
+  }
+
+  function isMainNavLink(link) {
+    if (!link || !link.href) return false;
+    if (link.target === "_blank") return false;
+    if (link.hasAttribute("download")) return false;
+
+    const url = new URL(link.href, window.location.href);
+
+    if (url.origin !== window.location.origin) return false;
+    if (url.href === window.location.href) return false;
+    if (url.hash && url.pathname === window.location.pathname) return false;
+
+    return navOrder.includes(pageName(url.href));
+  }
+
+  function bindRealTransitionLinks() {
+    document.querySelectorAll(".main-nav a").forEach(function (link) {
+      if (link.dataset.realPageTransitionBound === "1") return;
+
+      link.dataset.realPageTransitionBound = "1";
+
+      link.addEventListener("click", function (event) {
+        if (!isMainNavLink(link)) return;
+
+        event.preventDefault();
+        realPageTransition(link.href);
+      });
+    });
+  }
+
+  function syncActiveNav(targetHref) {
+    const targetPage = pageName(targetHref);
+
+    document.querySelectorAll(".main-nav a").forEach(function (link) {
+      link.classList.remove("active");
+
+      if (pageName(link.href) === targetPage) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  function rebindContactDropdown() {
+    const countryPicker = document.getElementById("countryPicker");
+    const countryButton = document.getElementById("countryPickerButton");
+    const countryCurrent = document.getElementById("countryPickerCurrent");
+    const countryCode = document.getElementById("countryCode");
+    const phoneInput = document.getElementById("phone");
+    const countryOptions = document.querySelectorAll(".country-option");
+
+    if (!countryPicker || !countryButton || !countryCurrent || !countryCode || !phoneInput) return;
+    if (countryPicker.dataset.dropdownBound === "1") return;
+
+    countryPicker.dataset.dropdownBound = "1";
+
+    countryButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      countryPicker.classList.toggle("is-open");
+
+      const isOpen = countryPicker.classList.contains("is-open");
+      countryButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    countryOptions.forEach(function (option) {
+      option.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        countryOptions.forEach(function (item) {
+          item.classList.remove("is-active");
+        });
+
+        option.classList.add("is-active");
+        countryCode.value = option.dataset.code;
+        countryCurrent.textContent = option.dataset.label || option.textContent.trim();
+        phoneInput.placeholder = option.dataset.placeholder || "";
+        countryPicker.classList.remove("is-open");
+        countryButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!countryPicker.contains(event.target)) {
+        countryPicker.classList.remove("is-open");
+        countryButton.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    phoneInput.addEventListener("input", function () {
+      phoneInput.value = phoneInput.value.replace(/[^\d\s\-()]/g, "");
+    });
+  }
+
+  async function realPageTransition(targetHref) {
+    if (transitionIsRunning) return;
+    transitionIsRunning = true;
+
+    const currentMain = document.querySelector("main");
+    const header = document.querySelector(".site-header");
+    const direction = directionTo(targetHref);
+
+    if (!currentMain) {
+      window.location.href = targetHref;
+      return;
+    }
+
+    let nextDoc;
+    let nextMain;
+
+    try {
+      const response = await fetch(targetHref, {
+        credentials: "same-origin",
+        cache: "no-cache"
+      });
+
+      if (!response.ok) throw new Error("fetch failed");
+
+      const text = await response.text();
+      nextDoc = new DOMParser().parseFromString(text, "text/html");
+      nextMain = nextDoc.querySelector("main");
+
+      if (!nextMain) throw new Error("next main missing");
+    } catch (error) {
+      window.location.href = targetHref;
+      return;
+    }
+
+    const headerBottom = header ? Math.max(0, Math.round(header.getBoundingClientRect().bottom)) : 0;
+
+    const stage = document.createElement("div");
+    stage.className = "real-page-transition-stage";
+    stage.style.setProperty("--transition-top", headerBottom + "px");
+
+    const oldPanel = document.createElement("div");
+    oldPanel.className = "real-page-transition-panel";
+    oldPanel.appendChild(currentMain.cloneNode(true));
+
+    const newPanel = document.createElement("div");
+    newPanel.className = "real-page-transition-panel";
+    newPanel.appendChild(nextMain.cloneNode(true));
+
+    const distance = window.innerWidth;
+    const oldEnd = direction === "forward" ? -distance : distance;
+    const newStart = direction === "forward" ? distance : -distance;
+
+    oldPanel.style.transform = "translate3d(0, 0, 0)";
+    newPanel.style.transform = "translate3d(" + newStart + "px, 0, 0)";
+
+    stage.appendChild(oldPanel);
+    stage.appendChild(newPanel);
+    document.body.appendChild(stage);
+
+    document.body.classList.add("real-page-transition-running");
+
+    await new Promise(function (resolve) {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(resolve);
+      });
+    });
+
+    const options = {
+      duration: 720,
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fill: "forwards"
+    };
+
+    const oldAnim = oldPanel.animate(
+      [
+        { transform: "translate3d(0, 0, 0)" },
+        { transform: "translate3d(" + oldEnd + "px, 0, 0)" }
+      ],
+      options
+    );
+
+    const newAnim = newPanel.animate(
+      [
+        { transform: "translate3d(" + newStart + "px, 0, 0)" },
+        { transform: "translate3d(0, 0, 0)" }
+      ],
+      options
+    );
+
+    await Promise.all([
+      oldAnim.finished.catch(function () {}),
+      newAnim.finished.catch(function () {})
+    ]);
+
+    currentMain.replaceWith(nextMain.cloneNode(true));
+
+    document.title = nextDoc.title || document.title;
+    history.pushState({}, "", targetHref);
+
+    syncActiveNav(targetHref);
+
+    stage.remove();
+    document.body.classList.remove("real-page-transition-running");
+
+    window.scrollTo(0, 0);
+
+    bindRealTransitionLinks();
+    rebindContactDropdown();
+
+    transitionIsRunning = false;
+  }
+
+  window.addEventListener("popstate", function () {
+    window.location.reload();
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    bindRealTransitionLinks();
+    rebindContactDropdown();
+  });
+})();

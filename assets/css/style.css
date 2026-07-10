@@ -2064,3 +2064,276 @@ details p {
 .contact-socials .social-instagram {
   color: #c13584 !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header final normal fix */
+.site-header {
+  min-height: 147px !important;
+  overflow: hidden !important;
+}
+
+.site-header .container {
+  width: calc(100% - 70px) !important;
+  max-width: none !important;
+}
+
+.header-inner {
+  height: 147px !important;
+  padding-top: 12px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 26px !important;
+}
+
+.logo {
+  margin-left: 28px !important;
+  flex: 0 0 auto !important;
+  align-self: flex-start !important;
+}
+
+.logo img {
+  width: 165px !important;
+  height: 112px !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: none !important;
+}
+
+.main-nav {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: clamp(16px, 1.55vw, 28px) !important;
+  padding-top: 22px !important;
+  font-size: clamp(12px, 0.72vw, 14px) !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.11em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.main-nav a {
+  color: #2f4f45 !important;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.92),
+    0 2px 7px rgba(255, 255, 255, 0.85) !important;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #007f8f !important;
+}
+
+.lang-switch {
+  flex: 0 0 auto !important;
+  margin-left: 10px !important;
+  color: #2f4f45 !important;
+  font-weight: 900 !important;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.92),
+    0 2px 7px rgba(255, 255, 255, 0.85) !important;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    margin-left: 18px !important;
+  }
+
+  .logo img {
+    width: 145px !important;
+    height: 100px !important;
+  }
+
+  .main-nav {
+    gap: 14px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.08em !important;
+  }
+}
+
+
+/* Header final polish */
+.logo img {
+  width: 178px !important;
+  height: 121px !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: none !important;
+}
+
+.header-inner {
+  height: 147px !important;
+  padding-top: 8px !important;
+  align-items: flex-start !important;
+}
+
+.logo {
+  margin-left: 24px !important;
+}
+
+.main-nav {
+  padding-top: 22px !important;
+  gap: clamp(17px, 1.6vw, 29px) !important;
+  font-size: clamp(13px, 0.78vw, 15px) !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.115em !important;
+}
+
+.main-nav a {
+  color: #23463d !important;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 1),
+    0 2px 6px rgba(255, 255, 255, 0.98),
+    0 0 16px rgba(255, 255, 255, 0.9) !important;
+  transform: scale(1) !important;
+  transform-origin: center !important;
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease,
+    text-shadow 0.22s ease !important;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #007f8f !important;
+  transform: scale(1.075) !important;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 1),
+    0 3px 8px rgba(255, 255, 255, 1),
+    0 0 18px rgba(255, 255, 255, 0.95) !important;
+}
+
+.lang-switch {
+  color: #23463d !important;
+  font-size: 15px !important;
+  font-weight: 950 !important;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 1),
+    0 2px 6px rgba(255, 255, 255, 0.98),
+    0 0 16px rgba(255, 255, 255, 0.9) !important;
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease,
+    text-shadow 0.22s ease !important;
+}
+
+.lang-switch:hover {
+  color: #007f8f !important;
+  transform: scale(1.075) !important;
+}
+
+@media (max-width: 1200px) {
+  .logo img {
+    width: 158px !important;
+    height: 108px !important;
+  }
+
+  .main-nav {
+    gap: 15px !important;
+    font-size: 12.5px !important;
+    letter-spacing: 0.085em !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Real page-to-page transition */
+html,
+body {
+  overflow-x: hidden;
+  background: #f7f3ee;
+}
+
+.real-page-transition-stage {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: var(--transition-top, 0px);
+  bottom: 0;
+  z-index: 999998;
+  overflow: hidden;
+  background: #f7f3ee;
+  pointer-events: none;
+}
+
+.real-page-transition-panel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background: #f7f3ee;
+  will-change: transform;
+}
+
+.real-page-transition-panel main {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f3ee;
+}
+
+body.real-page-transition-running > main {
+  visibility: hidden !important;
+}
+
+body.real-page-transition-running {
+  overflow: hidden !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .real-page-transition-stage {
+    display: none !important;
+  }
+
+  body.real-page-transition-running > main {
+    visibility: visible !important;
+  }
+
+  body.real-page-transition-running {
+    overflow: auto !important;
+  }
+}
