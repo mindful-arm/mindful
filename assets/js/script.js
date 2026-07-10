@@ -322,6 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function isMainNavLink(link) {
     if (!link || !link.href) return false;
+    if (link.classList && link.classList.contains("lang-switch")) return false;
     if (link.target === "_blank") return false;
     if (link.hasAttribute("download")) return false;
 
