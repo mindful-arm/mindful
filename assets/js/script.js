@@ -487,6 +487,14 @@ document.addEventListener("DOMContentLoaded", function () {
       fill: "forwards"
     };
 
+    const transitionSafetyTimer = window.setTimeout(function () {
+      isTransitioning = false;
+      document.body.classList.remove("spa-slide-running");
+      const brokenStage = document.querySelector(".spa-slide-stage");
+      if (brokenStage) brokenStage.remove();
+      window.location.href = targetHref;
+    }, 2200);
+
     const oldAnim = oldPanel.animate(
       [
         { transform: "translate3d(0, 0, 0)" },
@@ -509,8 +517,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ]);
 
     currentMain.replaceWith(nextMain.cloneNode(true));
-
-    syncHeaderFromNextPage(nextDoc);
 
     document.title = nextDoc.title || document.title;
     history.pushState({}, "", targetHref);
