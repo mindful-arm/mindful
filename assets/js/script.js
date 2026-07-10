@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (link.target === "_blank") return false;
     if (link.hasAttribute("download")) return false;
 
-    const url = new URL(link.href, window.location.href);
+    const url = new URL(normalizeInternalUrl(link.href), window.location.href);
 
     if (url.origin !== window.location.origin) return false;
     if (url.href === window.location.href) return false;
