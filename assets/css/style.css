@@ -2341,3 +2341,127 @@ body.spa-slide-running > main {
     overflow: auto !important;
   }
 }
+
+
+
+
+
+/* Team specialists polish */
+.team-section {
+  padding-top: 48px !important;
+}
+
+.team-grid,
+.specialists-grid,
+.team-list,
+.specialists-list {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+
+.team-card {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(184, 169, 151, 0.42) !important;
+  border-radius: 24px !important;
+  background: #fff !important;
+  box-shadow: 0 14px 34px rgba(31, 42, 46, 0.055) !important;
+  min-height: 0 !important;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease !important;
+}
+
+.team-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(0, 127, 143, 0.34) !important;
+  box-shadow: 0 22px 46px rgba(31, 42, 46, 0.095) !important;
+}
+
+.team-photo,
+.specialist-photo {
+  height: 255px !important;
+  min-height: 255px !important;
+  max-height: 255px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background:
+    linear-gradient(rgba(247, 243, 238, 0.86), rgba(247, 243, 238, 0.86)),
+    url("../images/header-bg.png") center / cover no-repeat !important;
+  color: rgba(47, 79, 69, 0.58) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.team-card-body {
+  padding: 22px 22px 24px !important;
+  background: #fff !important;
+  min-height: 112px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.team-card h2,
+.team-card h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #1f2a2e !important;
+  font-size: clamp(20px, 1.25vw, 25px) !important;
+  line-height: 1.18 !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.025em !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+.team-role {
+  margin: 0 0 8px !important;
+  color: #007f8f !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 1180px) {
+  .team-grid,
+  .specialists-grid,
+  .team-list,
+  .specialists-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .team-grid,
+  .specialists-grid,
+  .team-list,
+  .specialists-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+
+  .team-photo,
+  .specialist-photo {
+    height: 220px !important;
+    min-height: 220px !important;
+    max-height: 220px !important;
+  }
+
+  .team-card h2,
+  .team-card h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .team-grid,
+  .specialists-grid,
+  .team-list,
+  .specialists-list {
+    grid-template-columns: 1fr !important;
+  }
+}
