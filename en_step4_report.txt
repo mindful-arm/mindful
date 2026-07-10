@@ -1,0 +1,553 @@
+MISSING LINKS
+am/index.html -> ./specialists/name-surname.html
+am/team.html -> ./specialists/name-surname.html
+am/team.html -> ./specialists/name-surname-2.html
+am/team.html -> ./specialists/name-surname-3.html
+en/index.html -> ./specialists/name-surname.html
+en/team.html -> ./specialists/name-surname.html
+en/team.html -> ./specialists/name-surname-2.html
+en/team.html -> ./specialists/name-surname-3.html
+
+REMAINING ARMENIAN TEXT IN /en
+en/contact.html:32: <a href="./index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/contact.html:40: <a href="./therapies.html">Հոգեթերապիաներ</a>
+en/contact.html:42: <a href="./corporate.html">Կորպորատիվ ծառայություններ</a>
+en/contact.html:54: <h1>Contact հաստատեք մեզ հետ</h1>
+en/contact.html:55: <p>Our team պատրաստ է պատասխանել ձեր հարցերին և օգնել ընտրել համապատասխան մասնագետին։</p>
+en/contact.html:62: <h2>Մենք կօգնենք կողմնորոշվել</h2>
+en/contact.html:63: <p>Կարող եք կապ հաստատել մեզ հետ phoneով, emailով կամ լրացնել կապի ձևը։</p>
+en/contact.html:78: <p>Նալբանդյան փակուղի 15ա</p>
+en/contact.html:106: <input type="hidden" name="_subject" value="Նոր հաղորդագրություն Mindful Armenia կայքից" />
+en/contact.html:159: <textarea id="message" name="message" rows="6" placeholder="Ինչպե՞ս կարող ենք օգնել" required></textarea>
+en/contact.html:166: <p class="form-note">Մենք կկապվենք ձեզ հետ հնարավորինս շուտ։</p>
+en/corporate/consultancy.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/corporate/consultancy.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/corporate/consultancy.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/corporate/consultancy.html:50: <a href="../corporate.html" class="back-link">Back կորպորատիվ բաժին</a>
+en/corporate/consultancy.html:58: <h2>Ինչպես կարող ենք օգնել</h2>
+en/corporate/consultancy.html:69: <p class="eyebrow">Այս էջում</p>
+en/corporate/consultancy.html:70: <a href="#about">Ծառայության մասին</a>
+en/corporate/consultancy.html:71: <a href="#benefits">Ինչի համար է օգտակար</a>
+en/corporate/consultancy.html:72: <a href="#process">Ինչպես է ընթանում</a>
+en/corporate/consultancy.html:77: <h2>Ծառայության մասին</h2>
+en/corporate/consultancy.html:87: <h2>Ինչի համար է օգտակար</h2>
+en/corporate/consultancy.html:97: <h2>Ինչպես է ընթանում</h2>
+en/corporate/consultancy.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/corporate/executive-coaching.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/corporate/executive-coaching.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/corporate/executive-coaching.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/corporate/executive-coaching.html:50: <a href="../corporate.html" class="back-link">Back կորպորատիվ բաժին</a>
+en/corporate/executive-coaching.html:58: <h2>Ինչպես կարող ենք օգնել</h2>
+en/corporate/executive-coaching.html:69: <p class="eyebrow">Այս էջում</p>
+en/corporate/executive-coaching.html:70: <a href="#about">Ծառայության մասին</a>
+en/corporate/executive-coaching.html:71: <a href="#benefits">Ինչի համար է օգտակար</a>
+en/corporate/executive-coaching.html:72: <a href="#process">Ինչպես է ընթանում</a>
+en/corporate/executive-coaching.html:77: <h2>Ծառայության մասին</h2>
+en/corporate/executive-coaching.html:87: <h2>Ինչի համար է օգտակար</h2>
+en/corporate/executive-coaching.html:97: <h2>Ինչպես է ընթանում</h2>
+en/corporate/executive-coaching.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/corporate/staff-clinical-services.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/corporate/staff-clinical-services.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/corporate/staff-clinical-services.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/corporate/staff-clinical-services.html:50: <a href="../corporate.html" class="back-link">Back կորպորատիվ բաժին</a>
+en/corporate/staff-clinical-services.html:58: <h2>Ինչպես կարող ենք օգնել</h2>
+en/corporate/staff-clinical-services.html:69: <p class="eyebrow">Այս էջում</p>
+en/corporate/staff-clinical-services.html:70: <a href="#about">Ծառայության մասին</a>
+en/corporate/staff-clinical-services.html:71: <a href="#benefits">Ինչի համար է օգտակար</a>
+en/corporate/staff-clinical-services.html:72: <a href="#process">Ինչպես է ընթանում</a>
+en/corporate/staff-clinical-services.html:77: <h2>Ծառայության մասին</h2>
+en/corporate/staff-clinical-services.html:87: <h2>Ինչի համար է օգտակար</h2>
+en/corporate/staff-clinical-services.html:97: <h2>Ինչպես է ընթանում</h2>
+en/corporate/staff-clinical-services.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/corporate/training-psychoeducation.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/corporate/training-psychoeducation.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/corporate/training-psychoeducation.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/corporate/training-psychoeducation.html:50: <a href="../corporate.html" class="back-link">Back կորպորատիվ բաժին</a>
+en/corporate/training-psychoeducation.html:58: <h2>Ինչպես կարող ենք օգնել</h2>
+en/corporate/training-psychoeducation.html:69: <p class="eyebrow">Այս էջում</p>
+en/corporate/training-psychoeducation.html:70: <a href="#about">Ծառայության մասին</a>
+en/corporate/training-psychoeducation.html:71: <a href="#benefits">Ինչի համար է օգտակար</a>
+en/corporate/training-psychoeducation.html:72: <a href="#process">Ինչպես է ընթանում</a>
+en/corporate/training-psychoeducation.html:77: <h2>Ծառայության մասին</h2>
+en/corporate/training-psychoeducation.html:87: <h2>Ինչի համար է օգտակար</h2>
+en/corporate/training-psychoeducation.html:97: <h2>Ինչպես է ընթանում</h2>
+en/corporate/training-psychoeducation.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/corporate.html:31: <a href="./index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/corporate.html:39: <a href="./therapies.html">Հոգեթերապիաներ</a>
+en/corporate.html:41: <a href="./corporate.html">Կորպորատիվ ծառայություններ</a>
+en/corporate.html:57: <h1>Կորպորատիվ ծառայություններ</h1>
+en/corporate.html:72: <span>Contact հաստատել</span>
+en/index.html:32: <a href="./index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/index.html:40: <a href="./therapies.html">Հոգեթերապիաներ</a>
+en/index.html:42: <a href="./corporate.html">Կորպորատիվ ծառայություններ</a>
+en/index.html:63: <a href="./contact.html" class="btn">Contact հաստատել</a>
+en/index.html:64: <a href="./services.html" class="btn-secondary">Տեսնել ծառայությունները</a>
+en/index.html:70: Լուսանկար
+en/index.html:79: <p class="eyebrow">Մեր մոտեցումը</p>
+en/index.html:80: <h2>Անհատական, վստահելի և մասնագիտական աջակցություն</h2>
+en/index.html:85: <h3>Անվտանգ միջավայր</h3>
+en/index.html:90: <h3>Մասնագիտական թիմ</h3>
+en/index.html:95: <h3>Անհատական մոտեցում</h3>
+en/index.html:106: <h2>Ինչ ծառայություններ ենք առաջարկում</h2>
+en/index.html:128: <h2>Մասնագետներ, ովքեր կօգնեն ընտրել ճիշտ ուղին</h2>
+en/index.html:132: <a href="./team.html" class="btn">Տեսնել թիմը</a>
+en/index.html:137: <div class="specialist-photo">Լուսանկար</div>
+en/index.html:138: <h3>Name Ազգname</h3>
+en/index.html:139: <p>Հոգեբան / Հոգեթերապևտ</p>
+en/index.html:150: <h2>Հաճախ տրվող հարցեր</h2>
+en/index.html:155: <summary>Ինչպե՞ս գրանցվել խորհրդատվության։</summary>
+en/index.html:160: <summary>Առաջին հանդիպումը ինչքա՞ն է տևում։</summary>
+en/index.html:165: <summary>Կարո՞ղ եմ ընտրել մասնագետին։</summary>
+en/index.html:174: <h2>Ցանկանու՞մ եք կապ հաստատել մեզ հետ</h2>
+en/index.html:176: <a href="./contact.html" class="btn">Contact հաստատել</a>
+en/problems/anxiety.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/anxiety.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/anxiety.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/anxiety.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/anxiety.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/anxiety.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/anxiety.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/anxiety.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/anxiety.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/anxiety.html:77: <h2>Ինչ է Anxiety</h2>
+en/problems/anxiety.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/anxiety.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/anxiety.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/attention.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/attention.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/attention.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/attention.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/attention.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/attention.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/attention.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/attention.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/attention.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/attention.html:77: <h2>Ինչ է Attention and concentration difficulties</h2>
+en/problems/attention.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/attention.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/attention.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/burnout.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/burnout.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/burnout.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/burnout.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/burnout.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/burnout.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/burnout.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/burnout.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/burnout.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/burnout.html:77: <h2>Ինչ է Burnout</h2>
+en/problems/burnout.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/burnout.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/burnout.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/depressive-states.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/depressive-states.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/depressive-states.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/depressive-states.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/depressive-states.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/depressive-states.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/depressive-states.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/depressive-states.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/depressive-states.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/depressive-states.html:77: <h2>Ինչ է Depressive states</h2>
+en/problems/depressive-states.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/depressive-states.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/depressive-states.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/eating-behavior.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/eating-behavior.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/eating-behavior.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/eating-behavior.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/eating-behavior.html:51: <h1>Սննդային վարքի դժվարություններ</h1>
+en/problems/eating-behavior.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/eating-behavior.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/eating-behavior.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/eating-behavior.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/eating-behavior.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/eating-behavior.html:77: <h2>Ինչ է Սննդային վարքի դժվարություններ</h2>
+en/problems/eating-behavior.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/eating-behavior.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/eating-behavior.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/emotional-regulation.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/emotional-regulation.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/emotional-regulation.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/emotional-regulation.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/emotional-regulation.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/emotional-regulation.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/emotional-regulation.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/emotional-regulation.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/emotional-regulation.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/emotional-regulation.html:77: <h2>Ինչ է Emotional regulation difficulties</h2>
+en/problems/emotional-regulation.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/emotional-regulation.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/emotional-regulation.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/family-problems.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/family-problems.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/family-problems.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/family-problems.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/family-problems.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/family-problems.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/family-problems.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/family-problems.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/family-problems.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/family-problems.html:77: <h2>Ինչ է Family issues</h2>
+en/problems/family-problems.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/family-problems.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/family-problems.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/grief.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/grief.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/grief.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/grief.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/grief.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/grief.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/grief.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/grief.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/grief.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/grief.html:77: <h2>Ինչ է Loss and grief</h2>
+en/problems/grief.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/grief.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/grief.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/life-changes.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/life-changes.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/life-changes.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/life-changes.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/life-changes.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/life-changes.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/life-changes.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/life-changes.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/life-changes.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/life-changes.html:77: <h2>Ինչ է Life changes</h2>
+en/problems/life-changes.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/life-changes.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/life-changes.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/obsessive-thoughts.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/obsessive-thoughts.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/obsessive-thoughts.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/obsessive-thoughts.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/obsessive-thoughts.html:51: <h1>Կպչուն մտքեր և վարքագիծ</h1>
+en/problems/obsessive-thoughts.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/obsessive-thoughts.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/obsessive-thoughts.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/obsessive-thoughts.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/obsessive-thoughts.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/obsessive-thoughts.html:77: <h2>Ինչ է Կպչուն մտքեր և վարքագիծ</h2>
+en/problems/obsessive-thoughts.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/obsessive-thoughts.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/obsessive-thoughts.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/panic-attacks.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/panic-attacks.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/panic-attacks.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/panic-attacks.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/panic-attacks.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/panic-attacks.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/panic-attacks.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/panic-attacks.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/panic-attacks.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/panic-attacks.html:77: <h2>Ինչ է Panic attacks</h2>
+en/problems/panic-attacks.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/panic-attacks.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/panic-attacks.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/phobias.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/phobias.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/phobias.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/phobias.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/phobias.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/phobias.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/phobias.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/phobias.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/phobias.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/phobias.html:77: <h2>Ինչ է Phobias</h2>
+en/problems/phobias.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/phobias.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/phobias.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/relationships.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/relationships.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/relationships.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/relationships.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/relationships.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/relationships.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/relationships.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/relationships.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/relationships.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/relationships.html:77: <h2>Ինչ է Relationship difficulties</h2>
+en/problems/relationships.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/relationships.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/relationships.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/self-esteem.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/self-esteem.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/self-esteem.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/self-esteem.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/self-esteem.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/self-esteem.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/self-esteem.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/self-esteem.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/self-esteem.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/self-esteem.html:77: <h2>Ինչ է Self-esteem issues</h2>
+en/problems/self-esteem.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/self-esteem.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/self-esteem.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/sleep-problems.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/sleep-problems.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/sleep-problems.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/sleep-problems.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/sleep-problems.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/sleep-problems.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/sleep-problems.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/sleep-problems.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/sleep-problems.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/sleep-problems.html:77: <h2>Ինչ է Sleep problems</h2>
+en/problems/sleep-problems.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/sleep-problems.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/sleep-problems.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/stress.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/stress.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/stress.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/stress.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/stress.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/stress.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/stress.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/stress.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/stress.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/stress.html:77: <h2>Ինչ է Stress</h2>
+en/problems/stress.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/stress.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/stress.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/teenage-difficulties.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/teenage-difficulties.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/teenage-difficulties.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/teenage-difficulties.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/teenage-difficulties.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/teenage-difficulties.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/teenage-difficulties.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/teenage-difficulties.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/teenage-difficulties.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/teenage-difficulties.html:77: <h2>Ինչ է Adolescent difficulties</h2>
+en/problems/teenage-difficulties.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/teenage-difficulties.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/teenage-difficulties.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems/trauma.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems/trauma.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/problems/trauma.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems/trauma.html:50: <a href="../problems.html" class="back-link">Back խնդիրներին</a>
+en/problems/trauma.html:58: <h2>Երբ դիմել մասնագետի</h2>
+en/problems/trauma.html:69: <p class="eyebrow">Այս էջում</p>
+en/problems/trauma.html:70: <a href="#about">Ինչ է սա</a>
+en/problems/trauma.html:71: <a href="#symptoms">Ինչպես կարող է արտահայտվել</a>
+en/problems/trauma.html:72: <a href="#help">Ինչպես կարող ենք օգնել</a>
+en/problems/trauma.html:77: <h2>Ինչ է Traumatic experience</h2>
+en/problems/trauma.html:87: <h2>Ինչպես կարող է արտահայտվել</h2>
+en/problems/trauma.html:97: <h2>Ինչպես կարող ենք օգնել</h2>
+en/problems/trauma.html:101: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/problems.html:32: <a href="./index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/problems.html:40: <a href="./therapies.html">Հոգեթերապիաներ</a>
+en/problems.html:42: <a href="./corporate.html">Կորպորատիվ ծառայություններ</a>
+en/problems.html:67: <a href="./problems/eating-behavior.html">Սննդային վարքի դժվարություններ</a>
+en/problems.html:79: <a href="./problems/obsessive-thoughts.html">Կպչուն մտքեր և վարքագիծ</a>
+en/problems.html:92: <span>Contact հաստատել</span>
+en/services/addictions.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/addictions.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/addictions.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/addictions.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/addictions.html:51: <p class="detail-label">Կախյալություններ</p>
+en/services/addictions.html:52: <h1>Addiction support հետ աշխատանք</h1>
+en/services/addictions.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/addictions.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/addictions.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/addictions.html:72: <a href="#when">Երբ դիմել</a>
+en/services/addictions.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/addictions.html:78: <h2>Ծառայության մասին</h2>
+en/services/addictions.html:88: <h2>Երբ դիմել</h2>
+en/services/addictions.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/addictions.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/expert-consultation.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/expert-consultation.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/expert-consultation.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/expert-consultation.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/expert-consultation.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/expert-consultation.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/expert-consultation.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/expert-consultation.html:72: <a href="#when">Երբ դիմել</a>
+en/services/expert-consultation.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/expert-consultation.html:78: <h2>Ծառայության մասին</h2>
+en/services/expert-consultation.html:88: <h2>Երբ դիմել</h2>
+en/services/expert-consultation.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/expert-consultation.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/psychiatric-adolescents.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/psychiatric-adolescents.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/psychiatric-adolescents.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/psychiatric-adolescents.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/psychiatric-adolescents.html:52: <h1>Psychiatric care ծառայություններ դեռահասների համար</h1>
+en/services/psychiatric-adolescents.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/psychiatric-adolescents.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/psychiatric-adolescents.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/psychiatric-adolescents.html:72: <a href="#when">Երբ դիմել</a>
+en/services/psychiatric-adolescents.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/psychiatric-adolescents.html:78: <h2>Ծառայության մասին</h2>
+en/services/psychiatric-adolescents.html:88: <h2>Երբ դիմել</h2>
+en/services/psychiatric-adolescents.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/psychiatric-adolescents.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/psychiatric-adults.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/psychiatric-adults.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/psychiatric-adults.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/psychiatric-adults.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/psychiatric-adults.html:52: <h1>Psychiatric care ծառայություններ մեծահասակների համար</h1>
+en/services/psychiatric-adults.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/psychiatric-adults.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/psychiatric-adults.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/psychiatric-adults.html:72: <a href="#when">Երբ դիմել</a>
+en/services/psychiatric-adults.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/psychiatric-adults.html:78: <h2>Ծառայության մասին</h2>
+en/services/psychiatric-adults.html:88: <h2>Երբ դիմել</h2>
+en/services/psychiatric-adults.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/psychiatric-adults.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/psychological-adolescents.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/psychological-adolescents.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/psychological-adolescents.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/psychological-adolescents.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/psychological-adolescents.html:52: <h1>Psychological counseling ծառայություններ դեռահասների համար</h1>
+en/services/psychological-adolescents.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/psychological-adolescents.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/psychological-adolescents.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/psychological-adolescents.html:72: <a href="#when">Երբ դիմել</a>
+en/services/psychological-adolescents.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/psychological-adolescents.html:78: <h2>Ծառայության մասին</h2>
+en/services/psychological-adolescents.html:88: <h2>Երբ դիմել</h2>
+en/services/psychological-adolescents.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/psychological-adolescents.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/psychological-adults.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/psychological-adults.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/psychological-adults.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/psychological-adults.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/psychological-adults.html:52: <h1>Psychological counseling ծառայություններ մեծահասակների համար</h1>
+en/services/psychological-adults.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/psychological-adults.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/psychological-adults.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/psychological-adults.html:72: <a href="#when">Երբ դիմել</a>
+en/services/psychological-adults.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/psychological-adults.html:78: <h2>Ծառայության մասին</h2>
+en/services/psychological-adults.html:88: <h2>Երբ դիմել</h2>
+en/services/psychological-adults.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/psychological-adults.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/psychotherapy-adolescents.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/psychotherapy-adolescents.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/psychotherapy-adolescents.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/psychotherapy-adolescents.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/psychotherapy-adolescents.html:52: <h1>Psychotherapy ծառայություններ դեռահասների համար</h1>
+en/services/psychotherapy-adolescents.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/psychotherapy-adolescents.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/psychotherapy-adolescents.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/psychotherapy-adolescents.html:72: <a href="#when">Երբ դիմել</a>
+en/services/psychotherapy-adolescents.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/psychotherapy-adolescents.html:78: <h2>Ծառայության մասին</h2>
+en/services/psychotherapy-adolescents.html:88: <h2>Երբ դիմել</h2>
+en/services/psychotherapy-adolescents.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/psychotherapy-adolescents.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/psychotherapy-adults.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/psychotherapy-adults.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/psychotherapy-adults.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/psychotherapy-adults.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/psychotherapy-adults.html:52: <h1>Psychotherapy ծառայություններ մեծահասակների համար</h1>
+en/services/psychotherapy-adults.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/psychotherapy-adults.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/psychotherapy-adults.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/psychotherapy-adults.html:72: <a href="#when">Երբ դիմել</a>
+en/services/psychotherapy-adults.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/psychotherapy-adults.html:78: <h2>Ծառայության մասին</h2>
+en/services/psychotherapy-adults.html:88: <h2>Երբ դիմել</h2>
+en/services/psychotherapy-adults.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/psychotherapy-adults.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services/sexology.html:28: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services/sexology.html:36: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/services/sexology.html:38: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services/sexology.html:50: <a href="../services.html" class="back-link">Back ծառայություններին</a>
+en/services/sexology.html:52: <h1>Sexology ծառայություններ</h1>
+en/services/sexology.html:59: <h2>Ինչպես կարող ենք օգնել</h2>
+en/services/sexology.html:70: <p class="eyebrow">Այս էջում</p>
+en/services/sexology.html:71: <a href="#about">Ծառայության մասին</a>
+en/services/sexology.html:72: <a href="#when">Երբ դիմել</a>
+en/services/sexology.html:73: <a href="#process">Ինչպես է ընթանում</a>
+en/services/sexology.html:78: <h2>Ծառայության մասին</h2>
+en/services/sexology.html:88: <h2>Երբ դիմել</h2>
+en/services/sexology.html:98: <h2>Ինչպես է ընթանում</h2>
+en/services/sexology.html:102: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/services.html:31: <a href="./index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/services.html:39: <a href="./therapies.html">Հոգեթերապիաներ</a>
+en/services.html:41: <a href="./corporate.html">Կորպորատիվ ծառայություններ</a>
+en/services.html:106: <span>Contact հաստատել</span>
+en/team.html:32: <a href="./index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/team.html:40: <a href="./therapies.html">Հոգեթերապիաներ</a>
+en/team.html:42: <a href="./corporate.html">Կորպորատիվ ծառայություններ</a>
+en/team.html:54: <h1>Մասնագետներ, ովքեր աշխատում են հոգատար և անհատական մոտեցմամբ</h1>
+en/team.html:68: <div class="team-photo">Լուսանկար</div>
+en/team.html:70: <p class="team-role">Հոգեբան / Հոգեթերապևտ</p>
+en/team.html:71: <h2>Name Ազգname</h2>
+en/team.html:82: <div class="team-photo">Լուսանկար</div>
+en/team.html:84: <p class="team-role">Հոգեբույժ</p>
+en/team.html:85: <h2>Name Ազգname</h2>
+en/team.html:96: <div class="team-photo">Լուսանկար</div>
+en/team.html:98: <p class="team-role">Կլինիկական հոգեբան</p>
+en/team.html:99: <h2>Name Ազգname</h2>
+en/team.html:114: <h2>Չգիտե՞ք որ մասնագետին դիմել</h2>
+en/team.html:115: <p>Contact հաստատեք մեզ հետ, և մենք կօգնենք կողմնորոշվել։</p>
+en/team.html:116: <a href="./contact.html" class="btn">Contact հաստատել</a>
+en/therapies/brainspotting.html:38: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/therapies/brainspotting.html:50: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/therapies/brainspotting.html:54: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/therapies/brainspotting.html:74: <a href="../therapies.html" class="back-link">Back հոգեթերապիաներին</a>
+en/therapies/brainspotting.html:76: <h1>Բրեյնսփոթինգ</h1>
+en/therapies/brainspotting.html:88: <h2>Մոտեցման մասին</h2>
+en/therapies/brainspotting.html:108: <p class="eyebrow">Այս էջում</p>
+en/therapies/brainspotting.html:110: <a href="#about">Ինչ է սա</a>
+en/therapies/brainspotting.html:112: <a href="#process">Ինչպես է անցկացվում</a>
+en/therapies/brainspotting.html:114: <a href="#help">Ում կարող է օգնել</a>
+en/therapies/brainspotting.html:122: <h2>Ինչ է Բրեյնսփոթինգ</h2>
+en/therapies/brainspotting.html:140: <h2>Ինչպես է անցկացվում</h2>
+en/therapies/brainspotting.html:158: <h2>Ում կարող է օգնել</h2>
+en/therapies/brainspotting.html:166: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/therapies/cbt.html:38: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/therapies/cbt.html:50: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/therapies/cbt.html:54: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/therapies/cbt.html:74: <a href="../therapies.html" class="back-link">Back հոգեթերապիաներին</a>
+en/therapies/cbt.html:88: <h2>Մոտեցման մասին</h2>
+en/therapies/cbt.html:108: <p class="eyebrow">Այս էջում</p>
+en/therapies/cbt.html:110: <a href="#about">Ինչ է սա</a>
+en/therapies/cbt.html:112: <a href="#process">Ինչպես է անցկացվում</a>
+en/therapies/cbt.html:114: <a href="#help">Ում կարող է օգնել</a>
+en/therapies/cbt.html:122: <h2>Ինչ է Cognitive behavioral therapy</h2>
+en/therapies/cbt.html:140: <h2>Ինչպես է անցկացվում</h2>
+en/therapies/cbt.html:158: <h2>Ում կարող է օգնել</h2>
+en/therapies/cbt.html:166: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/therapies/existential.html:38: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/therapies/existential.html:50: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/therapies/existential.html:54: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/therapies/existential.html:74: <a href="../therapies.html" class="back-link">Back հոգեթերապիաներին</a>
+en/therapies/existential.html:76: <h1>Էքզիստենցիալ թերապիա</h1>
+en/therapies/existential.html:88: <h2>Մոտեցման մասին</h2>
+en/therapies/existential.html:108: <p class="eyebrow">Այս էջում</p>
+en/therapies/existential.html:110: <a href="#about">Ինչ է սա</a>
+en/therapies/existential.html:112: <a href="#process">Ինչպես է անցկացվում</a>
+en/therapies/existential.html:114: <a href="#help">Ում կարող է օգնել</a>
+en/therapies/existential.html:122: <h2>Ինչ է Էքզիստենցիալ թերապիա</h2>
+en/therapies/existential.html:140: <h2>Ինչպես է անցկացվում</h2>
+en/therapies/existential.html:158: <h2>Ում կարող է օգնել</h2>
+en/therapies/existential.html:166: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/therapies/schema-therapy.html:38: <a href="../index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/therapies/schema-therapy.html:50: <a href="../therapies.html">Հոգեթերապիաներ</a>
+en/therapies/schema-therapy.html:54: <a href="../corporate.html">Կորպորատիվ ծառայություններ</a>
+en/therapies/schema-therapy.html:74: <a href="../therapies.html" class="back-link">Back հոգեթերապիաներին</a>
+en/therapies/schema-therapy.html:76: <h1>Սխեմաթերապիա</h1>
+en/therapies/schema-therapy.html:88: <h2>Մոտեցման մասին</h2>
+en/therapies/schema-therapy.html:108: <p class="eyebrow">Այս էջում</p>
+en/therapies/schema-therapy.html:110: <a href="#about">Ինչ է սա</a>
+en/therapies/schema-therapy.html:112: <a href="#process">Ինչպես է անցկացվում</a>
+en/therapies/schema-therapy.html:114: <a href="#help">Ում կարող է օգնել</a>
+en/therapies/schema-therapy.html:122: <h2>Ինչ է Սխեմաթերապիա</h2>
+en/therapies/schema-therapy.html:140: <h2>Ինչպես է անցկացվում</h2>
+en/therapies/schema-therapy.html:158: <h2>Ում կարող է օգնել</h2>
+en/therapies/schema-therapy.html:166: <a href="../contact.html" class="btn">Contact հաստատել</a>
+en/therapies.html:31: <a href="./index.html" class="logo" aria-label="Mindful Armenia գլխավոր էջ">
+en/therapies.html:39: <a href="./therapies.html">Հոգեթերապիաներ</a>
+en/therapies.html:41: <a href="./corporate.html">Կորպորատիվ ծառայություններ</a>
+en/therapies.html:57: <h1>Հոգեթերապիաներ</h1>
+en/therapies.html:60: <a href="./therapies/schema-therapy.html">Սխեմաթերապիա</a>
+en/therapies.html:62: <a href="./therapies/existential.html">Էքզիստենցիալ թերապիա</a>
+en/therapies.html:63: <a href="./therapies/brainspotting.html">Բրեյնսփոթինգ</a>
+en/therapies.html:72: <span>Contact հաստատել</span>
