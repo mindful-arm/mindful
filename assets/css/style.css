@@ -2284,7 +2284,10 @@ details p {
 
 
 
-/* Stable GitHub Pages SPA transition */
+
+
+
+/* Stable SPA transition fixed relative assets */
 html,
 body {
   overflow-x: hidden;

@@ -1,0 +1,1190 @@
+
+==========================================================================================
+HTML FILES
+==========================================================================================
+404.html
+am/contact.html
+am/corporate/consultancy.html
+am/corporate/executive-coaching.html
+am/corporate/staff-clinical-services.html
+am/corporate/training-psychoeducation.html
+am/corporate.html
+am/index.html
+am/problems/anxiety.html
+am/problems/attention.html
+am/problems/burnout.html
+am/problems/depressive-states.html
+am/problems/eating-behavior.html
+am/problems/emotional-regulation.html
+am/problems/family-problems.html
+am/problems/grief.html
+am/problems/life-changes.html
+am/problems/obsessive-thoughts.html
+am/problems/panic-attacks.html
+am/problems/phobias.html
+am/problems/relationships.html
+am/problems/self-esteem.html
+am/problems/sleep-problems.html
+am/problems/stress.html
+am/problems/teenage-difficulties.html
+am/problems/trauma.html
+am/problems.html
+am/services/addictions.html
+am/services/expert-consultation.html
+am/services/psychiatric-adolescents.html
+am/services/psychiatric-adults.html
+am/services/psychological-adolescents.html
+am/services/psychological-adults.html
+am/services/psychotherapy-adolescents.html
+am/services/psychotherapy-adults.html
+am/services/sexology.html
+am/services.html
+am/team.html
+am/therapies/brainspotting.html
+am/therapies/cbt.html
+am/therapies/existential.html
+am/therapies/schema-therapy.html
+am/therapies.html
+backup-contact-fix/contact-20260708-140315.html
+en/contact.html
+en/corporate/consultancy.html
+en/corporate/executive-coaching.html
+en/corporate/staff-clinical-services.html
+en/corporate/training-psychoeducation.html
+en/corporate.html
+en/index.html
+en/problems/anxiety.html
+en/problems/attention.html
+en/problems/burnout.html
+en/problems/depressive-states.html
+en/problems/eating-behavior.html
+en/problems/emotional-regulation.html
+en/problems/family-problems.html
+en/problems/grief.html
+en/problems/life-changes.html
+en/problems/obsessive-thoughts.html
+en/problems/panic-attacks.html
+en/problems/phobias.html
+en/problems/relationships.html
+en/problems/self-esteem.html
+en/problems/sleep-problems.html
+en/problems/stress.html
+en/problems/teenage-difficulties.html
+en/problems/trauma.html
+en/problems.html
+en/services/addictions.html
+en/services/expert-consultation.html
+en/services/psychiatric-adolescents.html
+en/services/psychiatric-adults.html
+en/services/psychological-adolescents.html
+en/services/psychological-adults.html
+en/services/psychotherapy-adolescents.html
+en/services/psychotherapy-adults.html
+en/services/sexology.html
+en/services.html
+en/team.html
+en/therapies/brainspotting.html
+en/therapies/cbt.html
+en/therapies/existential.html
+en/therapies/schema-therapy.html
+en/therapies.html
+index.html
+
+==========================================================================================
+CHECK 1: ROOT ABSOLUTE LINKS THAT BREAK GITHUB PAGES
+==========================================================================================
+
+==========================================================================================
+CHECK 2: LINKS WITHOUT /mindful/ ON LIVE GITHUB DOMAIN
+==========================================================================================
+
+==========================================================================================
+CHECK 3: BROKEN LOCAL href/src FILES
+==========================================================================================
+BROKEN LOCAL LINK: 404.html -> ./assets/images/logo.png -> /Users/abc/Documents/mindful/assets/images/logo.png
+BROKEN LOCAL LINK: am/index.html -> ./specialists/name-surname.html -> /Users/abc/Documents/mindful/am/specialists/name-surname.html
+BROKEN LOCAL LINK: am/team.html -> ./specialists/name-surname.html -> /Users/abc/Documents/mindful/am/specialists/name-surname.html
+BROKEN LOCAL LINK: am/team.html -> ./specialists/name-surname-2.html -> /Users/abc/Documents/mindful/am/specialists/name-surname-2.html
+BROKEN LOCAL LINK: am/team.html -> ./specialists/name-surname-3.html -> /Users/abc/Documents/mindful/am/specialists/name-surname-3.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./index.html -> /Users/abc/Documents/mindful/backup-contact-fix/index.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./index.html -> /Users/abc/Documents/mindful/backup-contact-fix/index.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./team.html -> /Users/abc/Documents/mindful/backup-contact-fix/team.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./services.html -> /Users/abc/Documents/mindful/backup-contact-fix/services.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./therapies.html -> /Users/abc/Documents/mindful/backup-contact-fix/therapies.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./problems.html -> /Users/abc/Documents/mindful/backup-contact-fix/problems.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./corporate.html -> /Users/abc/Documents/mindful/backup-contact-fix/corporate.html
+BROKEN LOCAL LINK: backup-contact-fix/contact-20260708-140315.html -> ./contact.html -> /Users/abc/Documents/mindful/backup-contact-fix/contact.html
+
+==========================================================================================
+CHECK 4: IMAGE TAGS AND HOW THEY RESOLVE
+==========================================================================================
+
+IMAGES IN 404.html
+  BROKEN: src=./assets/images/logo.png -> local=/Users/abc/Documents/mindful/assets/images/logo.png
+
+IMAGES IN am/contact.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/corporate/consultancy.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/corporate/executive-coaching.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/corporate/staff-clinical-services.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/corporate/training-psychoeducation.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/corporate.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+IMAGES IN am/index.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/anxiety.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/attention.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/burnout.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/depressive-states.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/eating-behavior.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/emotional-regulation.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/family-problems.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/grief.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/life-changes.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/obsessive-thoughts.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/panic-attacks.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/phobias.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/relationships.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/self-esteem.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/sleep-problems.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/stress.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/teenage-difficulties.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems/trauma.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/problems.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+IMAGES IN am/services/addictions.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/expert-consultation.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/psychiatric-adolescents.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/psychiatric-adults.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/psychological-adolescents.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/psychological-adults.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/psychotherapy-adolescents.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/psychotherapy-adults.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services/sexology.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/services.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+IMAGES IN am/team.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/therapies/brainspotting.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/therapies/cbt.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/therapies/existential.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/therapies/schema-therapy.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN am/therapies.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+IMAGES IN backup-contact-fix/contact-20260708-140315.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/contact.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/corporate/consultancy.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/corporate/executive-coaching.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/corporate/staff-clinical-services.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/corporate/training-psychoeducation.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/corporate.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+IMAGES IN en/index.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/anxiety.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/attention.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/burnout.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/depressive-states.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/eating-behavior.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/emotional-regulation.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/family-problems.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/grief.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/life-changes.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/obsessive-thoughts.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/panic-attacks.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/phobias.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/relationships.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/self-esteem.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/sleep-problems.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/stress.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/teenage-difficulties.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems/trauma.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/problems.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+IMAGES IN en/services/addictions.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/expert-consultation.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/psychiatric-adolescents.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/psychiatric-adults.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/psychological-adolescents.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/psychological-adults.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/psychotherapy-adolescents.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/psychotherapy-adults.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services/sexology.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/services.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+IMAGES IN en/team.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/therapies/brainspotting.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/therapies/cbt.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/therapies/existential.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/therapies/schema-therapy.html
+  OK: src=../../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+
+IMAGES IN en/therapies.html
+  OK: src=../assets/images/mindful-logo.png -> local=/Users/abc/Documents/mindful/assets/images/mindful-logo.png
+  OK: src=../assets/images/issues-left.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-left.jpg
+  OK: src=../assets/images/issues-right.jpg -> local=/Users/abc/Documents/mindful/assets/images/issues-right.jpg
+
+==========================================================================================
+CHECK 5: CSS url(...) FILES
+==========================================================================================
+BROKEN CSS URL: backup-contact-fix/style-20260708-140315.css -> ../images/header-bg.png -> /Users/abc/Documents/mindful/images/header-bg.png
+
+==========================================================================================
+CHECK 6: VISIBLE LITERAL \n GARBAGE
+==========================================================================================
+
+==========================================================================================
+CHECK 7: LANGUAGE BUTTONS
+==========================================================================================
+LANG BUTTON ISSUE: 404.html -> ['EN'], expected []
+LANG BUTTON ISSUE: backup-contact-fix/contact-20260708-140315.html -> ['EN'], expected []
+
+==========================================================================================
+CHECK 8: SPA TRANSITION JS STATUS
+==========================================================================================
+SPA RELATED JS FOUND: assets/js/script.js
+  contains: Stable GitHub Pages SPA transition
+  contains: transitionTo
+  contains: pushState
+  contains: normalizeUrl
+  contains: normalizeDomLinks
+  contains: basePath
+
+==========================================================================================
+CHECK 9: DANGEROUS JS URL PATTERNS
+==========================================================================================
+assets/js/script.js: history.pushState({}, "", normalizeUrl(targetHref));
+assets/js/script.js: window.location.href = targetHref;
+assets/js/script.js: window.location.href = targetHref;
+assets/js/script.js: window.location.href = targetHref;
+assets/js/script.js: window.location.href = targetHref;
+assets/js/script.js: const response = await fetch(targetHref, {
+
+==========================================================================================
+CHECK 10: EXPECTED LIVE URL SIMULATION FOR MAIN NAV LINKS
+==========================================================================================
+
+NAV LINKS FROM am/contact.html
+  OK: Գլխավոր -> href=./index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=./team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=./services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/corporate/consultancy.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/corporate/executive-coaching.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/corporate/staff-clinical-services.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/corporate/training-psychoeducation.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/corporate.html
+  OK: Գլխավոր -> href=./index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=./team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=./services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/index.html
+  OK: Գլխավոր -> href=./index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=./team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=./services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/anxiety.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/attention.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/burnout.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/depressive-states.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/eating-behavior.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/emotional-regulation.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/family-problems.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/grief.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/life-changes.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/obsessive-thoughts.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/panic-attacks.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/phobias.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/relationships.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/self-esteem.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/sleep-problems.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/stress.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/teenage-difficulties.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems/trauma.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/problems.html
+  OK: Գլխավոր -> href=./index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=./team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=./services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/addictions.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/expert-consultation.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/psychiatric-adolescents.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/psychiatric-adults.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/psychological-adolescents.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/psychological-adults.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/psychotherapy-adolescents.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/psychotherapy-adults.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services/sexology.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/services.html
+  OK: Գլխավոր -> href=./index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=./team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=./services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/team.html
+  OK: Գլխավոր -> href=./index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=./team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=./services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/therapies/brainspotting.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/therapies/cbt.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/therapies/existential.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/therapies/schema-therapy.html
+  OK: Գլխավոր -> href=../index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=../team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=../services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM am/therapies.html
+  OK: Գլխավոր -> href=./index.html -> live=https://mindful-arm.github.io/mindful/am/index.html
+  OK: Մեր թիմը -> href=./team.html -> live=https://mindful-arm.github.io/mindful/am/team.html
+  OK: Ծառայություններ -> href=./services.html -> live=https://mindful-arm.github.io/mindful/am/services.html
+  OK: Հոգեթերապիաներ -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/am/therapies.html
+  OK: Խնդիրներ -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/am/problems.html
+  OK: Կորպորատիվ ծառայություններ -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/am/corporate.html
+  OK: Կապ -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/am/contact.html
+
+NAV LINKS FROM en/contact.html
+  OK: Home -> href=./index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=./team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=./services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/corporate/consultancy.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/corporate/executive-coaching.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/corporate/staff-clinical-services.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/corporate/training-psychoeducation.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/corporate.html
+  OK: Home -> href=./index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=./team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=./services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/index.html
+  OK: Home -> href=./index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=./team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=./services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/anxiety.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/attention.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/burnout.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/depressive-states.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/eating-behavior.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/emotional-regulation.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/family-problems.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/grief.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/life-changes.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/obsessive-thoughts.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/panic-attacks.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/phobias.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/relationships.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/self-esteem.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/sleep-problems.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/stress.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/teenage-difficulties.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems/trauma.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/problems.html
+  OK: Home -> href=./index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=./team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=./services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/addictions.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/expert-consultation.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/psychiatric-adolescents.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/psychiatric-adults.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/psychological-adolescents.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/psychological-adults.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/psychotherapy-adolescents.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/psychotherapy-adults.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services/sexology.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/services.html
+  OK: Home -> href=./index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=./team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=./services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/team.html
+  OK: Home -> href=./index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=./team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=./services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/therapies/brainspotting.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/therapies/cbt.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/therapies/existential.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/therapies/schema-therapy.html
+  OK: Home -> href=../index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=../team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=../services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=../therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=../problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=../corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=../contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html
+
+NAV LINKS FROM en/therapies.html
+  OK: Home -> href=./index.html -> live=https://mindful-arm.github.io/mindful/en/index.html
+  OK: Our team -> href=./team.html -> live=https://mindful-arm.github.io/mindful/en/team.html
+  OK: Services -> href=./services.html -> live=https://mindful-arm.github.io/mindful/en/services.html
+  OK: Therapies -> href=./therapies.html -> live=https://mindful-arm.github.io/mindful/en/therapies.html
+  OK: Issues -> href=./problems.html -> live=https://mindful-arm.github.io/mindful/en/problems.html
+  OK: Corporate services -> href=./corporate.html -> live=https://mindful-arm.github.io/mindful/en/corporate.html
+  OK: Contact -> href=./contact.html -> live=https://mindful-arm.github.io/mindful/en/contact.html

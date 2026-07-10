@@ -284,7 +284,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/* Stable GitHub Pages SPA transition */
+
+
+
+/* Stable SPA transition fixed relative assets */
 (function () {
   const navOrder = [
     "index.html",
@@ -308,8 +311,8 @@ document.addEventListener("DOMContentLoaded", function () {
     return "";
   }
 
-  function normalizeUrl(value) {
-    const url = new URL(value, window.location.href);
+  function normalizeUrl(value, baseUrl) {
+    const url = new URL(value, baseUrl || window.location.href);
     const base = basePath();
 
     if (url.origin !== window.location.origin) {
@@ -336,13 +339,10 @@ document.addEventListener("DOMContentLoaded", function () {
     return url.href;
   }
 
-  function normalizeDomLinks(scope) {
-    const base = basePath();
-    if (!base) return;
-
+  function absolutizeLinks(scope, documentUrl) {
     const root = scope || document;
 
-    root.querySelectorAll("a[href], img[src], script[src], link[href]").forEach(function (el) {
+    root.querySelectorAll("a[href], img[src], script[src], link[href], source[src], video[src]").forEach(function (el) {
       const attr = el.hasAttribute("href") ? "href" : "src";
       const value = el.getAttribute(attr);
 
@@ -357,18 +357,13 @@ document.addEventListener("DOMContentLoaded", function () {
         value.startsWith("whatsapp:") ||
         value.startsWith("sms:") ||
         value.startsWith("#") ||
-        value.startsWith("javascript:")
+        value.startsWith("javascript:") ||
+        value.startsWith("data:")
       ) {
         return;
       }
 
-      if (
-        value.startsWith("/am/") ||
-        value.startsWith("/en/") ||
-        value.startsWith("/assets/")
-      ) {
-        el.setAttribute(attr, base + value);
-      }
+      el.setAttribute(attr, normalizeUrl(value, documentUrl));
     });
   }
 
@@ -414,15 +409,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function bindLinks() {
     document.querySelectorAll(".main-nav a").forEach(function (link) {
-      if (link.dataset.stableSpaBound === "1") return;
+      if (link.dataset.stableSpaAssetsBound === "1") return;
 
-      link.dataset.stableSpaBound = "1";
+      link.dataset.stableSpaAssetsBound = "1";
 
       link.addEventListener("click", function (event) {
         if (!isAllowedLink(link)) return;
 
         event.preventDefault();
-        transitionTo(normalizeUrl(link.href));
+        transitionTo(link.href);
       });
     });
   }
@@ -444,8 +439,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function syncHeader(nextDoc, targetHref) {
+    const currentHeader = document.querySelector(".site-header");
+    const nextHeader = nextDoc.querySelector(".site-header");
+
+    if (!currentHeader || !nextHeader) return;
+
+    absolutizeLinks(nextHeader, targetHref);
+    currentHeader.innerHTML = nextHeader.innerHTML;
+  }
+
   function runPageScripts() {
-    normalizeDomLinks(document);
+    absolutizeLinks(document, window.location.href);
     bindLinks();
 
     if (typeof window.initContactForm === "function") {
@@ -480,6 +485,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const text = await response.text();
       nextDoc = new DOMParser().parseFromString(text, "text/html");
+
+      absolutizeLinks(nextDoc, targetHref);
+
       nextMain = nextDoc.querySelector("main");
 
       if (!nextMain) throw new Error("next main missing");
@@ -488,8 +496,6 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = targetHref;
       return;
     }
-
-    normalizeDomLinks(nextDoc);
 
     const direction = directionTo(targetHref);
     const headerBottom = header ? Math.round(header.getBoundingClientRect().bottom) : 147;
@@ -520,7 +526,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const safetyTimer = window.setTimeout(function () {
       cleanupFreeze();
       window.location.href = targetHref;
-    }, 2500);
+    }, 2600);
 
     await new Promise(function (resolve) {
       requestAnimationFrame(function () {
@@ -565,12 +571,13 @@ document.addEventListener("DOMContentLoaded", function () {
     window.clearTimeout(safetyTimer);
 
     currentMain.replaceWith(nextMain.cloneNode(true));
+    syncHeader(nextDoc, targetHref);
 
     if (nextDoc.title) {
       document.title = nextDoc.title;
     }
 
-    history.pushState({}, "", normalizeUrl(targetHref));
+    history.pushState({}, "", targetHref);
     setActiveNav(targetHref);
 
     stage.remove();
@@ -587,7 +594,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    normalizeDomLinks(document);
+    absolutizeLinks(document, window.location.href);
     bindLinks();
     setActiveNav(window.location.href);
   });
