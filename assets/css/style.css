@@ -2281,18 +2281,21 @@ details p {
 
 
 
-/* Real page-to-page transition */
+
+
+
+/* Stable GitHub Pages SPA transition */
 html,
 body {
   overflow-x: hidden;
   background: #f7f3ee;
 }
 
-.real-page-transition-stage {
+.spa-slide-stage {
   position: fixed;
   left: 0;
   right: 0;
-  top: var(--transition-top, 0px);
+  top: var(--spa-slide-top, 147px);
   bottom: 0;
   z-index: 999998;
   overflow: hidden;
@@ -2300,40 +2303,38 @@ body {
   pointer-events: none;
 }
 
-.real-page-transition-panel {
+.spa-slide-panel {
   position: absolute;
   inset: 0;
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
   background: #f7f3ee;
   will-change: transform;
 }
 
-.real-page-transition-panel main {
+.spa-slide-panel > main {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--spa-slide-top, 147px));
   background: #f7f3ee;
 }
 
-body.real-page-transition-running > main {
-  visibility: hidden !important;
-}
-
-body.real-page-transition-running {
+body.spa-slide-running {
   overflow: hidden !important;
 }
 
+body.spa-slide-running > main {
+  visibility: hidden !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .real-page-transition-stage {
+  .spa-slide-stage {
     display: none !important;
   }
 
-  body.real-page-transition-running > main {
+  body.spa-slide-running > main {
     visibility: visible !important;
   }
 
-  body.real-page-transition-running {
+  body.spa-slide-running {
     overflow: auto !important;
   }
 }

@@ -281,7 +281,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/* Real page-to-page transition */
+
+
+
+/* Stable GitHub Pages SPA transition */
 (function () {
   const navOrder = [
     "index.html",
@@ -293,13 +296,87 @@ document.addEventListener("DOMContentLoaded", function () {
     "contact.html"
   ];
 
-  let transitionIsRunning = false;
+  let isTransitioning = false;
 
-  function pageName(urlValue) {
-    const url = new URL(urlValue, window.location.href);
+  function basePath() {
+    const path = window.location.pathname;
+
+    if (path.startsWith("/mindful/")) {
+      return "/mindful";
+    }
+
+    return "";
+  }
+
+  function normalizeUrl(value) {
+    const url = new URL(value, window.location.href);
+    const base = basePath();
+
+    if (url.origin !== window.location.origin) {
+      return url.href;
+    }
+
+    if (!base) {
+      return url.href;
+    }
+
+    if (url.pathname.startsWith(base + "/")) {
+      return url.href;
+    }
+
+    if (
+      url.pathname.startsWith("/am/") ||
+      url.pathname.startsWith("/en/") ||
+      url.pathname.startsWith("/assets/")
+    ) {
+      url.pathname = base + url.pathname;
+      return url.href;
+    }
+
+    return url.href;
+  }
+
+  function normalizeDomLinks(scope) {
+    const base = basePath();
+    if (!base) return;
+
+    const root = scope || document;
+
+    root.querySelectorAll("a[href], img[src], script[src], link[href]").forEach(function (el) {
+      const attr = el.hasAttribute("href") ? "href" : "src";
+      const value = el.getAttribute(attr);
+
+      if (!value) return;
+
+      if (
+        value.startsWith("http://") ||
+        value.startsWith("https://") ||
+        value.startsWith("mailto:") ||
+        value.startsWith("tel:") ||
+        value.startsWith("tg:") ||
+        value.startsWith("whatsapp:") ||
+        value.startsWith("sms:") ||
+        value.startsWith("#") ||
+        value.startsWith("javascript:")
+      ) {
+        return;
+      }
+
+      if (
+        value.startsWith("/am/") ||
+        value.startsWith("/en/") ||
+        value.startsWith("/assets/")
+      ) {
+        el.setAttribute(attr, base + value);
+      }
+    });
+  }
+
+  function pageName(value) {
+    const url = new URL(normalizeUrl(value), window.location.href);
     let page = url.pathname.split("/").pop();
 
-    if (!page || page === "am") {
+    if (!page || page === "am" || page === "en" || page === "mindful") {
       page = "index.html";
     }
 
@@ -307,11 +384,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function directionTo(targetHref) {
-    const current = pageName(window.location.href);
-    const target = pageName(targetHref);
+    const currentPage = pageName(window.location.href);
+    const targetPage = pageName(targetHref);
 
-    const currentIndex = navOrder.indexOf(current);
-    const targetIndex = navOrder.indexOf(target);
+    const currentIndex = navOrder.indexOf(currentPage);
+    const targetIndex = navOrder.indexOf(targetPage);
 
     if (currentIndex === -1 || targetIndex === -1) {
       return "forward";
@@ -320,13 +397,13 @@ document.addEventListener("DOMContentLoaded", function () {
     return targetIndex > currentIndex ? "forward" : "backward";
   }
 
-  function isMainNavLink(link) {
+  function isAllowedLink(link) {
     if (!link || !link.href) return false;
     if (link.classList && link.classList.contains("lang-switch")) return false;
     if (link.target === "_blank") return false;
     if (link.hasAttribute("download")) return false;
 
-    const url = new URL(normalizeInternalUrl(link.href), window.location.href);
+    const url = new URL(normalizeUrl(link.href), window.location.href);
 
     if (url.origin !== window.location.origin) return false;
     if (url.href === window.location.href) return false;
@@ -335,93 +412,55 @@ document.addEventListener("DOMContentLoaded", function () {
     return navOrder.includes(pageName(url.href));
   }
 
-  function bindRealTransitionLinks() {
+  function bindLinks() {
     document.querySelectorAll(".main-nav a").forEach(function (link) {
-      if (link.dataset.realPageTransitionBound === "1") return;
+      if (link.dataset.stableSpaBound === "1") return;
 
-      link.dataset.realPageTransitionBound = "1";
+      link.dataset.stableSpaBound = "1";
 
       link.addEventListener("click", function (event) {
-        if (!isMainNavLink(link)) return;
+        if (!isAllowedLink(link)) return;
 
         event.preventDefault();
-        realPageTransition(link.href);
+        transitionTo(normalizeUrl(link.href));
       });
     });
   }
 
-  function syncActiveNav(targetHref) {
+  function setActiveNav(targetHref) {
     const targetPage = pageName(targetHref);
 
     document.querySelectorAll(".main-nav a").forEach(function (link) {
-      link.classList.remove("active");
-
-      if (pageName(link.href) === targetPage) {
-        link.classList.add("active");
-      }
+      link.classList.toggle("active", pageName(link.href) === targetPage);
     });
   }
 
-  function rebindContactDropdown() {
-    const countryPicker = document.getElementById("countryPicker");
-    const countryButton = document.getElementById("countryPickerButton");
-    const countryCurrent = document.getElementById("countryPickerCurrent");
-    const countryCode = document.getElementById("countryCode");
-    const phoneInput = document.getElementById("phone");
-    const countryOptions = document.querySelectorAll(".country-option");
+  function cleanupFreeze() {
+    isTransitioning = false;
+    document.body.classList.remove("spa-slide-running");
 
-    if (!countryPicker || !countryButton || !countryCurrent || !countryCode || !phoneInput) return;
-    if (countryPicker.dataset.dropdownBound === "1") return;
-
-    countryPicker.dataset.dropdownBound = "1";
-
-    countryButton.addEventListener("click", function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      countryPicker.classList.toggle("is-open");
-
-      const isOpen = countryPicker.classList.contains("is-open");
-      countryButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-
-    countryOptions.forEach(function (option) {
-      option.addEventListener("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-
-        countryOptions.forEach(function (item) {
-          item.classList.remove("is-active");
-        });
-
-        option.classList.add("is-active");
-        countryCode.value = option.dataset.code;
-        countryCurrent.textContent = option.dataset.label || option.textContent.trim();
-        phoneInput.placeholder = option.dataset.placeholder || "";
-        countryPicker.classList.remove("is-open");
-        countryButton.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    document.addEventListener("click", function (event) {
-      if (!countryPicker.contains(event.target)) {
-        countryPicker.classList.remove("is-open");
-        countryButton.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    phoneInput.addEventListener("input", function () {
-      phoneInput.value = phoneInput.value.replace(/[^\d\s\-()]/g, "");
+    document.querySelectorAll(".spa-slide-stage").forEach(function (stage) {
+      stage.remove();
     });
   }
 
-  async function realPageTransition(targetHref) {
-    if (transitionIsRunning) return;
-    transitionIsRunning = true;
+  function runPageScripts() {
+    normalizeDomLinks(document);
+    bindLinks();
+
+    if (typeof window.initContactForm === "function") {
+      window.initContactForm();
+    }
+  }
+
+  async function transitionTo(targetHref) {
+    targetHref = normalizeUrl(targetHref);
+
+    if (isTransitioning) return;
+    isTransitioning = true;
 
     const currentMain = document.querySelector("main");
     const header = document.querySelector(".site-header");
-    const direction = directionTo(targetHref);
 
     if (!currentMain) {
       window.location.href = targetHref;
@@ -445,36 +484,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!nextMain) throw new Error("next main missing");
     } catch (error) {
+      cleanupFreeze();
       window.location.href = targetHref;
       return;
     }
 
-    const headerBottom = header ? Math.max(0, Math.round(header.getBoundingClientRect().bottom)) : 0;
+    normalizeDomLinks(nextDoc);
+
+    const direction = directionTo(targetHref);
+    const headerBottom = header ? Math.round(header.getBoundingClientRect().bottom) : 147;
+    const width = window.innerWidth;
+
+    const oldEnd = direction === "forward" ? -width : width;
+    const newStart = direction === "forward" ? width : -width;
 
     const stage = document.createElement("div");
-    stage.className = "real-page-transition-stage";
-    stage.style.setProperty("--transition-top", headerBottom + "px");
+    stage.className = "spa-slide-stage";
+    stage.style.setProperty("--spa-slide-top", headerBottom + "px");
 
     const oldPanel = document.createElement("div");
-    oldPanel.className = "real-page-transition-panel";
+    oldPanel.className = "spa-slide-panel";
+    oldPanel.style.transform = "translate3d(0, 0, 0)";
     oldPanel.appendChild(currentMain.cloneNode(true));
 
     const newPanel = document.createElement("div");
-    newPanel.className = "real-page-transition-panel";
-    newPanel.appendChild(nextMain.cloneNode(true));
-
-    const distance = window.innerWidth;
-    const oldEnd = direction === "forward" ? -distance : distance;
-    const newStart = direction === "forward" ? distance : -distance;
-
-    oldPanel.style.transform = "translate3d(0, 0, 0)";
+    newPanel.className = "spa-slide-panel";
     newPanel.style.transform = "translate3d(" + newStart + "px, 0, 0)";
+    newPanel.appendChild(nextMain.cloneNode(true));
 
     stage.appendChild(oldPanel);
     stage.appendChild(newPanel);
     document.body.appendChild(stage);
+    document.body.classList.add("spa-slide-running");
 
-    document.body.classList.add("real-page-transition-running");
+    const safetyTimer = window.setTimeout(function () {
+      cleanupFreeze();
+      window.location.href = targetHref;
+    }, 2500);
 
     await new Promise(function (resolve) {
       requestAnimationFrame(function () {
@@ -488,51 +534,52 @@ document.addEventListener("DOMContentLoaded", function () {
       fill: "forwards"
     };
 
-    const transitionSafetyTimer = window.setTimeout(function () {
-      isTransitioning = false;
-      document.body.classList.remove("spa-slide-running");
-      const brokenStage = document.querySelector(".spa-slide-stage");
-      if (brokenStage) brokenStage.remove();
+    try {
+      const oldAnim = oldPanel.animate(
+        [
+          { transform: "translate3d(0, 0, 0)" },
+          { transform: "translate3d(" + oldEnd + "px, 0, 0)" }
+        ],
+        options
+      );
+
+      const newAnim = newPanel.animate(
+        [
+          { transform: "translate3d(" + newStart + "px, 0, 0)" },
+          { transform: "translate3d(0, 0, 0)" }
+        ],
+        options
+      );
+
+      await Promise.all([
+        oldAnim.finished.catch(function () {}),
+        newAnim.finished.catch(function () {})
+      ]);
+    } catch (error) {
+      window.clearTimeout(safetyTimer);
+      cleanupFreeze();
       window.location.href = targetHref;
-    }, 2200);
+      return;
+    }
 
-    const oldAnim = oldPanel.animate(
-      [
-        { transform: "translate3d(0, 0, 0)" },
-        { transform: "translate3d(" + oldEnd + "px, 0, 0)" }
-      ],
-      options
-    );
-
-    const newAnim = newPanel.animate(
-      [
-        { transform: "translate3d(" + newStart + "px, 0, 0)" },
-        { transform: "translate3d(0, 0, 0)" }
-      ],
-      options
-    );
-
-    await Promise.all([
-      oldAnim.finished.catch(function () {}),
-      newAnim.finished.catch(function () {})
-    ]);
+    window.clearTimeout(safetyTimer);
 
     currentMain.replaceWith(nextMain.cloneNode(true));
 
-    document.title = nextDoc.title || document.title;
-    history.pushState({}, "", targetHref);
+    if (nextDoc.title) {
+      document.title = nextDoc.title;
+    }
 
-    syncActiveNav(targetHref);
+    history.pushState({}, "", normalizeUrl(targetHref));
+    setActiveNav(targetHref);
 
     stage.remove();
-    document.body.classList.remove("real-page-transition-running");
+    document.body.classList.remove("spa-slide-running");
 
     window.scrollTo(0, 0);
+    runPageScripts();
 
-    bindRealTransitionLinks();
-    rebindContactDropdown();
-
-    transitionIsRunning = false;
+    isTransitioning = false;
   }
 
   window.addEventListener("popstate", function () {
@@ -540,7 +587,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    bindRealTransitionLinks();
-    rebindContactDropdown();
+    normalizeDomLinks(document);
+    bindLinks();
+    setActiveNav(window.location.href);
   });
 })();
