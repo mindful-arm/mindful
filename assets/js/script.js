@@ -510,6 +510,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     currentMain.replaceWith(nextMain.cloneNode(true));
 
+    syncHeaderFromNextPage(nextDoc);
+
     document.title = nextDoc.title || document.title;
     history.pushState({}, "", targetHref);
 
