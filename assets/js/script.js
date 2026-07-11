@@ -599,3 +599,145 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveNav(window.location.href);
   });
 })();
+
+
+/* Strict contact form validation */
+(function () {
+  function isContactForm(form) {
+    if (!form) return false;
+
+    return (
+      form.id === "contactForm" ||
+      form.matches('form[action*="formspree"], form[data-contact-form], form.contact-form')
+    );
+  }
+
+  function setFieldError(field, message) {
+    if (!field) return;
+
+    field.classList.add("is-invalid");
+    field.setAttribute("aria-invalid", "true");
+
+    let error = field.parentElement ? field.parentElement.querySelector(".field-error") : null;
+
+    if (!error && field.parentElement) {
+      error = document.createElement("div");
+      error.className = "field-error";
+      field.parentElement.appendChild(error);
+    }
+
+    if (error) {
+      error.textContent = message;
+    }
+  }
+
+  function clearErrors(form) {
+    form.querySelectorAll(".is-invalid").forEach(function (field) {
+      field.classList.remove("is-invalid");
+      field.removeAttribute("aria-invalid");
+    });
+
+    form.querySelectorAll(".field-error").forEach(function (error) {
+      error.textContent = "";
+    });
+  }
+
+  function validateContactForm(form) {
+    clearErrors(form);
+
+    const lang = document.documentElement.lang === "en" ? "en" : "am";
+
+    const messages = {
+      am: {
+        name: "Անունը պարտադիր է։",
+        phone: "Հեռախոսահամարը պարտադիր է։",
+        email: "Էլ․ հասցեն պարտադիր է։",
+        emailInvalid: "Խնդրում ենք գրել ճիշտ էլ․ հասցե։",
+        message: "Հաղորդագրությունը պարտադիր է։"
+      },
+      en: {
+        name: "Name is required.",
+        phone: "Phone number is required.",
+        email: "Email address is required.",
+        emailInvalid: "Please enter a valid email address.",
+        message: "Message is required."
+      }
+    };
+
+    const m = messages[lang];
+
+    const nameField = form.querySelector('[name="name"], #name');
+    const phoneField = form.querySelector('[name="phone"], #phone');
+    const emailField = form.querySelector('[name="email"], #email');
+    const messageField = form.querySelector('[name="message"], #message, textarea');
+
+    const name = nameField ? nameField.value.trim() : "";
+    const phone = phoneField ? phoneField.value.trim() : "";
+    const email = emailField ? emailField.value.trim() : "";
+    const message = messageField ? messageField.value.trim() : "";
+
+    let valid = true;
+
+    if (!name) {
+      setFieldError(nameField, m.name);
+      valid = false;
+    }
+
+    if (!phone) {
+      setFieldError(phoneField, m.phone);
+      valid = false;
+    }
+
+    if (!email) {
+      setFieldError(emailField, m.email);
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setFieldError(emailField, m.emailInvalid);
+      valid = false;
+    }
+
+    if (!message) {
+      setFieldError(messageField, m.message);
+      valid = false;
+    }
+
+    if (!valid) {
+      const firstInvalid = form.querySelector(".is-invalid");
+      if (firstInvalid) {
+        firstInvalid.focus({ preventScroll: false });
+      }
+    }
+
+    return valid;
+  }
+
+  document.addEventListener("submit", function (event) {
+    const form = event.target;
+
+    if (!isContactForm(form)) return;
+
+    if (!validateContactForm(form)) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      return false;
+    }
+  }, true);
+
+  document.addEventListener("input", function (event) {
+    const field = event.target;
+    const form = field && field.form;
+
+    if (!isContactForm(form)) return;
+
+    if (field.value && field.value.trim()) {
+      field.classList.remove("is-invalid");
+      field.removeAttribute("aria-invalid");
+
+      const error = field.parentElement ? field.parentElement.querySelector(".field-error") : null;
+      if (error) {
+        error.textContent = "";
+      }
+    }
+  }, true);
+})();

@@ -2907,3 +2907,52 @@ img:not(.logo img):not([src*="logo"]):not([src*="mindful-logo"]) {
   transform: translateY(-1px) scale(1.045) !important;
   box-shadow: 0 10px 24px rgba(254, 227, 169, 0.42) !important;
 }
+
+
+/* Mint blue nav highlight */
+.main-nav a:hover {
+  background: #A9DEDA !important;
+  color: #668784 !important;
+  transform: translateY(-1px) scale(1.045) !important;
+  box-shadow: 0 10px 24px rgba(169, 222, 218, 0.42) !important;
+  text-shadow: none !important;
+}
+
+.main-nav a.active {
+  background: #A9DEDA !important;
+  color: #668784 !important;
+  box-shadow: 0 10px 24px rgba(169, 222, 218, 0.42) !important;
+  transform: translateY(0) scale(1) !important;
+  text-shadow: none !important;
+}
+
+.main-nav a.active::after {
+  display: none !important;
+  content: none !important;
+}
+
+.lang-switch:hover {
+  background: #A9DEDA !important;
+  color: #668784 !important;
+  transform: translateY(-1px) scale(1.045) !important;
+  box-shadow: 0 10px 24px rgba(169, 222, 218, 0.42) !important;
+}
+
+.btn:hover,
+.btn-secondary:hover,
+button[type="submit"]:hover {
+  background: #A9DEDA !important;
+  color: #668784 !important;
+  box-shadow: 0 10px 24px rgba(169, 222, 218, 0.36) !important;
+}
+
+.field-error {
+  margin-top: 7px !important;
+  color: #c74d4d !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+}
+
+.is-invalid {
+  border-color: #c74d4d !important;
+}
