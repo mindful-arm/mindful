@@ -95,7 +95,7 @@ h2 {
   min-height: 147px;
   background:
     linear-gradient(rgba(247, 243, 238, 0.12), rgba(247, 243, 238, 0.08)),
-    url("../images/header-bg.png");
+    none;
   background-size: cover;
   background-position: center 34%;
   border-bottom: 0;
@@ -2389,7 +2389,7 @@ body.spa-slide-running > main {
   justify-content: center !important;
   background:
     linear-gradient(rgba(247, 243, 238, 0.86), rgba(247, 243, 238, 0.86)),
-    url("../images/header-bg.png") center / cover no-repeat !important;
+    none center / cover no-repeat !important;
   color: rgba(47, 79, 69, 0.58) !important;
   font-size: 15px !important;
   font-weight: 500 !important;
@@ -2464,4 +2464,416 @@ body.spa-slide-running > main {
   .specialists-list {
     grid-template-columns: 1fr !important;
   }
+}
+
+
+/* Specialist profile pages */
+.team-card {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.specialist-profile-hero {
+  padding: 62px 0 70px !important;
+  background: #fff !important;
+}
+
+.specialist-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 34px !important;
+  color: #b49a76 !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+.specialist-profile-layout {
+  display: grid !important;
+  grid-template-columns: 360px minmax(0, 1fr) !important;
+  gap: 58px !important;
+  align-items: center !important;
+}
+
+.specialist-profile-photo {
+  height: 430px !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(184, 169, 151, 0.42) !important;
+  background:
+    linear-gradient(rgba(247, 243, 238, 0.86), rgba(247, 243, 238, 0.86)),
+    none center / cover no-repeat !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: rgba(47, 79, 69, 0.58) !important;
+  font-size: 16px !important;
+  box-shadow: 0 24px 55px rgba(31, 42, 46, 0.08) !important;
+}
+
+.specialist-profile-intro {
+  max-width: 760px !important;
+}
+
+.specialist-profile-intro h1 {
+  margin: 0 0 18px !important;
+  color: #007f8f !important;
+  font-size: clamp(42px, 5vw, 76px) !important;
+  line-height: 0.98 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.045em !important;
+}
+
+.specialist-profile-intro p:not(.detail-label) {
+  max-width: 620px !important;
+  margin: 0 0 28px !important;
+  color: #6d7a7e !important;
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+}
+
+.specialist-profile-content {
+  padding: 76px 0 !important;
+  background: #f7f3ee !important;
+}
+
+.specialist-profile-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 26px !important;
+}
+
+.specialist-profile-card {
+  padding: 34px !important;
+  border-radius: 26px !important;
+  background: #fff !important;
+  border: 1px solid rgba(184, 169, 151, 0.36) !important;
+  box-shadow: 0 16px 38px rgba(31, 42, 46, 0.045) !important;
+}
+
+.specialist-profile-card-wide {
+  grid-column: 1 / -1 !important;
+}
+
+.specialist-profile-card h2 {
+  margin: 0 0 14px !important;
+  color: #1f2a2e !important;
+  font-size: 28px !important;
+  line-height: 1.2 !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.specialist-profile-card p {
+  margin: 0 !important;
+  color: #6d7a7e !important;
+  font-size: 16px !important;
+  line-height: 1.72 !important;
+}
+
+.specialist-profile-card ul {
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.specialist-profile-card li {
+  padding: 16px 18px !important;
+  border-radius: 16px !important;
+  background: #f7f3ee !important;
+  color: #2f4f45 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+.specialist-profile-cta {
+  padding: 72px 0 !important;
+  background: #4f6b5d !important;
+  text-align: center !important;
+}
+
+.specialist-profile-cta h2 {
+  margin: 0 auto 14px !important;
+  max-width: 720px !important;
+  color: #fff !important;
+  font-size: clamp(34px, 4vw, 56px) !important;
+  line-height: 1.06 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.specialist-profile-cta p {
+  margin: 0 auto 26px !important;
+  max-width: 620px !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+.specialist-profile-cta .btn {
+  background: #fff !important;
+  color: #4f6b5d !important;
+}
+
+@media (max-width: 920px) {
+  .specialist-profile-layout {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+
+  .specialist-profile-photo {
+    height: 360px !important;
+  }
+
+  .specialist-profile-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .specialist-profile-card ul {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Exact global text color */
+:root {
+  --text: #668784 !important;
+  --muted: #668784 !important;
+  --teal: #668784 !important;
+  --green: #668784 !important;
+  --dark: #668784 !important;
+}
+
+body,
+main,
+section,
+article,
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+summary,
+label,
+small,
+strong,
+em,
+button,
+input,
+textarea,
+select,
+option,
+.main-nav a,
+.lang-switch,
+.back-link,
+.detail-label,
+.eyebrow,
+.team-card h2,
+.team-card h3,
+.team-role,
+.specialist-profile-intro h1,
+.specialist-profile-intro p,
+.specialist-profile-card h2,
+.specialist-profile-card p,
+.specialist-profile-card li,
+.specialist-profile-cta h2,
+.specialist-profile-cta p,
+.contact-list-item,
+.contact-list-item p,
+.contact-list-item a,
+.form-note {
+  color: #668784 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #668784 !important;
+  opacity: 0.72 !important;
+}
+
+.main-nav a:hover,
+.main-nav a.active,
+.lang-switch:hover,
+.lang-switch.active {
+  color: #668784 !important;
+}
+
+.btn,
+.btn-secondary,
+button[type="submit"],
+input[type="submit"] {
+  color: #668784 !important;
+}
+
+.logo,
+.logo *,
+.site-header img,
+.team-photo,
+.specialist-photo,
+.specialist-profile-photo {
+  color: #668784 !important;
+}
+
+
+
+
+
+/* Header cream background and soft coral hover */
+.site-header {
+  background: #F5EDE4 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.site-header::before,
+.site-header::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.header-inner {
+  background: transparent !important;
+}
+
+.main-nav {
+  gap: clamp(14px, 1.25vw, 26px) !important;
+}
+
+.main-nav a {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 34px !important;
+  padding: 9px 15px !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: #668784 !important;
+  line-height: 1 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transform: translateY(0) scale(1) !important;
+  transition:
+    background-color .24s ease,
+    color .24s ease,
+    transform .24s ease,
+    box-shadow .24s ease !important;
+}
+
+.main-nav a:hover {
+  background: #FDA895 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.045) !important;
+  box-shadow: 0 10px 24px rgba(253, 168, 149, 0.28) !important;
+}
+
+.main-nav a.active {
+  background: transparent !important;
+  color: #668784 !important;
+  box-shadow: none !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.main-nav a.active::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 16px !important;
+  right: 16px !important;
+  bottom: 2px !important;
+  height: 2px !important;
+  border-radius: 999px !important;
+  background: #FDA895 !important;
+}
+
+.lang-switch {
+  background: rgba(255, 255, 255, 0.62) !important;
+  color: #668784 !important;
+  border: 1px solid rgba(102, 135, 132, 0.22) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition:
+    background-color .24s ease,
+    color .24s ease,
+    transform .24s ease,
+    box-shadow .24s ease !important;
+}
+
+.lang-switch:hover {
+  background: #FDA895 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.045) !important;
+  box-shadow: 0 10px 24px rgba(253, 168, 149, 0.28) !important;
+}
+
+.logo img {
+  filter: none !important;
+}
+
+@media (max-width: 1280px) {
+  .main-nav {
+    gap: 10px !important;
+  }
+
+  .main-nav a {
+    padding: 8px 10px !important;
+  }
+}
+
+
+/* Remove all photo backgrounds */
+.site-header,
+.page-hero,
+.hero,
+.hero-section,
+.team-photo,
+.specialist-photo,
+.specialist-profile-photo,
+.spa-slide-stage,
+.spa-slide-panel,
+.card-image,
+.image-panel,
+.visual-panel,
+[class*="photo"],
+[class*="image"],
+[class*="visual"] {
+  background-image: none !important;
+  background: #F5EDE4 !important;
+}
+
+.team-photo,
+.specialist-photo,
+.specialist-profile-photo {
+  background-color: #F5EDE4 !important;
+}
+
+.site-header {
+  background-color: #F5EDE4 !important;
+  background-image: none !important;
+}
+
+.site-header::before,
+.site-header::after,
+.hero::before,
+.hero::after,
+.page-hero::before,
+.page-hero::after {
+  background-image: none !important;
+  background: none !important;
+}
+
+img:not(.logo img):not([src*="logo"]):not([src*="mindful-logo"]) {
+  display: none !important;
 }
