@@ -2877,3 +2877,33 @@ input[type="submit"] {
 img:not(.logo img):not([src*="logo"]):not([src*="mindful-logo"]) {
   display: none !important;
 }
+
+
+/* Vanilla nav highlight */
+.main-nav a:hover {
+  background: #FEE3A9 !important;
+  color: #668784 !important;
+  transform: translateY(-1px) scale(1.045) !important;
+  box-shadow: 0 10px 24px rgba(254, 227, 169, 0.42) !important;
+  text-shadow: none !important;
+}
+
+.main-nav a.active {
+  background: #FEE3A9 !important;
+  color: #668784 !important;
+  box-shadow: 0 10px 24px rgba(254, 227, 169, 0.42) !important;
+  transform: translateY(0) scale(1) !important;
+  text-shadow: none !important;
+}
+
+.main-nav a.active::after {
+  display: none !important;
+  content: none !important;
+}
+
+.lang-switch:hover {
+  background: #FEE3A9 !important;
+  color: #668784 !important;
+  transform: translateY(-1px) scale(1.045) !important;
+  box-shadow: 0 10px 24px rgba(254, 227, 169, 0.42) !important;
+}
