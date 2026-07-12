@@ -741,3 +741,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, true);
 })();
+
+
+/* Floating contact scroll animation */
+(function () {
+  let lastY = window.scrollY || 0;
+  let ticking = false;
+  let resetTimer = null;
+
+  function updateFloatingContactDirection() {
+    const currentY = window.scrollY || 0;
+    const diff = currentY - lastY;
+
+    if (Math.abs(diff) > 4) {
+      document.body.classList.toggle("floating-contact-scroll-down", diff > 0);
+      document.body.classList.toggle("floating-contact-scroll-up", diff < 0);
+      lastY = currentY;
+
+      window.clearTimeout(resetTimer);
+      resetTimer = window.setTimeout(function () {
+        document.body.classList.remove("floating-contact-scroll-down");
+        document.body.classList.remove("floating-contact-scroll-up");
+      }, 650);
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      window.requestAnimationFrame(updateFloatingContactDirection);
+      ticking = true;
+    }
+  }, { passive: true });
+})();
