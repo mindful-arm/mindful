@@ -3527,3 +3527,105 @@ main [class*="separator"] {
     line-height: 1.16 !important;
   }
 }
+
+
+/* Home video balanced layout fix */
+.home-intro-video-section {
+  padding: 72px 0 76px !important;
+  background: #F5EDE4 !important;
+}
+
+.home-intro-video-section .container {
+  max-width: 1280px !important;
+}
+
+.home-intro-video-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.72fr) !important;
+  gap: 62px !important;
+  align-items: center !important;
+}
+
+.home-intro-video-text {
+  max-width: 650px !important;
+}
+
+.home-intro-video-text h1 {
+  max-width: 650px !important;
+  margin: 0 0 24px !important;
+  color: #668784 !important;
+  font-size: clamp(36px, 3vw, 52px) !important;
+  line-height: 1.12 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.home-intro-video-text p {
+  max-width: 650px !important;
+  margin: 0 0 16px !important;
+  color: #668784 !important;
+  font-size: 17px !important;
+  line-height: 1.72 !important;
+  font-weight: 400 !important;
+}
+
+.home-intro-video-media {
+  justify-self: end !important;
+  width: 100% !important;
+  max-width: 430px !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  background: #F5EDE4 !important;
+  border: 1px solid rgba(102, 135, 132, 0.18) !important;
+  box-shadow: 0 22px 52px rgba(102, 135, 132, 0.15) !important;
+}
+
+.home-intro-video-media video {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 1100px) {
+  .home-intro-video-layout {
+    grid-template-columns: 1fr !important;
+    gap: 38px !important;
+  }
+
+  .home-intro-video-text {
+    max-width: 760px !important;
+  }
+
+  .home-intro-video-text h1,
+  .home-intro-video-text p {
+    max-width: 760px !important;
+  }
+
+  .home-intro-video-media {
+    justify-self: start !important;
+    max-width: 520px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-intro-video-section {
+    padding: 52px 0 60px !important;
+  }
+
+  .home-intro-video-text h1 {
+    font-size: 34px !important;
+    line-height: 1.16 !important;
+  }
+
+  .home-intro-video-text p {
+    font-size: 16px !important;
+  }
+
+  .home-intro-video-media {
+    max-width: 100% !important;
+    border-radius: 22px !important;
+  }
+}
