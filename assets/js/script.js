@@ -450,6 +450,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function runPageScripts() {
+    
+    if (typeof window.mindfulReloadVideos === "function") {
+      window.mindfulReloadVideos();
+    }
+
     absolutizeLinks(document, window.location.href);
     bindLinks();
 
@@ -585,6 +590,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.scrollTo(0, 0);
     runPageScripts();
+
+    if (typeof window.mindfulReloadVideos === "function") {
+      window.mindfulReloadVideos();
+    }
 
     isTransitioning = false;
   }
@@ -774,4 +783,75 @@ document.addEventListener("DOMContentLoaded", function () {
       ticking = true;
     }
   }, { passive: true });
+})();
+
+
+/* SPA video reload fix */
+(function () {
+  function reloadAndPlayVideos(scope) {
+    const root = scope || document;
+
+    root.querySelectorAll("video").forEach(function (video) {
+      try {
+        video.muted = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+        video.setAttribute("autoplay", "");
+        video.setAttribute("loop", "");
+
+        video.querySelectorAll("source").forEach(function (source) {
+          const src = source.getAttribute("src");
+          if (!src) return;
+
+          const cleanSrc = src.split("?")[0];
+          const version = Date.now();
+
+          if (cleanSrc.endsWith(".mp4")) {
+            source.setAttribute("src", cleanSrc + "?v=" + version);
+          }
+        });
+
+        video.load();
+
+        const playPromise = video.play();
+
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(function () {});
+        }
+      } catch (e) {}
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    reloadAndPlayVideos(document);
+  });
+
+  window.addEventListener("pageshow", function () {
+    reloadAndPlayVideos(document);
+  });
+
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      mutation.addedNodes.forEach(function (node) {
+        if (!node || node.nodeType !== 1) return;
+
+        if (node.matches && node.matches("video")) {
+          reloadAndPlayVideos(node.parentElement || document);
+        }
+
+        if (node.querySelectorAll && node.querySelectorAll("video").length) {
+          reloadAndPlayVideos(node);
+        }
+      });
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+
+  window.mindfulReloadVideos = function () {
+    reloadAndPlayVideos(document);
+  };
 })();
