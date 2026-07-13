@@ -3298,3 +3298,116 @@ main .container > [class*="separator"]:empty {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+
+/* Remove leftover old contact decorative lines final */
+.services-showcase,
+.problems-showcase,
+.therapies-showcase,
+.corporate-showcase,
+.services-content,
+.problems-content,
+.therapies-content,
+.corporate-content,
+.services-list,
+.problems-list,
+.therapies-list,
+.corporate-list,
+.detail-footer,
+.detail-cta,
+.section-cta,
+.page-cta,
+.contact-cta,
+.cta-row,
+.cta-link,
+.cta-block,
+.cta-section,
+.showcase-footer,
+.showcase-cta,
+.detail-actions,
+.problem-detail-footer,
+.service-detail-footer,
+.therapy-detail-footer,
+.corporate-detail-footer {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.services-showcase::before,
+.services-showcase::after,
+.problems-showcase::before,
+.problems-showcase::after,
+.therapies-showcase::before,
+.therapies-showcase::after,
+.corporate-showcase::before,
+.corporate-showcase::after,
+.services-content::before,
+.services-content::after,
+.problems-content::before,
+.problems-content::after,
+.therapies-content::before,
+.therapies-content::after,
+.corporate-content::before,
+.corporate-content::after,
+.services-list::before,
+.services-list::after,
+.problems-list::before,
+.problems-list::after,
+.therapies-list::before,
+.therapies-list::after,
+.corporate-list::before,
+.corporate-list::after,
+.detail-footer::before,
+.detail-footer::after,
+.detail-cta::before,
+.detail-cta::after,
+.section-cta::before,
+.section-cta::after,
+.page-cta::before,
+.page-cta::after,
+.contact-cta::before,
+.contact-cta::after,
+.cta-row::before,
+.cta-row::after,
+.cta-link::before,
+.cta-link::after,
+.cta-block::before,
+.cta-block::after,
+.cta-section::before,
+.cta-section::after,
+.showcase-footer::before,
+.showcase-footer::after,
+.showcase-cta::before,
+.showcase-cta::after,
+.detail-actions::before,
+.detail-actions::after,
+.problem-detail-footer::before,
+.problem-detail-footer::after,
+.service-detail-footer::before,
+.service-detail-footer::after,
+.therapy-detail-footer::before,
+.therapy-detail-footer::after,
+.corporate-detail-footer::before,
+.corporate-detail-footer::after {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+main hr,
+main .line,
+main .divider,
+main .separator,
+main [class*="divider"],
+main [class*="separator"] {
+  display: none !important;
+  border: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
