@@ -855,3 +855,70 @@ document.addEventListener("DOMContentLoaded", function () {
     reloadAndPlayVideos(document);
   };
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home FAQ reliable one open final */
+(function () {
+  function bindReliableFaq() {
+    document.querySelectorAll(".home-faq-item").forEach(function (item) {
+      const summary = item.querySelector("summary");
+      const answer = item.querySelector(".home-faq-answer");
+
+      if (!summary || !answer) return;
+
+      answer.style.maxHeight = "";
+      answer.style.height = "";
+      answer.style.overflow = "";
+
+      if (item.dataset.reliableFaqBound === "true") return;
+      item.dataset.reliableFaqBound = "true";
+
+      summary.addEventListener("click", function () {
+        setTimeout(function () {
+          if (!item.open) return;
+
+          document.querySelectorAll(".home-faq-item").forEach(function (other) {
+            if (other !== item) {
+              other.open = false;
+
+              const otherAnswer = other.querySelector(".home-faq-answer");
+              if (otherAnswer) {
+                otherAnswer.style.maxHeight = "";
+                otherAnswer.style.height = "";
+                otherAnswer.style.overflow = "";
+              }
+            }
+          });
+
+          answer.style.maxHeight = "";
+          answer.style.height = "";
+          answer.style.overflow = "";
+        }, 0);
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", bindReliableFaq);
+  window.addEventListener("pageshow", bindReliableFaq);
+
+  const observer = new MutationObserver(function () {
+    bindReliableFaq();
+  });
+
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
