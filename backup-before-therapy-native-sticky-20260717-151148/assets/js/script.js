@@ -1243,47 +1243,202 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* THERAPY_SIDE_NAV_V2_END */
 
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_START */
+/* THERAPY_NAV_SCROLL_FOLLOW_FINAL_START */
 
 (function () {
-  const pageClass = "therapy-detail-page";
+  const sideSelector = "main .therapy-detail-side";
+  const layoutSelector = ".therapy-detail-article-layout";
 
-  function syncTherapyPageClass() {
-    const active = Boolean(
-      document.querySelector(
-        "main .therapy-detail-side"
+  const desktopMedia = window.matchMedia(
+    "(min-width: 721px)"
+  );
+
+  let animationFrame = 0;
+  let currentSide = null;
+
+  function resetSide(side) {
+    if (!side) {
+      return;
+    }
+
+    side.style.setProperty(
+      "--therapy-nav-follow-y",
+      "0px"
+    );
+  }
+
+  function updateSidePosition() {
+    animationFrame = 0;
+
+    const side = document.querySelector(
+      sideSelector
+    );
+
+    if (!side) {
+      currentSide = null;
+      return;
+    }
+
+    if (
+      currentSide
+      && currentSide !== side
+    ) {
+      resetSide(currentSide);
+    }
+
+    currentSide = side;
+
+    const layout = side.closest(
+      layoutSelector
+    );
+
+    if (
+      !layout
+      || !desktopMedia.matches
+    ) {
+      resetSide(side);
+      return;
+    }
+
+    const layoutRect =
+      layout.getBoundingClientRect();
+
+    const sideRect =
+      side.getBoundingClientRect();
+
+    const layoutTop =
+      window.scrollY + layoutRect.top;
+
+    const layoutHeight =
+      layout.offsetHeight;
+
+    const sideHeight =
+      sideRect.height;
+
+    /*
+      Расстояние блока от верхней части окна
+      после начала следования.
+    */
+    const viewportTopOffset = 24;
+
+    const requestedOffset =
+      window.scrollY
+      + viewportTopOffset
+      - layoutTop;
+
+    /*
+      Блок не может выйти за нижнюю границу
+      общей текстовой секции.
+    */
+    const maximumOffset = Math.max(
+      0,
+      layoutHeight - sideHeight
+    );
+
+    const finalOffset = Math.min(
+      maximumOffset,
+      Math.max(
+        0,
+        requestedOffset
       )
     );
 
-    document.documentElement.classList.toggle(
-      pageClass,
-      active
+    side.style.setProperty(
+      "--therapy-nav-follow-y",
+      `${Math.round(finalOffset)}px`
     );
-
-    if (document.body) {
-      document.body.classList.toggle(
-        pageClass,
-        active
-      );
-    }
   }
 
-  document.addEventListener(
-    "DOMContentLoaded",
-    syncTherapyPageClass
+  function scheduleUpdate() {
+    if (animationFrame) {
+      return;
+    }
+
+    animationFrame =
+      window.requestAnimationFrame(
+        updateSidePosition
+      );
+  }
+
+  window.addEventListener(
+    "scroll",
+    scheduleUpdate,
+    {
+      passive: true
+    }
+  );
+
+  window.addEventListener(
+    "resize",
+    scheduleUpdate,
+    {
+      passive: true
+    }
   );
 
   window.addEventListener(
     "pageshow",
-    syncTherapyPageClass
+    function () {
+      window.setTimeout(
+        scheduleUpdate,
+        40
+      );
+
+      window.setTimeout(
+        scheduleUpdate,
+        300
+      );
+    }
+  );
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+      scheduleUpdate();
+
+      window.setTimeout(
+        scheduleUpdate,
+        100
+      );
+
+      window.setTimeout(
+        scheduleUpdate,
+        400
+      );
+    }
+  );
+
+  if (
+    document.fonts
+    && document.fonts.ready
+  ) {
+    document.fonts.ready.then(
+      scheduleUpdate
+    );
+  }
+
+  desktopMedia.addEventListener(
+    "change",
+    scheduleUpdate
   );
 
   /*
-    Нужен для существующего page transition:
-    класс обновляется после замены main.
+    Нужен для SPA page transition:
+    после замены main на новую страницу
+    автоматически находим новый блок.
   */
   const observer = new MutationObserver(
-    syncTherapyPageClass
+    function () {
+      window.setTimeout(
+        scheduleUpdate,
+        0
+      );
+
+      window.setTimeout(
+        scheduleUpdate,
+        250
+      );
+    }
   );
 
   observer.observe(
@@ -1294,7 +1449,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  syncTherapyPageClass();
+  scheduleUpdate();
 })();
 
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_END */
+/* THERAPY_NAV_SCROLL_FOLLOW_FINAL_END */

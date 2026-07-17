@@ -936,49 +936,19 @@ document.addEventListener("DOMContentLoaded", function () {
   let mutationTimer = null;
 
   function getHeaderOffset() {
-    let offset = 28;
-
     const header = document.querySelector(".site-header");
 
-    if (header) {
-      const headerPosition = window.getComputedStyle(
-        header
-      ).position;
-
-      if (
-        headerPosition === "fixed"
-        || headerPosition === "sticky"
-      ) {
-        offset += Math.ceil(
-          header.getBoundingClientRect().height
-        );
-      }
+    if (!header) {
+      return 28;
     }
 
-    /*
-      On narrow screens the side navigation is sticky
-      above the article. Include its height so section
-      titles are not hidden underneath it.
-    */
-    const sideNavigation = document.querySelector(
-      ".therapy-detail-side"
-    );
+    const position = window.getComputedStyle(header).position;
 
-    if (
-      sideNavigation
-      && window.matchMedia("(max-width: 720px)").matches
-      && window.getComputedStyle(sideNavigation).position
-        === "sticky"
-    ) {
-      offset = Math.max(
-        offset,
-        Math.ceil(
-          sideNavigation.getBoundingClientRect().height
-        ) + 24
-      );
+    if (position === "fixed" || position === "sticky") {
+      return Math.ceil(header.getBoundingClientRect().height) + 28;
     }
 
-    return offset;
+    return 28;
   }
 
   function getNavigationLinks() {
@@ -1242,59 +1212,3 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 /* THERAPY_SIDE_NAV_V2_END */
-
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_START */
-
-(function () {
-  const pageClass = "therapy-detail-page";
-
-  function syncTherapyPageClass() {
-    const active = Boolean(
-      document.querySelector(
-        "main .therapy-detail-side"
-      )
-    );
-
-    document.documentElement.classList.toggle(
-      pageClass,
-      active
-    );
-
-    if (document.body) {
-      document.body.classList.toggle(
-        pageClass,
-        active
-      );
-    }
-  }
-
-  document.addEventListener(
-    "DOMContentLoaded",
-    syncTherapyPageClass
-  );
-
-  window.addEventListener(
-    "pageshow",
-    syncTherapyPageClass
-  );
-
-  /*
-    Нужен для существующего page transition:
-    класс обновляется после замены main.
-  */
-  const observer = new MutationObserver(
-    syncTherapyPageClass
-  );
-
-  observer.observe(
-    document.documentElement,
-    {
-      childList: true,
-      subtree: true
-    }
-  );
-
-  syncTherapyPageClass();
-})();
-
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_END */

@@ -4820,43 +4820,27 @@ button#contactSubmit:disabled {
 
 /* SERVICES_FINAL_CLEAN_V2_END */
 
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_START */
+/* THERAPY_NAV_STICKY_ACTIVE_V3_START */
 
 /*
-  Нативная sticky-навигация.
-
-  JavaScript больше не двигает карточку через transform,
-  поэтому при прокрутке она не дрожит.
+  Therapy side navigation:
+  - follows the page while scrolling;
+  - works on desktop, tablet and mobile;
+  - active item matches the main navigation highlight.
 */
 
-html.therapy-detail-page,
-body.therapy-detail-page {
-  overflow-x: clip !important;
+.therapy-detail-side {
+  position: sticky !important;
+  top: 24px !important;
+
+  align-self: start !important;
+  height: max-content !important;
+
+  z-index: 25 !important;
 }
 
 
-@media (min-width: 721px) {
-  .therapy-detail-content-section,
-  .therapy-detail-article-layout {
-    overflow: visible !important;
-  }
-
-  .therapy-detail-side {
-    position: sticky !important;
-    top: 24px !important;
-
-    align-self: start !important;
-    height: max-content !important;
-
-    transform: none !important;
-    will-change: auto !important;
-
-    z-index: 25 !important;
-  }
-}
-
-
-/* Активный пункт — как активный пункт главного меню */
+/* Active section — same visual language as main navigation */
 
 .therapy-detail-side-nav a.is-active,
 .therapy-detail-side-nav a[aria-current="location"] {
@@ -4871,17 +4855,16 @@ body.therapy-detail-page {
 
   font-weight: 700 !important;
 
-  transform: none !important;
+  transform: translateY(0) scale(1) !important;
 }
 
 
-/* Hover остаётся мягче активного пункта */
+/* Hover remains softer than the active item */
 
 .therapy-detail-side-nav a:not(.is-active):hover,
-.therapy-detail-side-nav
-a:not([aria-current="location"]):focus-visible {
+.therapy-detail-side-nav a:not([aria-current="location"]):focus-visible {
   color: #668784 !important;
-  background: rgba(169, 222, 218, 0.24) !important;
+  background: rgba(169, 222, 218, 0.22) !important;
 
   border-color: transparent !important;
   border-radius: 999px !important;
@@ -4891,16 +4874,41 @@ a:not([aria-current="location"]):focus-visible {
 }
 
 
-/* На телефоне навигация остаётся в обычном потоке */
+/* Narrow screens: keep it sticky instead of static */
 
 @media (max-width: 720px) {
   .therapy-detail-side {
-    position: static !important;
-    top: auto !important;
+    position: sticky !important;
+    top: 12px !important;
 
-    transform: none !important;
-    will-change: auto !important;
+    z-index: 40 !important;
+
+    height: max-content !important;
+
+    margin: 0 0 34px !important;
+    padding: 14px !important;
+
+    background: #F5EDE4 !important;
+
+    border-radius: 18px !important;
+
+    box-shadow:
+      0 14px 34px rgba(63, 83, 81, 0.1) !important;
+  }
+
+  .therapy-detail-side .eyebrow {
+    margin-bottom: 11px !important;
+    padding-bottom: 11px !important;
+  }
+
+  .therapy-detail-side-nav {
+    gap: 6px !important;
+  }
+
+  .therapy-detail-side-nav a {
+    padding: 9px 12px !important;
+    border-radius: 999px !important;
   }
 }
 
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_END */
+/* THERAPY_NAV_STICKY_ACTIVE_V3_END */

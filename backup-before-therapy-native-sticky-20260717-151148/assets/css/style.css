@@ -4820,20 +4820,17 @@ button#contactSubmit:disabled {
 
 /* SERVICES_FINAL_CLEAN_V2_END */
 
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_START */
+/* THERAPY_NAV_SCROLL_FOLLOW_FINAL_START */
 
 /*
-  Нативная sticky-навигация.
+  Надёжное следование боковой навигации за прокруткой.
 
-  JavaScript больше не двигает карточку через transform,
-  поэтому при прокрутке она не дрожит.
+  Не зависит от position: sticky, поэтому работает даже при
+  глобальном overflow-x: hidden у html/body.
 */
 
-html.therapy-detail-page,
-body.therapy-detail-page {
-  overflow-x: clip !important;
-}
 
+/* Desktop и tablet */
 
 @media (min-width: 721px) {
   .therapy-detail-content-section,
@@ -4842,21 +4839,26 @@ body.therapy-detail-page {
   }
 
   .therapy-detail-side {
-    position: sticky !important;
-    top: 24px !important;
+    position: relative !important;
+    top: auto !important;
 
     align-self: start !important;
-    height: max-content !important;
-
-    transform: none !important;
-    will-change: auto !important;
 
     z-index: 25 !important;
+
+    transform:
+      translate3d(
+        0,
+        var(--therapy-nav-follow-y, 0px),
+        0
+      ) !important;
+
+    will-change: transform !important;
   }
 }
 
 
-/* Активный пункт — как активный пункт главного меню */
+/* Активная секция — как активный пункт главного меню */
 
 .therapy-detail-side-nav a.is-active,
 .therapy-detail-side-nav a[aria-current="location"] {
@@ -4875,7 +4877,7 @@ body.therapy-detail-page {
 }
 
 
-/* Hover остаётся мягче активного пункта */
+/* Hover мягче активного состояния */
 
 .therapy-detail-side-nav a:not(.is-active):hover,
 .therapy-detail-side-nav
@@ -4891,16 +4893,17 @@ a:not([aria-current="location"]):focus-visible {
 }
 
 
-/* На телефоне навигация остаётся в обычном потоке */
+/*
+  На телефоне блок остаётся в обычном потоке,
+  чтобы не перекрывать текст.
+*/
 
 @media (max-width: 720px) {
   .therapy-detail-side {
-    position: static !important;
-    top: auto !important;
+    --therapy-nav-follow-y: 0px !important;
 
     transform: none !important;
-    will-change: auto !important;
   }
 }
 
-/* THERAPY_NAV_NATIVE_STICKY_FINAL_END */
+/* THERAPY_NAV_SCROLL_FOLLOW_FINAL_END */
