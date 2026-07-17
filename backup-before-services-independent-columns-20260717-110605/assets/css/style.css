@@ -4077,6 +4077,345 @@ main [class*="separator"] {
   }
 }
 
+/* SERVICES_HOVER_UI_V3_START */
+
+/*
+  Services hover UI:
+  сохраняем прежний минималистичный список,
+  но подпункты открываются строго под своей секцией.
+*/
+
+.services-content {
+  max-width: 1040px;
+  overflow: visible;
+}
+
+.services-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 72px;
+  row-gap: 8px;
+  align-items: start;
+  overflow: visible;
+}
+
+.services-group {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-height: 62px;
+
+  padding: 15px 14px 13px;
+
+  border-bottom: 1px solid rgba(102, 135, 132, 0.2);
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.services-group:hover,
+.services-group:focus-within {
+  background: rgba(169, 222, 218, 0.12);
+  border-bottom-color: rgba(102, 135, 132, 0.42);
+}
+
+.services-group h2 {
+  margin: 0;
+
+  color: #668784;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+
+  white-space: normal;
+  cursor: default;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.services-group:hover h2,
+.services-group:focus-within h2 {
+  color: #557774;
+  transform: translateX(4px);
+}
+
+/*
+  Подпункты находятся в обычном потоке документа.
+  Поэтому они не перекрывают соседнюю колонку
+  и не накладываются на другие секции.
+*/
+.services-sublist {
+  position: static;
+  top: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+
+  width: 100%;
+  max-width: 100%;
+  max-height: 0;
+
+  margin: 0;
+  padding: 0 0 0 16px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  overflow: hidden;
+  transform: translateY(-5px);
+
+  transition:
+    max-height 0.3s ease,
+    margin-top 0.3s ease,
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.3s ease;
+}
+
+.services-group:hover .services-sublist,
+.services-group:focus-within .services-sublist {
+  max-height: 180px;
+  margin-top: 10px;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+.services-sublist::before,
+.services-sublist::after {
+  display: none;
+}
+
+.services-sublist a {
+  position: relative;
+
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+
+  padding-left: 13px;
+
+  color: #668784;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+
+  white-space: normal;
+
+  opacity: 0.96;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.services-sublist a::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+  background: #A9DEDA;
+
+  transform: translateY(-50%);
+}
+
+.services-sublist a:hover {
+  color: #557774;
+  transform: translateX(3px);
+}
+
+.services-group-single {
+  display: flex;
+  align-items: flex-start;
+}
+
+.services-group-single a {
+  color: #668784;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+
+  white-space: normal;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.services-group-single:hover a,
+.services-group-single a:hover {
+  color: #557774;
+  transform: translateX(4px);
+}
+
+@media (max-width: 1000px) {
+  .services-groups {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 6px;
+  }
+}
+
+@media (max-width: 800px) {
+  .services-group {
+    min-height: auto;
+    padding: 14px 10px;
+    border-radius: 10px;
+  }
+
+  /*
+    На телефоне hover отсутствует,
+    поэтому подпункты отображаются постоянно.
+  */
+  .services-sublist {
+    max-height: none;
+    margin-top: 10px;
+    padding-left: 14px;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    overflow: visible;
+    transform: none;
+
+    transition: none;
+  }
+
+  .services-group:hover .services-sublist,
+  .services-group:focus-within .services-sublist {
+    max-height: none;
+    margin-top: 10px;
+    transform: none;
+  }
+}
+
+/* SERVICES_HOVER_UI_V3_END */
+
+/* SERVICES_SMOOTH_SUBMENU_V4_START */
+
+/*
+  Более плавное раскрытие подпунктов услуг.
+  Точки перед ссылками полностью удалены.
+*/
+
+.services-group {
+  overflow: hidden;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.services-sublist {
+  position: static;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+
+  width: 100%;
+  max-width: 100%;
+  max-height: 0;
+
+  margin-top: 0;
+  padding-left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  overflow: hidden;
+  transform: translateY(-10px);
+
+  transition:
+    max-height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    margin-top 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.55s;
+}
+
+.services-group:hover .services-sublist,
+.services-group:focus-within .services-sublist {
+  max-height: 260px;
+  margin-top: 12px;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateY(0);
+
+  transition:
+    max-height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    margin-top 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease 0.05s,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0s;
+}
+
+.services-sublist a {
+  padding-left: 0 !important;
+}
+
+/* Удаляем декоративные точки перед всеми подпунктами */
+.services-sublist a::before,
+.services-sublist a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* На телефонах подпункты остаются видимыми постоянно */
+@media (max-width: 800px) {
+  .services-sublist {
+    max-height: none;
+    margin-top: 10px;
+    padding-left: 0;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    overflow: visible;
+    transform: none;
+
+    transition: none;
+  }
+
+  .services-group:hover .services-sublist,
+  .services-group:focus-within .services-sublist {
+    max-height: none;
+    margin-top: 10px;
+    transform: none;
+  }
+}
+
+/* SERVICES_SMOOTH_SUBMENU_V4_END */
+
 /* TEAM_CARD_ROLES_V1_START */
 
 /* Имя и должность в карточках команды */
@@ -4518,320 +4857,3 @@ button#contactSubmit:disabled {
 }
 
 /* SOFT_CORAL_CONTACT_BUTTONS_END */
-
-/* SERVICES_FINAL_MINIMAL_UI_START */
-
-/*
-  Final Services UI:
-  - прежний минималистичный вид;
-  - независимые левая и правая колонки;
-  - подпункты раскрываются под своим разделом.
-*/
-
-.services-groups.services-two-columns {
-  display: grid !important;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr)) !important;
-
-  column-gap: clamp(58px, 7vw, 92px) !important;
-  row-gap: 0 !important;
-
-  align-items: start !important;
-
-  overflow: visible !important;
-}
-
-.services-column {
-  display: flex !important;
-  flex-direction: column !important;
-
-  gap: 20px !important;
-
-  min-width: 0 !important;
-}
-
-.service-item-shell {
-  width: 100% !important;
-  min-width: 0 !important;
-
-  order: var(--service-order) !important;
-}
-
-
-/* Главный раздел */
-
-.services-groups.services-two-columns .services-group {
-  position: relative !important;
-
-  display: block !important;
-
-  width: 100% !important;
-  max-width: none !important;
-  min-width: 0 !important;
-  min-height: auto !important;
-
-  margin: 0 !important;
-  padding: 12px 0 15px !important;
-
-  background: transparent !important;
-
-  border: 0 !important;
-  border-bottom:
-    1px solid rgba(102, 135, 132, 0.18) !important;
-
-  border-radius: 0 !important;
-  box-shadow: none !important;
-
-  overflow: hidden !important;
-  transform: none !important;
-
-  transition:
-    border-color 0.28s ease !important;
-}
-
-.services-groups.services-two-columns .services-group:hover,
-.services-groups.services-two-columns .services-group:focus-within {
-  background: transparent !important;
-
-  border-bottom-color:
-    rgba(102, 135, 132, 0.42) !important;
-
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-
-/* Название главного раздела */
-
-.services-groups.services-two-columns .services-group h2,
-.services-groups.services-two-columns
-.services-group-single > a {
-  display: block !important;
-
-  width: 100% !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  color: #668784 !important;
-
-  font-size:
-    clamp(18px, 1.35vw, 21px) !important;
-
-  font-weight: 650 !important;
-  line-height: 1.42 !important;
-  letter-spacing: -0.008em !important;
-
-  white-space: normal !important;
-
-  transform: none !important;
-
-  transition:
-    color 0.24s ease,
-    transform 0.32s
-      cubic-bezier(0.22, 1, 0.36, 1) !important;
-}
-
-.services-groups.services-two-columns
-.services-group:hover h2,
-.services-groups.services-two-columns
-.services-group:focus-within h2,
-.services-groups.services-two-columns
-.services-group-single:hover > a,
-.services-groups.services-two-columns
-.services-group-single > a:hover {
-  color: #557774 !important;
-
-  transform: translateX(4px) !important;
-}
-
-
-/* Плавное раскрытие подпунктов */
-
-.services-groups.services-two-columns .services-sublist {
-  position: static !important;
-  inset: auto !important;
-
-  display: grid !important;
-  gap: 4px !important;
-
-  width: 100% !important;
-  max-width: none !important;
-  max-height: 0 !important;
-
-  margin: 0 !important;
-  padding: 0 0 0 18px !important;
-
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-
-  overflow: hidden !important;
-
-  border-left:
-    2px solid transparent !important;
-
-  transform: translateY(-8px) !important;
-
-  transition:
-    max-height 0.52s
-      cubic-bezier(0.22, 1, 0.36, 1),
-    margin-top 0.44s
-      cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.28s ease,
-    transform 0.44s
-      cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.32s ease,
-    visibility 0s linear 0.52s !important;
-}
-
-.services-groups.services-two-columns
-.services-group:hover .services-sublist,
-.services-groups.services-two-columns
-.services-group:focus-within .services-sublist {
-  max-height: 460px !important;
-
-  margin-top: 12px !important;
-
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-
-  border-left-color: #A9DEDA !important;
-
-  transform: translateY(0) !important;
-
-  transition:
-    max-height 0.52s
-      cubic-bezier(0.22, 1, 0.36, 1),
-    margin-top 0.44s
-      cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.3s ease 0.05s,
-    transform 0.44s
-      cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.32s ease,
-    visibility 0s linear 0s !important;
-}
-
-
-/* Подпункты */
-
-.services-groups.services-two-columns
-.services-sublist a {
-  display: block !important;
-
-  width: 100% !important;
-  max-width: none !important;
-
-  margin: 0 !important;
-  padding: 5px 0 5px 12px !important;
-
-  color:
-    rgba(102, 135, 132, 0.93) !important;
-
-  background: transparent !important;
-
-  border: 0 !important;
-  border-radius: 0 !important;
-
-  font-size:
-    clamp(15px, 1.08vw, 17px) !important;
-
-  font-weight: 500 !important;
-  line-height: 1.5 !important;
-  letter-spacing: 0 !important;
-
-  white-space: normal !important;
-
-  opacity: 1 !important;
-  transform: none !important;
-
-  transition:
-    color 0.22s ease,
-    transform 0.28s ease !important;
-}
-
-.services-groups.services-two-columns
-.services-sublist a::before,
-.services-groups.services-two-columns
-.services-sublist a::after {
-  content: none !important;
-  display: none !important;
-}
-
-.services-groups.services-two-columns
-.services-sublist a:hover,
-.services-groups.services-two-columns
-.services-sublist a:focus-visible {
-  color: #557774 !important;
-
-  transform: translateX(4px) !important;
-
-  outline: none !important;
-}
-
-
-/* Телефон */
-
-@media (max-width: 760px) {
-  .services-groups.services-two-columns {
-    display: flex !important;
-    flex-direction: column !important;
-
-    gap: 16px !important;
-  }
-
-  .services-column {
-    display: contents !important;
-  }
-
-  .service-item-shell {
-    order: var(--service-order) !important;
-  }
-
-  .services-groups.services-two-columns
-  .services-group {
-    padding: 12px 0 14px !important;
-  }
-
-  /*
-    На телефоне подпункты видны постоянно,
-    потому что обычного hover там нет.
-  */
-  .services-groups.services-two-columns
-  .services-sublist {
-    max-height: none !important;
-
-    margin-top: 10px !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-
-    border-left-color: #A9DEDA !important;
-
-    transform: none !important;
-    transition: none !important;
-  }
-}
-
-/* SERVICES_FINAL_MINIMAL_UI_END */
-
-/* SERVICES_LINES_REMOVE_V1_START */
-
-/* Удаляем только линии в разделе услуг */
-
-.services-groups.services-two-columns .services-group,
-.services-groups.services-two-columns .services-group:hover,
-.services-groups.services-two-columns .services-group:focus-within {
-  border-bottom: 0 !important;
-}
-
-.services-groups.services-two-columns .services-sublist,
-.services-groups.services-two-columns .services-group:hover .services-sublist,
-.services-groups.services-two-columns .services-group:focus-within .services-sublist {
-  border-left: 0 !important;
-}
-
-/* SERVICES_LINES_REMOVE_V1_END */

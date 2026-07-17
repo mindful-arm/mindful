@@ -4817,21 +4817,3 @@ button#contactSubmit:disabled {
 }
 
 /* SERVICES_FINAL_MINIMAL_UI_END */
-
-/* SERVICES_LINES_REMOVE_V1_START */
-
-/* Удаляем только линии в разделе услуг */
-
-.services-groups.services-two-columns .services-group,
-.services-groups.services-two-columns .services-group:hover,
-.services-groups.services-two-columns .services-group:focus-within {
-  border-bottom: 0 !important;
-}
-
-.services-groups.services-two-columns .services-sublist,
-.services-groups.services-two-columns .services-group:hover .services-sublist,
-.services-groups.services-two-columns .services-group:focus-within .services-sublist {
-  border-left: 0 !important;
-}
-
-/* SERVICES_LINES_REMOVE_V1_END */

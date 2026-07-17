@@ -760,24 +760,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-<url>
-    <loc>https://example.com/am/services/balint-groups.html</loc>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://example.com/am/services/balint-groups.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/services/psychological-adults.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/am/services/balint-groups.html" />
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-<url>
-    <loc>https://example.com/en/services/balint-groups.html</loc>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://example.com/en/services/balint-groups.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/services/psychological-adults.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/en/services/balint-groups.html" />
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
