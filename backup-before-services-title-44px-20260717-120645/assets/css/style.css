@@ -4954,28 +4954,3 @@ body.services-page-compact
 }
 
 /* SERVICES_VISUAL_SCALE_FINAL_END */
-
-/* SERVICES_ARMENIAN_TITLE_44PX_START */
-
-/*
-  Меняем только армянский заголовок Ծառայություններ.
-  Разделы, подразделы, колонки и анимация не затрагиваются.
-*/
-
-html[lang="hy"]
-body.services-page-compact
-main
-.services-content > h1 {
-  font-size: clamp(38px, 3.5vw, 50px) !important;
-}
-
-@media (max-width: 800px) {
-  html[lang="hy"]
-  body.services-page-compact
-  main
-  .services-content > h1 {
-    font-size: clamp(38px, 10vw, 48px) !important;
-  }
-}
-
-/* SERVICES_ARMENIAN_TITLE_44PX_END */

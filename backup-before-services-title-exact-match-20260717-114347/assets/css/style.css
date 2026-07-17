@@ -4836,146 +4836,50 @@ button#contactSubmit:disabled {
 
 /* SERVICES_LINES_REMOVE_V1_END */
 
-/* SERVICES_VISUAL_SCALE_FINAL_START */
+/* SERVICES_FONT_ADJUST_V2_START */
 
 /*
-  Финальная типографика Services.
-
-  Armenian title уменьшается визуально, потому что слово
-  «Ծառայություններ» значительно длиннее «Խնդիրներ».
-
-  Структура, расположение, ссылки и анимация не меняются.
+  Заголовок Services — как на странице Problems.
+  Главные разделы и подразделы — компактнее.
 */
 
-
-/* Armenian: визуально примерно как Խնդիրներ */
-html[lang="hy"] body.services-page-compact .services-content h1 {
-  margin: 0 0 38px !important;
-
-  color: #668784 !important;
-
-  font-size: clamp(30px, 2.7vw, 38px) !important;
+.services-content > h1 {
+  font-size: clamp(62px, 5.7vw, 88px) !important;
   font-weight: 400 !important;
-  line-height: 1.06 !important;
-  letter-spacing: -0.03em !important;
+  line-height: 1.03 !important;
+  letter-spacing: -0.04em !important;
 }
-
-
-/* English: Services и Problems имеют сопоставимую длину */
-html[lang="en"] body.services-page-compact .services-content h1 {
-  margin: 0 0 40px !important;
-
-  color: #668784 !important;
-
-  font-size: clamp(38px, 4.2vw, 58px) !important;
-  font-weight: 400 !important;
-  line-height: 1.05 !important;
-  letter-spacing: -0.035em !important;
-}
-
 
 /* Главные разделы */
-body.services-page-compact
-.services-groups.services-two-columns
-.services-group h2,
-
-body.services-page-compact
-.services-groups.services-two-columns
-.services-group-single > a {
-  font-size: clamp(12.5px, 0.82vw, 13.5px) !important;
-  font-weight: 500 !important;
+.services-groups.services-two-columns .services-group h2,
+.services-groups.services-two-columns .services-group-single > a {
+  font-size: clamp(15.5px, 1.05vw, 17.5px) !important;
+  font-weight: 600 !important;
   line-height: 1.42 !important;
-  letter-spacing: 0 !important;
+  letter-spacing: -0.008em !important;
 }
 
-
 /* Подразделы */
-body.services-page-compact
-.services-groups.services-two-columns
-.services-sublist a {
-  font-size: clamp(11.5px, 0.75vw, 12.5px) !important;
-  font-weight: 400 !important;
+.services-groups.services-two-columns .services-sublist a {
+  font-size: clamp(13.5px, 0.92vw, 15px) !important;
+  font-weight: 500 !important;
   line-height: 1.48 !important;
   letter-spacing: 0 !important;
 }
 
-
-/* Немного компактнее интервалы */
-body.services-page-compact .services-column {
-  gap: 12px !important;
-}
-
-body.services-page-compact
-.services-groups.services-two-columns
-.services-group {
-  padding-top: 8px !important;
-  padding-bottom: 9px !important;
-}
-
-body.services-page-compact
-.services-groups.services-two-columns
-.services-sublist a {
-  padding-top: 3px !important;
-  padding-bottom: 3px !important;
-}
-
-
-/* Mobile */
-@media (max-width: 800px) {
-  html[lang="hy"]
-  body.services-page-compact
-  .services-content h1 {
-    font-size: clamp(32px, 9vw, 40px) !important;
-    margin-bottom: 30px !important;
-  }
-
-  html[lang="en"]
-  body.services-page-compact
-  .services-content h1 {
-    font-size: clamp(40px, 12vw, 56px) !important;
-    margin-bottom: 32px !important;
-  }
-
-  body.services-page-compact
-  .services-groups.services-two-columns
-  .services-group h2,
-
-  body.services-page-compact
-  .services-groups.services-two-columns
-  .services-group-single > a {
-    font-size: 13.5px !important;
-  }
-
-  body.services-page-compact
-  .services-groups.services-two-columns
-  .services-sublist a {
-    font-size: 12.5px !important;
-  }
-}
-
-/* SERVICES_VISUAL_SCALE_FINAL_END */
-
-/* SERVICES_ARMENIAN_TITLE_44PX_START */
-
-/*
-  Меняем только армянский заголовок Ծառայություններ.
-  Разделы, подразделы, колонки и анимация не затрагиваются.
-*/
-
-html[lang="hy"]
-body.services-page-compact
-main
-.services-content > h1 {
-  font-size: clamp(38px, 3.5vw, 50px) !important;
-}
-
-@media (max-width: 800px) {
-  html[lang="hy"]
-  body.services-page-compact
-  main
+@media (max-width: 760px) {
   .services-content > h1 {
-    font-size: clamp(38px, 10vw, 48px) !important;
+    font-size: clamp(46px, 12vw, 64px) !important;
+  }
+
+  .services-groups.services-two-columns .services-group h2,
+  .services-groups.services-two-columns .services-group-single > a {
+    font-size: 16px !important;
+  }
+
+  .services-groups.services-two-columns .services-sublist a {
+    font-size: 14px !important;
   }
 }
 
-/* SERVICES_ARMENIAN_TITLE_44PX_END */
+/* SERVICES_FONT_ADJUST_V2_END */

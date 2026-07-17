@@ -4966,7 +4966,7 @@ html[lang="hy"]
 body.services-page-compact
 main
 .services-content > h1 {
-  font-size: clamp(38px, 3.5vw, 50px) !important;
+  font-size: clamp(33px, 3vw, 44px) !important;
 }
 
 @media (max-width: 800px) {
@@ -4974,7 +4974,7 @@ main
   body.services-page-compact
   main
   .services-content > h1 {
-    font-size: clamp(38px, 10vw, 48px) !important;
+    font-size: clamp(35px, 9.5vw, 44px) !important;
   }
 }
 
