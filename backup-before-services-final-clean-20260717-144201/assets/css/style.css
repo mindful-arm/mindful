@@ -4519,21 +4519,19 @@ button#contactSubmit:disabled {
 
 /* SOFT_CORAL_CONTACT_BUTTONS_END */
 
-/* SERVICES_FINAL_CLEAN_V2_START */
+/* SERVICES_CLEAN_FINAL_V1_START */
 
 /*
-  Final Services UI:
-  - заголовок точно повторяет Problems / Խնդիրներ;
-  - главные разделы имеют размер ссылок страницы Problems;
-  - подразделы меньше и открываются под своим разделом;
-  - колонки независимы;
-  - без линий, точек, цифр и карточек.
+  Единый финальный блок для страницы Services.
+  Все старые экспериментальные SERVICES_* блоки удалены.
 */
 
 
-/* Заголовок — точно как Խնդիրներ */
+/* ==================================================
+   Заголовок — точно как Problems / Խնդիրներ
+================================================== */
 
-.services-content h1 {
+body.services-page-compact .services-content h1 {
   margin: 0 0 40px !important;
 
   color: var(--teal) !important;
@@ -4545,15 +4543,18 @@ button#contactSubmit:disabled {
 }
 
 
-/* Две независимые колонки */
+/* ==================================================
+   Две независимые колонки
+================================================== */
 
+body.services-page-compact
 .services-groups.services-two-columns {
   display: grid !important;
 
   grid-template-columns:
     repeat(2, minmax(0, 1fr)) !important;
 
-  column-gap: 78px !important;
+  column-gap: clamp(58px, 7vw, 92px) !important;
   row-gap: 0 !important;
 
   align-items: start !important;
@@ -4561,16 +4562,16 @@ button#contactSubmit:disabled {
   overflow: visible !important;
 }
 
-.services-groups.services-two-columns .services-column {
+body.services-page-compact .services-column {
   display: flex !important;
   flex-direction: column !important;
 
-  gap: 15px !important;
+  gap: 12px !important;
 
   min-width: 0 !important;
 }
 
-.services-groups.services-two-columns .service-item-shell {
+body.services-page-compact .service-item-shell {
   width: 100% !important;
   min-width: 0 !important;
 
@@ -4578,9 +4579,13 @@ button#contactSubmit:disabled {
 }
 
 
-/* Главный раздел */
+/* ==================================================
+   Главные разделы — максимально компактные
+================================================== */
 
-.services-groups.services-two-columns .services-group {
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group {
   position: relative !important;
 
   display: block !important;
@@ -4591,7 +4596,7 @@ button#contactSubmit:disabled {
   min-height: auto !important;
 
   margin: 0 !important;
-  padding: 8px 0 !important;
+  padding: 8px 0 9px !important;
 
   background: transparent !important;
 
@@ -4601,15 +4606,16 @@ button#contactSubmit:disabled {
   box-shadow: none !important;
 
   overflow: hidden !important;
-
   transform: none !important;
 }
 
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group h2,
 
-/* Название главного раздела */
-
-.services-groups.services-two-columns .services-group h2,
-.services-groups.services-two-columns .services-group-single > a {
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group-single > a {
   display: block !important;
 
   width: 100% !important;
@@ -4619,53 +4625,58 @@ button#contactSubmit:disabled {
 
   color: var(--teal) !important;
 
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  line-height: 1.45 !important;
-  letter-spacing: 0.005em !important;
+  font-size: clamp(12px, 0.78vw, 13px) !important;
+  font-weight: 500 !important;
+  line-height: 1.42 !important;
+  letter-spacing: 0 !important;
 
   white-space: normal !important;
 
-  transform: none !important;
-
   transition:
-    color 0.2s ease,
-    transform 0.25s ease !important;
+    color 0.24s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
-.services-groups.services-two-columns .services-group:hover h2,
-.services-groups.services-two-columns .services-group:focus-within h2,
-.services-groups.services-two-columns .services-group-single:hover > a,
-.services-groups.services-two-columns .services-group-single > a:hover,
-.services-groups.services-two-columns .services-group-single > a:focus-visible {
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group:hover h2,
+
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group:focus-within h2,
+
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group-single:hover > a,
+
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group-single > a:hover {
   color: var(--accent-dark) !important;
 
   transform: translateX(3px) !important;
 }
 
 
-/* Подразделы скрыты и открываются вертикально под заголовком */
+/* ==================================================
+   Плавное раскрытие подразделов
+================================================== */
 
+body.services-page-compact
 .services-groups.services-two-columns
-.services-group > .services-sublist {
+.services-sublist {
   position: static !important;
-
   inset: auto !important;
-  top: auto !important;
 
   display: grid !important;
-
-  grid-template-columns:
-    minmax(0, 1fr) !important;
-
-  gap: 4px !important;
+  gap: 2px !important;
 
   width: 100% !important;
   max-width: none !important;
   max-height: 0 !important;
 
   margin: 0 !important;
-  padding: 0 0 0 18px !important;
+  padding: 0 0 0 12px !important;
 
   opacity: 0 !important;
   visibility: hidden !important;
@@ -4678,19 +4689,21 @@ button#contactSubmit:disabled {
   transform: translateY(-6px) !important;
 
   transition:
-    max-height 0.48s cubic-bezier(0.22, 1, 0.36, 1),
-    margin-top 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.24s ease,
-    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    visibility 0s linear 0.48s !important;
+    max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    margin-top 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.26s ease,
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.5s !important;
 }
 
+body.services-page-compact
 .services-groups.services-two-columns
-.services-group:hover > .services-sublist,
+.services-group:hover .services-sublist,
 
+body.services-page-compact
 .services-groups.services-two-columns
-.services-group:focus-within > .services-sublist {
-  max-height: 480px !important;
+.services-group:focus-within .services-sublist {
+  max-height: 420px !important;
 
   margin-top: 8px !important;
 
@@ -4701,16 +4714,19 @@ button#contactSubmit:disabled {
   transform: translateY(0) !important;
 
   transition:
-    max-height 0.48s cubic-bezier(0.22, 1, 0.36, 1),
-    margin-top 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.26s ease 0.04s,
-    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    margin-top 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.28s ease 0.04s,
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
     visibility 0s linear 0s !important;
 }
 
 
-/* Названия подразделов */
+/* ==================================================
+   Подразделы — максимально маленькие
+================================================== */
 
+body.services-page-compact
 .services-groups.services-two-columns
 .services-sublist a {
   display: block !important;
@@ -4719,43 +4735,44 @@ button#contactSubmit:disabled {
   max-width: none !important;
 
   margin: 0 !important;
-  padding: 3px 0 !important;
+  padding: 2px 0 2px 8px !important;
 
-  color: rgba(102, 135, 132, 0.92) !important;
-
+  color: rgba(102, 135, 132, 0.93) !important;
   background: transparent !important;
 
   border: 0 !important;
   border-radius: 0 !important;
 
-  font-size: 13.5px !important;
+  font-size: clamp(10.5px, 0.7vw, 11.5px) !important;
   font-weight: 400 !important;
-  line-height: 1.45 !important;
+  line-height: 1.48 !important;
   letter-spacing: 0 !important;
 
   white-space: normal !important;
 
   opacity: 1 !important;
 
-  transform: none !important;
-
   transition:
-    color 0.2s ease,
-    transform 0.24s ease !important;
+    color 0.22s ease,
+    transform 0.28s ease !important;
 }
 
+body.services-page-compact
 .services-groups.services-two-columns
 .services-sublist a::before,
 
+body.services-page-compact
 .services-groups.services-two-columns
 .services-sublist a::after {
   content: none !important;
   display: none !important;
 }
 
+body.services-page-compact
 .services-groups.services-two-columns
 .services-sublist a:hover,
 
+body.services-page-compact
 .services-groups.services-two-columns
 .services-sublist a:focus-visible {
   color: var(--accent-dark) !important;
@@ -4766,44 +4783,50 @@ button#contactSubmit:disabled {
 }
 
 
-/* Старый нижний разделитель не показываем */
-
-.services-divider {
-  display: none !important;
-}
-
-
-/* Планшет */
+/* ==================================================
+   Mobile
+================================================== */
 
 @media (max-width: 800px) {
-  .services-content h1 {
+  body.services-page-compact .services-content h1 {
     margin-bottom: 34px !important;
 
     font-size: clamp(40px, 12vw, 56px) !important;
   }
-}
 
-
-/* Телефон */
-
-@media (max-width: 760px) {
+  body.services-page-compact
   .services-groups.services-two-columns {
     display: flex !important;
     flex-direction: column !important;
 
-    gap: 14px !important;
+    gap: 12px !important;
   }
 
-  .services-groups.services-two-columns .services-column {
+  body.services-page-compact .services-column {
     display: contents !important;
   }
 
-  .services-groups.services-two-columns .service-item-shell {
+  body.services-page-compact .service-item-shell {
     order: var(--service-order) !important;
   }
 
+  body.services-page-compact
   .services-groups.services-two-columns
-  .services-group > .services-sublist {
+  .services-group h2,
+
+  body.services-page-compact
+  .services-groups.services-two-columns
+  .services-group-single > a {
+    font-size: 13px !important;
+  }
+
+  /*
+    На телефоне подразделы видны постоянно,
+    потому что обычного hover там нет.
+  */
+  body.services-page-compact
+  .services-groups.services-two-columns
+  .services-sublist {
     max-height: none !important;
 
     margin-top: 8px !important;
@@ -4813,9 +4836,14 @@ button#contactSubmit:disabled {
     pointer-events: auto !important;
 
     transform: none !important;
-
     transition: none !important;
+  }
+
+  body.services-page-compact
+  .services-groups.services-two-columns
+  .services-sublist a {
+    font-size: 11.5px !important;
   }
 }
 
-/* SERVICES_FINAL_CLEAN_V2_END */
+/* SERVICES_CLEAN_FINAL_V1_END */

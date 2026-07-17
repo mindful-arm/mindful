@@ -4519,33 +4519,14 @@ button#contactSubmit:disabled {
 
 /* SOFT_CORAL_CONTACT_BUTTONS_END */
 
-/* SERVICES_FINAL_CLEAN_V2_START */
+/* SERVICES_FINAL_MINIMAL_UI_START */
 
 /*
   Final Services UI:
-  - заголовок точно повторяет Problems / Խնդիրներ;
-  - главные разделы имеют размер ссылок страницы Problems;
-  - подразделы меньше и открываются под своим разделом;
-  - колонки независимы;
-  - без линий, точек, цифр и карточек.
+  - прежний минималистичный вид;
+  - независимые левая и правая колонки;
+  - подпункты раскрываются под своим разделом.
 */
-
-
-/* Заголовок — точно как Խնդիրներ */
-
-.services-content h1 {
-  margin: 0 0 40px !important;
-
-  color: var(--teal) !important;
-
-  font-size: clamp(38px, 4.2vw, 58px) !important;
-  font-weight: 400 !important;
-  line-height: 1.05 !important;
-  letter-spacing: -0.035em !important;
-}
-
-
-/* Две независимые колонки */
 
 .services-groups.services-two-columns {
   display: grid !important;
@@ -4553,7 +4534,7 @@ button#contactSubmit:disabled {
   grid-template-columns:
     repeat(2, minmax(0, 1fr)) !important;
 
-  column-gap: 78px !important;
+  column-gap: clamp(58px, 7vw, 92px) !important;
   row-gap: 0 !important;
 
   align-items: start !important;
@@ -4561,16 +4542,16 @@ button#contactSubmit:disabled {
   overflow: visible !important;
 }
 
-.services-groups.services-two-columns .services-column {
+.services-column {
   display: flex !important;
   flex-direction: column !important;
 
-  gap: 15px !important;
+  gap: 20px !important;
 
   min-width: 0 !important;
 }
 
-.services-groups.services-two-columns .service-item-shell {
+.service-item-shell {
   width: 100% !important;
   min-width: 0 !important;
 
@@ -4591,17 +4572,32 @@ button#contactSubmit:disabled {
   min-height: auto !important;
 
   margin: 0 !important;
-  padding: 8px 0 !important;
+  padding: 12px 0 15px !important;
 
   background: transparent !important;
 
   border: 0 !important;
-  border-radius: 0 !important;
+  border-bottom:
+    1px solid rgba(102, 135, 132, 0.18) !important;
 
+  border-radius: 0 !important;
   box-shadow: none !important;
 
   overflow: hidden !important;
+  transform: none !important;
 
+  transition:
+    border-color 0.28s ease !important;
+}
+
+.services-groups.services-two-columns .services-group:hover,
+.services-groups.services-two-columns .services-group:focus-within {
+  background: transparent !important;
+
+  border-bottom-color:
+    rgba(102, 135, 132, 0.42) !important;
+
+  box-shadow: none !important;
   transform: none !important;
 }
 
@@ -4609,7 +4605,8 @@ button#contactSubmit:disabled {
 /* Название главного раздела */
 
 .services-groups.services-two-columns .services-group h2,
-.services-groups.services-two-columns .services-group-single > a {
+.services-groups.services-two-columns
+.services-group-single > a {
   display: block !important;
 
   width: 100% !important;
@@ -4617,47 +4614,46 @@ button#contactSubmit:disabled {
   margin: 0 !important;
   padding: 0 !important;
 
-  color: var(--teal) !important;
+  color: #668784 !important;
 
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  line-height: 1.45 !important;
-  letter-spacing: 0.005em !important;
+  font-size:
+    clamp(18px, 1.35vw, 21px) !important;
+
+  font-weight: 650 !important;
+  line-height: 1.42 !important;
+  letter-spacing: -0.008em !important;
 
   white-space: normal !important;
 
   transform: none !important;
 
   transition:
-    color 0.2s ease,
-    transform 0.25s ease !important;
+    color 0.24s ease,
+    transform 0.32s
+      cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
-
-.services-groups.services-two-columns .services-group:hover h2,
-.services-groups.services-two-columns .services-group:focus-within h2,
-.services-groups.services-two-columns .services-group-single:hover > a,
-.services-groups.services-two-columns .services-group-single > a:hover,
-.services-groups.services-two-columns .services-group-single > a:focus-visible {
-  color: var(--accent-dark) !important;
-
-  transform: translateX(3px) !important;
-}
-
-
-/* Подразделы скрыты и открываются вертикально под заголовком */
 
 .services-groups.services-two-columns
-.services-group > .services-sublist {
-  position: static !important;
+.services-group:hover h2,
+.services-groups.services-two-columns
+.services-group:focus-within h2,
+.services-groups.services-two-columns
+.services-group-single:hover > a,
+.services-groups.services-two-columns
+.services-group-single > a:hover {
+  color: #557774 !important;
 
+  transform: translateX(4px) !important;
+}
+
+
+/* Плавное раскрытие подпунктов */
+
+.services-groups.services-two-columns .services-sublist {
+  position: static !important;
   inset: auto !important;
-  top: auto !important;
 
   display: grid !important;
-
-  grid-template-columns:
-    minmax(0, 1fr) !important;
-
   gap: 4px !important;
 
   width: 100% !important;
@@ -4673,43 +4669,53 @@ button#contactSubmit:disabled {
 
   overflow: hidden !important;
 
-  border: 0 !important;
+  border-left:
+    2px solid transparent !important;
 
-  transform: translateY(-6px) !important;
+  transform: translateY(-8px) !important;
 
   transition:
-    max-height 0.48s cubic-bezier(0.22, 1, 0.36, 1),
-    margin-top 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.24s ease,
-    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    visibility 0s linear 0.48s !important;
+    max-height 0.52s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    margin-top 0.44s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.28s ease,
+    transform 0.44s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s ease,
+    visibility 0s linear 0.52s !important;
 }
 
 .services-groups.services-two-columns
-.services-group:hover > .services-sublist,
-
+.services-group:hover .services-sublist,
 .services-groups.services-two-columns
-.services-group:focus-within > .services-sublist {
-  max-height: 480px !important;
+.services-group:focus-within .services-sublist {
+  max-height: 460px !important;
 
-  margin-top: 8px !important;
+  margin-top: 12px !important;
 
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
 
+  border-left-color: #A9DEDA !important;
+
   transform: translateY(0) !important;
 
   transition:
-    max-height 0.48s cubic-bezier(0.22, 1, 0.36, 1),
-    margin-top 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.26s ease 0.04s,
-    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    max-height 0.52s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    margin-top 0.44s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease 0.05s,
+    transform 0.44s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s ease,
     visibility 0s linear 0s !important;
 }
 
 
-/* Названия подразделов */
+/* Подпункты */
 
 .services-groups.services-two-columns
 .services-sublist a {
@@ -4719,34 +4725,35 @@ button#contactSubmit:disabled {
   max-width: none !important;
 
   margin: 0 !important;
-  padding: 3px 0 !important;
+  padding: 5px 0 5px 12px !important;
 
-  color: rgba(102, 135, 132, 0.92) !important;
+  color:
+    rgba(102, 135, 132, 0.93) !important;
 
   background: transparent !important;
 
   border: 0 !important;
   border-radius: 0 !important;
 
-  font-size: 13.5px !important;
-  font-weight: 400 !important;
-  line-height: 1.45 !important;
+  font-size:
+    clamp(15px, 1.08vw, 17px) !important;
+
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
   letter-spacing: 0 !important;
 
   white-space: normal !important;
 
   opacity: 1 !important;
-
   transform: none !important;
 
   transition:
-    color 0.2s ease,
-    transform 0.24s ease !important;
+    color 0.22s ease,
+    transform 0.28s ease !important;
 }
 
 .services-groups.services-two-columns
 .services-sublist a::before,
-
 .services-groups.services-two-columns
 .services-sublist a::after {
   content: none !important;
@@ -4755,32 +4762,13 @@ button#contactSubmit:disabled {
 
 .services-groups.services-two-columns
 .services-sublist a:hover,
-
 .services-groups.services-two-columns
 .services-sublist a:focus-visible {
-  color: var(--accent-dark) !important;
+  color: #557774 !important;
 
-  transform: translateX(3px) !important;
+  transform: translateX(4px) !important;
 
   outline: none !important;
-}
-
-
-/* Старый нижний разделитель не показываем */
-
-.services-divider {
-  display: none !important;
-}
-
-
-/* Планшет */
-
-@media (max-width: 800px) {
-  .services-content h1 {
-    margin-bottom: 34px !important;
-
-    font-size: clamp(40px, 12vw, 56px) !important;
-  }
 }
 
 
@@ -4791,31 +4779,203 @@ button#contactSubmit:disabled {
     display: flex !important;
     flex-direction: column !important;
 
-    gap: 14px !important;
+    gap: 16px !important;
   }
 
-  .services-groups.services-two-columns .services-column {
+  .services-column {
     display: contents !important;
   }
 
-  .services-groups.services-two-columns .service-item-shell {
+  .service-item-shell {
     order: var(--service-order) !important;
   }
 
   .services-groups.services-two-columns
-  .services-group > .services-sublist {
+  .services-group {
+    padding: 12px 0 14px !important;
+  }
+
+  /*
+    На телефоне подпункты видны постоянно,
+    потому что обычного hover там нет.
+  */
+  .services-groups.services-two-columns
+  .services-sublist {
     max-height: none !important;
 
-    margin-top: 8px !important;
+    margin-top: 10px !important;
 
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
 
-    transform: none !important;
+    border-left-color: #A9DEDA !important;
 
+    transform: none !important;
     transition: none !important;
   }
 }
 
-/* SERVICES_FINAL_CLEAN_V2_END */
+/* SERVICES_FINAL_MINIMAL_UI_END */
+
+/* SERVICES_LINES_REMOVE_V1_START */
+
+/* Удаляем только линии в разделе услуг */
+
+.services-groups.services-two-columns .services-group,
+.services-groups.services-two-columns .services-group:hover,
+.services-groups.services-two-columns .services-group:focus-within {
+  border-bottom: 0 !important;
+}
+
+.services-groups.services-two-columns .services-sublist,
+.services-groups.services-two-columns .services-group:hover .services-sublist,
+.services-groups.services-two-columns .services-group:focus-within .services-sublist {
+  border-left: 0 !important;
+}
+
+/* SERVICES_LINES_REMOVE_V1_END */
+
+/* SERVICES_VISUAL_SCALE_FINAL_START */
+
+/*
+  Финальная типографика Services.
+
+  Armenian title уменьшается визуально, потому что слово
+  «Ծառայություններ» значительно длиннее «Խնդիրներ».
+
+  Структура, расположение, ссылки и анимация не меняются.
+*/
+
+
+/* Armenian: визуально примерно как Խնդիրներ */
+html[lang="hy"] body.services-page-compact .services-content h1 {
+  margin: 0 0 38px !important;
+
+  color: #668784 !important;
+
+  font-size: clamp(30px, 2.7vw, 38px) !important;
+  font-weight: 400 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.03em !important;
+}
+
+
+/* English: Services и Problems имеют сопоставимую длину */
+html[lang="en"] body.services-page-compact .services-content h1 {
+  margin: 0 0 40px !important;
+
+  color: #668784 !important;
+
+  font-size: clamp(38px, 4.2vw, 58px) !important;
+  font-weight: 400 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.035em !important;
+}
+
+
+/* Главные разделы */
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group h2,
+
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group-single > a {
+  font-size: clamp(12.5px, 0.82vw, 13.5px) !important;
+  font-weight: 500 !important;
+  line-height: 1.42 !important;
+  letter-spacing: 0 !important;
+}
+
+
+/* Подразделы */
+body.services-page-compact
+.services-groups.services-two-columns
+.services-sublist a {
+  font-size: clamp(11.5px, 0.75vw, 12.5px) !important;
+  font-weight: 400 !important;
+  line-height: 1.48 !important;
+  letter-spacing: 0 !important;
+}
+
+
+/* Немного компактнее интервалы */
+body.services-page-compact .services-column {
+  gap: 12px !important;
+}
+
+body.services-page-compact
+.services-groups.services-two-columns
+.services-group {
+  padding-top: 8px !important;
+  padding-bottom: 9px !important;
+}
+
+body.services-page-compact
+.services-groups.services-two-columns
+.services-sublist a {
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+
+
+/* Mobile */
+@media (max-width: 800px) {
+  html[lang="hy"]
+  body.services-page-compact
+  .services-content h1 {
+    font-size: clamp(32px, 9vw, 40px) !important;
+    margin-bottom: 30px !important;
+  }
+
+  html[lang="en"]
+  body.services-page-compact
+  .services-content h1 {
+    font-size: clamp(40px, 12vw, 56px) !important;
+    margin-bottom: 32px !important;
+  }
+
+  body.services-page-compact
+  .services-groups.services-two-columns
+  .services-group h2,
+
+  body.services-page-compact
+  .services-groups.services-two-columns
+  .services-group-single > a {
+    font-size: 13.5px !important;
+  }
+
+  body.services-page-compact
+  .services-groups.services-two-columns
+  .services-sublist a {
+    font-size: 12.5px !important;
+  }
+}
+
+/* SERVICES_VISUAL_SCALE_FINAL_END */
+
+/* SERVICES_ARMENIAN_TITLE_44PX_START */
+
+/*
+  Меняем только армянский заголовок Ծառայություններ.
+  Разделы, подразделы, колонки и анимация не затрагиваются.
+*/
+
+html[lang="hy"]
+body.services-page-compact
+main
+.services-content > h1 {
+  font-size: clamp(38px, 3.5vw, 50px) !important;
+}
+
+@media (max-width: 800px) {
+  html[lang="hy"]
+  body.services-page-compact
+  main
+  .services-content > h1 {
+    font-size: clamp(38px, 10vw, 48px) !important;
+  }
+}
+
+/* SERVICES_ARMENIAN_TITLE_44PX_END */
