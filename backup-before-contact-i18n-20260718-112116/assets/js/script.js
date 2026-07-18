@@ -11,81 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const formStatus = document.getElementById("formStatus");
   const submitButton = document.getElementById("contactSubmit");
 
-  /* CONTACT_FORM_I18N_START */
-  const pageLanguage = (
-    document.documentElement.lang || "hy"
-  ).toLowerCase();
-
-  const isEnglish = pageLanguage.startsWith("en");
-
-  const formText = isEnglish
-    ? {
-        required: "This field is required.",
-        nameTooShort: "Please enter at least 2 characters.",
-        phoneDigitsOnly:
-          "The phone number may contain only digits, spaces, hyphens, and parentheses.",
-        phoneFormat: function (code, example) {
-          return (
-            "Invalid phone number format. Example: "
-            + code
-            + " "
-            + example
-          );
-        },
-        emailInvalid:
-          "Please enter a valid email address.",
-        messageTooShort:
-          "Please provide a little more detail.",
-        sending: "Sending...",
-        send: "Send",
-        success:
-          "Thank you. Your message has been sent successfully. We will contact you as soon as possible.",
-        sendError:
-          "The message could not be sent. Please try again or contact us by phone.",
-        networkError:
-          "The message could not be sent. Please check your internet connection and try again.",
-        fieldName: "Name",
-        fieldPhone: "Phone",
-        fieldEmail: "Email address",
-        fieldMessage: "Message",
-        subject:
-          "New message from Mindful Armenia website"
-      }
-    : {
-        required: "Այս դաշտը պարտադիր է։",
-        nameTooShort:
-          "Խնդրում ենք գրել առնվազն 2 նիշ։",
-        phoneDigitsOnly:
-          "Հեռախոսահամարը կարող է պարունակել միայն թվեր։",
-        phoneFormat: function (code, example) {
-          return (
-            "Սխալ հեռախոսահամարի ֆորմատ։ Օրինակ՝ "
-            + code
-            + " "
-            + example
-          );
-        },
-        emailInvalid:
-          "Խնդրում ենք գրել ճիշտ էլ․ հասցե։",
-        messageTooShort:
-          "Խնդրում ենք գրել մի փոքր ավելի մանրամասն։",
-        sending: "Ուղարկվում է...",
-        send: "Ուղարկել",
-        success:
-          "Շնորհակալություն։ Ձեր հաղորդագրությունը հաջողությամբ ուղարկվեց։ Մենք կկապվենք ձեզ հետ հնարավորինս շուտ։",
-        sendError:
-          "Չհաջողվեց ուղարկել հաղորդագրությունը։ Խնդրում ենք փորձել կրկին կամ կապ հաստատել հեռախոսով։",
-        networkError:
-          "Չհաջողվեց ուղարկել հաղորդագրությունը։ Խնդրում ենք ստուգել ինտերնետ կապը և փորձել կրկին։",
-        fieldName: "Անուն",
-        fieldPhone: "Հեռախոս",
-        fieldEmail: "Էլ․ հասցե",
-        fieldMessage: "Հաղորդագրություն",
-        subject:
-          "Նոր հաղորդագրություն Mindful Armenia կայքից"
-      };
-  /* CONTACT_FORM_I18N_END */
-
   const localLengthRules = {
     "+374": [8],
     "+7": [10],
@@ -152,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateName() {
     const value = document.getElementById("name").value.trim();
-    if (!value) return setError("name", formText.required);
-    if (value.length < 2) return setError("name", formText.nameTooShort);
+    if (!value) return setError("name", "Այս դաշտը պարտադիր է։");
+    if (value.length < 2) return setError("name", "Խնդրում ենք գրել առնվազն 2 նիշ։");
     return setError("name", "");
   }
 
@@ -165,14 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const example = active ? active.dataset.placeholder : "";
     const allowed = localLengthRules[code] || [7, 8, 9, 10, 11, 12];
 
-    if (!raw) return setError("phone", formText.required);
+    if (!raw) return setError("phone", "Այս դաշտը պարտադիր է։");
 
     if (!/^[0-9\s\-()]+$/.test(raw)) {
-      return setError("phone", formText.phoneDigitsOnly);
+      return setError("phone", "Հեռախոսահամարը կարող է պարունակել միայն թվեր։");
     }
 
     if (!allowed.includes(digits.length)) {
-      return setError("phone", formText.phoneFormat(code, example));
+      return setError("phone", "Սխալ հեռախոսահամարի ֆորմատ։ Օրինակ՝ " + code + " " + example);
     }
 
     return setError("phone", "");
@@ -182,11 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const value = document.getElementById("email").value.trim();
 
     if (!value) {
-      return setError("email", formText.required);
+      return setError("email", "Այս դաշտը պարտադիր է։");
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      return setError("email", formText.emailInvalid);
+      return setError("email", "Խնդրում ենք գրել ճիշտ էլ․ հասցե։");
     }
 
     return setError("email", "");
@@ -194,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateMessage() {
     const value = document.getElementById("message").value.trim();
-    if (!value) return setError("message", formText.required);
-    if (value.length < 5) return setError("message", formText.messageTooShort);
+    if (!value) return setError("message", "Այս դաշտը պարտադիր է։");
+    if (value.length < 5) return setError("message", "Խնդրում ենք գրել մի փոքր ավելի մանրամասն։");
     return setError("message", "");
   }
 
@@ -266,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!valid) return;
 
     submitButton.disabled = true;
-    submitButton.textContent = formText.sending;
+    submitButton.textContent = "Ուղարկվում է...";
 
     const name = document.getElementById("name").value.trim();
     const code = countryCode.value;
@@ -275,11 +200,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = document.getElementById("message").value.trim();
 
     const formData = new FormData();
-    formData.append(formText.fieldName, name);
-    formData.append(formText.fieldPhone, code + " " + phone);
-    formData.append(formText.fieldEmail, email);
-    formData.append(formText.fieldMessage, message);
-    formData.append("_subject", formText.subject);
+    formData.append("Անուն", name);
+    formData.append("Հեռախոս", code + " " + phone);
+    formData.append("Էլ․ հասցե", email);
+    formData.append("Հաղորդագրություն", message);
+    formData.append("_subject", "Նոր հաղորդագրություն Mindful Armenia կայքից");
 
     try {
       const response = await fetch("https://formspree.io/f/xrewvynj", {
@@ -303,15 +228,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const armOption = document.querySelector('.country-option[data-code="+374"]');
         if (armOption) armOption.classList.add("is-active");
 
-        showStatus("success", formText.success);
+        showStatus("success", "Շնորհակալություն։ Ձեր հաղորդագրությունը հաջողությամբ ուղարկվեց։ Մենք կկապվենք ձեզ հետ հնարավորինս շուտ։");
       } else {
-        showStatus("error", formText.sendError);
+        showStatus("error", "Չհաջողվեց ուղարկել հաղորդագրությունը։ Խնդրում ենք փորձել կրկին կամ կապ հաստատել հեռախոսով։");
       }
     } catch (error) {
-      showStatus("error", formText.networkError);
+      showStatus("error", "Չհաջողվեց ուղարկել հաղորդագրությունը։ Խնդրում ենք ստուգել ինտերնետ կապը և փորձել կրկին։");
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = formText.send;
+      submitButton.textContent = "Ուղարկել";
     }
   });
 });
