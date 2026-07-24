@@ -5517,17 +5517,3 @@ html body .main-nav .current-menu-item > a::after {
 }
 
 /* FAQ_QUESTIONS_MINT_BLUE_END */
-
-/* FAQ_TITLE_MINT_BLUE_START */
-
-/*
-  Меняем только заголовок FAQ
-  на Mint Blue #A9DEDA.
-*/
-
-.home-faq-section h2,
-.home-faq-section .section-title {
-  color: #A9DEDA !important;
-}
-
-/* FAQ_TITLE_MINT_BLUE_END */
