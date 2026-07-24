@@ -5489,31 +5489,3 @@ html body .main-nav .current-menu-item > a::after {
 }
 
 /* MAIN_NAV_VANILLA_HIGHLIGHT_END */
-
-/* FAQ_QUESTIONS_MINT_BLUE_START */
-
-/*
-  Меняем только цвет текста FAQ-вопросов.
-
-  Не затрагиваются:
-  - заголовок FAQ;
-  - ответы;
-  - стрелки;
-  - разделительные линии;
-  - фон;
-  - размеры;
-  - анимация.
-*/
-
-.home-faq-item > summary,
-.home-faq-item > summary > span:first-child,
-.home-faq-item[open] > summary,
-.home-faq-item[open] > summary > span:first-child,
-.home-faq-item > summary:hover,
-.home-faq-item > summary:hover > span:first-child,
-.home-faq-item > summary:focus-visible,
-.home-faq-item > summary:focus-visible > span:first-child {
-  color: #A9DEDA !important;
-}
-
-/* FAQ_QUESTIONS_MINT_BLUE_END */
