@@ -6747,40 +6747,115 @@ a[aria-current="location"] {
 
 /* SPECIALIST_HERO_POSITION_FINAL_END */
 
+/* SPECIALIST_BOTTOM_CARDS_FINAL_START */
 
-/* SPECIALIST_WORKS_CLEAN_SITE_STYLE_START */
+/* =========================================================
+   MEMBERSHIPS
+========================================================= */
 
-/*
-  Clean Mindful-style layout for "Works with".
+.specialist-v2-section--memberships {
+  padding:
+    clamp(30px, 3.6vw, 42px) !important;
+}
 
-  No dots.
-  No decorative bars.
-  No new colors.
-  No font-family changes.
-*/
+.specialist-v2-section--memberships h2 {
+  margin-bottom: 26px !important;
+}
+
+.specialist-v2-section--memberships
+.specialist-v2-memberships {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr)) !important;
+
+  gap: 16px !important;
+}
+
+.specialist-v2-section--memberships
+.specialist-v2-membership {
+  position: relative !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  min-height: 112px !important;
+
+  padding:
+    24px
+    26px
+    24px
+    30px !important;
+
+  border-radius: 24px !important;
+
+  background:
+    rgba(255, 255, 255, 0.80) !important;
+
+  border:
+    1px solid
+    rgba(102, 135, 132, 0.10) !important;
+
+  box-shadow:
+    0 10px 28px
+    rgba(75, 101, 99, 0.035) !important;
+
+  line-height: 1.55 !important;
+
+  overflow: hidden !important;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease !important;
+}
+
+.specialist-v2-section--memberships
+.specialist-v2-membership::before {
+  content: "" !important;
+
+  position: absolute !important;
+
+  left: 0 !important;
+  top: 22px !important;
+  bottom: 22px !important;
+
+  width: 4px !important;
+
+  border-radius:
+    0
+    999px
+    999px
+    0 !important;
+
+  background:
+    currentColor !important;
+
+  opacity: .18 !important;
+}
+
+.specialist-v2-section--memberships
+.specialist-v2-membership:hover {
+  transform:
+    translateY(-3px) !important;
+
+  box-shadow:
+    0 16px 34px
+    rgba(75, 101, 99, 0.065) !important;
+}
 
 
 /* =========================================================
-   SECTION
+   WORKS WITH
 ========================================================= */
 
 .specialist-v2-section--works {
   padding:
-    clamp(30px, 3.5vw, 42px) !important;
+    clamp(30px, 3.6vw, 42px) !important;
 }
-
 
 .specialist-v2-section--works h2 {
-  margin:
-    0
-    0
-    28px !important;
+  margin-bottom: 26px !important;
 }
-
-
-/* =========================================================
-   GRID
-========================================================= */
 
 .specialist-v2-section--works
 .specialist-v2-work-grid {
@@ -6789,38 +6864,14 @@ a[aria-current="location"] {
   grid-template-columns:
     repeat(3, minmax(0, 1fr)) !important;
 
-  gap: 18px !important;
+  gap: 16px !important;
 
   align-items: stretch !important;
 }
 
-
-/* =========================================================
-   CARD
-========================================================= */
-
 .specialist-v2-section--works
 .specialist-v2-work-card {
-  min-height: 0 !important;
-
-  padding:
-    24px
-    24px
-    26px !important;
-
-  border-radius:
-    24px !important;
-
-  background:
-    rgba(255, 255, 255, 0.72) !important;
-
-  border:
-    1px solid
-    rgba(102, 135, 132, 0.10) !important;
-
-  box-shadow:
-    0 8px 24px
-    rgba(75, 101, 99, 0.035) !important;
+  position: relative !important;
 
   display: flex !important;
 
@@ -6829,108 +6880,84 @@ a[aria-current="location"] {
   justify-content:
     flex-start !important;
 
-  align-items:
-    flex-start !important;
+  min-height: 0 !important;
 
-  gap:
-    12px !important;
+  padding:
+    22px
+    22px
+    24px !important;
+
+  border-radius:
+    24px !important;
+
+  background:
+    rgba(255, 255, 255, 0.82) !important;
+
+  border:
+    1px solid
+    rgba(102, 135, 132, 0.10) !important;
+
+  box-shadow:
+    0 10px 28px
+    rgba(75, 101, 99, 0.035) !important;
+
+  overflow: hidden !important;
 
   transition:
-    transform .20s ease,
-    box-shadow .20s ease !important;
+    transform .22s ease,
+    box-shadow .22s ease !important;
 }
 
+.specialist-v2-section--works
+.specialist-v2-work-card::before {
+  content: "" !important;
+
+  display: block !important;
+
+  width: 34px !important;
+  height: 3px !important;
+
+  margin-bottom: 16px !important;
+
+  border-radius:
+    999px !important;
+
+  background:
+    currentColor !important;
+
+  opacity:
+    .18 !important;
+}
 
 .specialist-v2-section--works
 .specialist-v2-work-card:hover {
   transform:
-    translateY(-2px) !important;
+    translateY(-3px) !important;
 
   box-shadow:
-    0 12px 28px
-    rgba(75, 101, 99, 0.055) !important;
+    0 16px 34px
+    rgba(75, 101, 99, 0.065) !important;
 }
-
-
-/* remove every old decorative pseudo-element */
-
-.specialist-v2-section--works
-.specialist-v2-work-card::before,
-
-.specialist-v2-section--works
-.specialist-v2-work-card::after {
-  content:
-    none !important;
-
-  display:
-    none !important;
-}
-
-
-/* =========================================================
-   LABEL
-========================================================= */
 
 .specialist-v2-section--works
 .specialist-v2-work-label {
-  display:
-    block !important;
+  display: block !important;
 
   margin:
-    0 !important;
-
-  font-size:
+    0
+    0
     12px !important;
 
   line-height:
-    1.4 !important;
-
-  font-weight:
-    700 !important;
-
-  letter-spacing:
-    .07em !important;
-
-  text-transform:
-    uppercase !important;
-
-  opacity:
-    .82 !important;
+    1.35 !important;
 }
-
-
-/* =========================================================
-   VALUE
-========================================================= */
 
 .specialist-v2-section--works
 .specialist-v2-work-value {
-  margin:
-    0 !important;
-
-  max-width:
-    none !important;
-
-  font-size:
-    18px !important;
+  margin: 0 !important;
 
   line-height:
-    1.48 !important;
-
-  font-weight:
-    500 !important;
-
-  letter-spacing:
-    0 !important;
-}
-
-
-/* hide old separator spans if any remain */
-
-.specialist-v2-section--works
-.specialist-v2-work-separator {
-  display:
-    none !important;
+    1.50 !important;
 }
 
 
@@ -6940,12 +6967,17 @@ a[aria-current="location"] {
 
 @media (max-width: 980px) {
 
+  .specialist-v2-section--memberships
+  .specialist-v2-memberships {
+    grid-template-columns:
+      1fr !important;
+  }
+
   .specialist-v2-section--works
   .specialist-v2-work-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr)) !important;
   }
-
 }
 
 
@@ -6955,40 +6987,176 @@ a[aria-current="location"] {
 
 @media (max-width: 680px) {
 
+  .specialist-v2-section--memberships,
   .specialist-v2-section--works {
     padding:
       22px
       18px !important;
   }
 
+  .specialist-v2-section--memberships
+  .specialist-v2-membership {
+    min-height:
+      auto !important;
+
+    padding:
+      19px
+      18px
+      19px
+      23px !important;
+
+    border-radius:
+      19px !important;
+  }
+
+  .specialist-v2-section--memberships
+  .specialist-v2-membership::before {
+    top: 18px !important;
+    bottom: 18px !important;
+  }
 
   .specialist-v2-section--works
   .specialist-v2-work-grid {
     grid-template-columns:
       1fr !important;
-
-    gap:
-      12px !important;
   }
-
 
   .specialist-v2-section--works
   .specialist-v2-work-card {
     padding:
-      20px !important;
+      19px !important;
 
     border-radius:
-      20px !important;
+      19px !important;
   }
-
-
-  .specialist-v2-section--works
-  .specialist-v2-work-value {
-    font-size:
-      17px !important;
-  }
-
 }
 
-/* SPECIALIST_WORKS_CLEAN_SITE_STYLE_END */
+/* SPECIALIST_BOTTOM_CARDS_FINAL_END */
 
+/* SPECIALIST_CARD_ACCENTS_REMOVE_START */
+
+/* remove small decorative accent bars from specialist cards */
+
+.specialist-v2-section--memberships
+.specialist-v2-membership::before,
+.specialist-v2-section--works
+.specialist-v2-work-card::before {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* keep card spacing clean after removing accents */
+.specialist-v2-section--memberships
+.specialist-v2-membership,
+.specialist-v2-section--works
+.specialist-v2-work-card {
+  background-image: none !important;
+}
+
+/* SPECIALIST_CARD_ACCENTS_REMOVE_END */
+
+/* SPECIALIST_WORK_CARDS_PREMIUM_START */
+
+/* Premium look for specialist "Works with" cards */
+.specialist-v2-section--works .specialist-v2-work-grid,
+.specialist-v2-section--works .specialist-v2-cards,
+.specialist-v2-section--works .specialist-v2-work-cards {
+  gap: 22px !important;
+  align-items: stretch !important;
+}
+
+.specialist-v2-section--works .specialist-v2-work-card {
+  position: relative !important;
+  min-height: unset !important;
+  padding: 28px 30px !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(111, 142, 137, 0.14) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.92) 100%
+  ) !important;
+  box-shadow:
+    0 18px 40px rgba(111, 142, 137, 0.06),
+    0 4px 12px rgba(111, 142, 137, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  transition:
+    transform 0.24s ease,
+    box-shadow 0.24s ease,
+    border-color 0.24s ease !important;
+}
+
+.specialist-v2-section--works .specialist-v2-work-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(111, 142, 137, 0.22) !important;
+  box-shadow:
+    0 22px 44px rgba(111, 142, 137, 0.08),
+    0 6px 14px rgba(111, 142, 137, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82) !important;
+}
+
+.specialist-v2-section--works .specialist-v2-work-card > * {
+  margin: 0 !important;
+}
+
+.specialist-v2-section--works .specialist-v2-work-card > :first-child {
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  opacity: 0.82 !important;
+}
+
+.specialist-v2-section--works .specialist-v2-work-card > :last-child {
+  font-size: clamp(18px, 1.35vw, 24px) !important;
+  line-height: 1.38 !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+  max-width: 18ch !important;
+}
+
+.specialist-v2-section--works .specialist-v2-work-separator {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1.55em !important;
+  height: 1.55em !important;
+  margin: 0 0.18em !important;
+  vertical-align: middle !important;
+  border-radius: 999px !important;
+  background: rgba(111, 142, 137, 0.08) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.8em !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .specialist-v2-section--works .specialist-v2-work-card {
+    padding: 22px 22px !important;
+    border-radius: 24px !important;
+    gap: 12px !important;
+  }
+
+  .specialist-v2-section--works .specialist-v2-work-card > :first-child {
+    font-size: 12px !important;
+  }
+
+  .specialist-v2-section--works .specialist-v2-work-card > :last-child {
+    font-size: clamp(16px, 4vw, 20px) !important;
+    max-width: none !important;
+  }
+}
+
+/* SPECIALIST_WORK_CARDS_PREMIUM_END */
