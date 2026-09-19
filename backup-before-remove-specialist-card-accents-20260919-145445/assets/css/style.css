@@ -7032,32 +7032,3 @@ a[aria-current="location"] {
 }
 
 /* SPECIALIST_BOTTOM_CARDS_FINAL_END */
-
-/* SPECIALIST_CARD_ACCENTS_REMOVE_START */
-
-/* remove small decorative accent bars from specialist cards */
-
-.specialist-v2-section--memberships
-.specialist-v2-membership::before,
-.specialist-v2-section--works
-.specialist-v2-work-card::before {
-  content: none !important;
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-/* keep card spacing clean after removing accents */
-.specialist-v2-section--memberships
-.specialist-v2-membership,
-.specialist-v2-section--works
-.specialist-v2-work-card {
-  background-image: none !important;
-}
-
-/* SPECIALIST_CARD_ACCENTS_REMOVE_END */
