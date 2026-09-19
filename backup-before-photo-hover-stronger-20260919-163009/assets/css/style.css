@@ -7596,18 +7596,15 @@ a[aria-current="location"] {
 /* SPECIALIST_PHOTO_HOVER_FINAL_START */
 
 /*
-   Stronger but still subtle photo hover.
-   Maximum zoom stays visually contained in hero.
+   Working hover for specialist photo block.
+
+   Important:
+   We scale the PHOTO CONTAINER itself,
+   so it works both for:
+   - real photos
+   - current "Լուսանկար" placeholder
 */
 
-
-/* hero keeps everything inside */
-.specialist-v2-hero-grid {
-  overflow: hidden !important;
-}
-
-
-/* photo */
 .specialist-v2-photo {
   position: relative !important;
 
@@ -7618,41 +7615,48 @@ a[aria-current="location"] {
     center center !important;
 
   transition:
-    transform 0.42s cubic-bezier(.22, .61, .36, 1),
-    box-shadow 0.42s ease !important;
+    transform 0.38s cubic-bezier(.22, .61, .36, 1),
+    box-shadow 0.38s ease !important;
 
   will-change:
     transform !important;
 }
 
 
-/* actual image */
-.specialist-v2-photo img {
-  display: block !important;
-
-  width: 100% !important;
-  height: 100% !important;
-
-  object-fit: cover !important;
-}
-
-
-/* desktop mouse hover */
+/* only desktop devices with real mouse hover */
 @media (hover: hover) and (pointer: fine) {
 
   .specialist-v2-photo:hover {
     transform:
-      scale(1.07) !important;
+      scale(1.045) !important;
 
     box-shadow:
-      0 20px 42px
-      rgba(102, 135, 132, 0.12) !important;
+      0 18px 38px rgba(102, 135, 132, 0.10) !important;
   }
 
 }
 
 
-/* reduced motion */
+/*
+   If a real IMG exists inside,
+   keep it smoothly fitted.
+*/
+.specialist-v2-photo img {
+  width:
+    100% !important;
+
+  height:
+    100% !important;
+
+  object-fit:
+    cover !important;
+
+  display:
+    block !important;
+}
+
+
+/* accessibility */
 @media (prefers-reduced-motion: reduce) {
 
   .specialist-v2-photo {
