@@ -7349,17 +7349,8 @@ a[aria-current="location"] {
 
 /* SPECIALIST_FOUNDER_PRICE_START */
 
-/*
-   Specialist hero metadata.
-
-   No font-family change.
-   No site palette change.
-   No hero layout change.
-*/
-
-
 /* =========================================================
-   NAME — VERY SUBTLE GLOW
+   NAME — subtle glow
 ========================================================= */
 
 .specialist-v2-intro h1,
@@ -7370,7 +7361,7 @@ a[aria-current="location"] {
 
 
 /* =========================================================
-   FOUNDER — TATEV ONLY
+   FOUNDER — TATEV
 ========================================================= */
 
 .specialist-v2-founder {
@@ -7417,31 +7408,18 @@ a[aria-current="location"] {
 
 
 /* =========================================================
-   ROLE
-========================================================= */
-
-.specialist-v2-founder + .specialist-v2-role,
-.specialist-v2-founder + p {
-  margin-top:
-    0 !important;
-}
-
-
-/* =========================================================
-   PRICE
+   SESSION FEE — clean text, no pill
 ========================================================= */
 
 .specialist-v2-price {
-  display: inline-flex !important;
+  display: flex !important;
+  align-items: baseline !important;
+  flex-wrap: wrap !important;
 
-  align-items:
-    center !important;
+  width: fit-content !important;
 
   gap:
-    11px !important;
-
-  width:
-    fit-content !important;
+    7px !important;
 
   margin:
     20px
@@ -7449,62 +7427,68 @@ a[aria-current="location"] {
     0 !important;
 
   padding:
-    9px
-    14px
-    9px
-    16px !important;
-
-  border-radius:
-    999px !important;
+    0 !important;
 
   background:
-    rgba(255, 255, 255, 0.58) !important;
+    none !important;
 
   border:
-    1px solid
-    rgba(102, 135, 132, 0.12) !important;
+    none !important;
+
+  border-radius:
+    0 !important;
 
   box-shadow:
-    0 7px 20px
-    rgba(75, 101, 99, 0.045),
-    inset 0 1px 0
-    rgba(255, 255, 255, 0.70) !important;
+    none !important;
+}
+
+
+.specialist-v2-price::before,
+.specialist-v2-price::after {
+  content:
+    none !important;
+
+  display:
+    none !important;
 }
 
 
 .specialist-v2-price-label {
   display:
-    inline-block !important;
-
-  font-size:
-    12px !important;
-
-  line-height:
-    1 !important;
-
-  font-weight:
-    700 !important;
-
-  letter-spacing:
-    0.055em !important;
-
-  opacity:
-    0.74 !important;
-}
-
-
-.specialist-v2-price-value {
-  display:
-    inline-block !important;
+    inline !important;
 
   font-size:
     15px !important;
 
   line-height:
-    1 !important;
+    1.45 !important;
+
+  font-weight:
+    500 !important;
+
+  letter-spacing:
+    0 !important;
+
+  opacity:
+    0.82 !important;
+}
+
+
+.specialist-v2-price-value {
+  display:
+    inline !important;
+
+  font-size:
+    16px !important;
+
+  line-height:
+    1.45 !important;
 
   font-weight:
     700 !important;
+
+  letter-spacing:
+    0 !important;
 
   white-space:
     nowrap !important;
@@ -7534,17 +7518,20 @@ a[aria-current="location"] {
     margin-top:
       16px !important;
 
-    padding:
-      8px
-      12px
-      8px
+    gap:
+      6px !important;
+  }
+
+
+  .specialist-v2-price-label {
+    font-size:
       14px !important;
   }
 
 
   .specialist-v2-price-value {
     font-size:
-      14px !important;
+      15px !important;
   }
 
 }
