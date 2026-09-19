@@ -7349,108 +7349,80 @@ a[aria-current="location"] {
 
 /* SPECIALIST_FOUNDER_PRICE_START */
 
-/*
-   Clean specialist hero metadata.
-
-   - Founder = normal text
-   - Session fee = normal text
-   - same site color
-   - no pills / backgrounds / borders
-*/
-
-
 /* =========================================================
-   SPECIALIST NAME
-   keep only very subtle depth
+   NAME — subtle glow
 ========================================================= */
 
 .specialist-v2-intro h1,
 .specialist-profile-intro h1 {
   text-shadow:
-    0 5px 18px rgba(102, 135, 132, 0.07) !important;
+    0 7px 22px rgba(102, 135, 132, 0.10) !important;
 }
 
 
 /* =========================================================
-   FOUNDER
+   FOUNDER — TATEV
 ========================================================= */
 
 .specialist-v2-founder {
-  display: block !important;
+  display: inline-flex !important;
+  align-items: center !important;
 
-  width: auto !important;
+  width: fit-content !important;
 
   margin:
     2px
     0
-    10px !important;
+    13px !important;
 
   padding:
-    0 !important;
-
-  background:
-    none !important;
-
-  border:
-    0 !important;
+    7px
+    13px !important;
 
   border-radius:
-    0 !important;
+    999px !important;
+
+  background:
+    rgba(254, 227, 169, 0.42) !important;
+
+  border:
+    1px solid
+    rgba(201, 166, 101, 0.14) !important;
 
   box-shadow:
-    none !important;
-
-  color:
-    inherit !important;
-
-  opacity:
-    1 !important;
+    0 5px 14px
+    rgba(102, 135, 132, 0.035) !important;
 
   font-size:
-    16px !important;
+    12px !important;
 
   line-height:
-    1.4 !important;
+    1.2 !important;
 
   font-weight:
-    600 !important;
+    700 !important;
 
   letter-spacing:
-    0 !important;
-}
-
-
-.specialist-v2-founder::before,
-.specialist-v2-founder::after {
-  content:
-    none !important;
-
-  display:
-    none !important;
+    0.055em !important;
 }
 
 
 /* =========================================================
-   SESSION FEE
+   SESSION FEE — clean text, no pill
 ========================================================= */
 
 .specialist-v2-price {
   display: flex !important;
+  align-items: baseline !important;
+  flex-wrap: wrap !important;
 
-  align-items:
-    baseline !important;
-
-  flex-wrap:
-    wrap !important;
-
-  width:
-    fit-content !important;
+  width: fit-content !important;
 
   gap:
     7px !important;
 
   margin:
-    16px
+    20px
     0
     0 !important;
 
@@ -7461,19 +7433,13 @@ a[aria-current="location"] {
     none !important;
 
   border:
-    0 !important;
+    none !important;
 
   border-radius:
     0 !important;
 
   box-shadow:
     none !important;
-
-  color:
-    inherit !important;
-
-  opacity:
-    1 !important;
 }
 
 
@@ -7487,26 +7453,12 @@ a[aria-current="location"] {
 }
 
 
-/* "Սեսիայի արժեքը՝" / "Session fee:" */
-
 .specialist-v2-price-label {
   display:
     inline !important;
 
-  margin:
-    0 !important;
-
-  padding:
-    0 !important;
-
-  color:
-    inherit !important;
-
-  opacity:
-    1 !important;
-
   font-size:
-    16px !important;
+    15px !important;
 
   line-height:
     1.45 !important;
@@ -7516,35 +7468,24 @@ a[aria-current="location"] {
 
   letter-spacing:
     0 !important;
+
+  opacity:
+    0.82 !important;
 }
 
-
-/* price */
 
 .specialist-v2-price-value {
   display:
     inline !important;
 
-  margin:
-    0 !important;
-
-  padding:
-    0 !important;
-
-  color:
-    inherit !important;
-
-  opacity:
-    1 !important;
-
   font-size:
-    17px !important;
+    16px !important;
 
   line-height:
     1.45 !important;
 
   font-weight:
-    650 !important;
+    700 !important;
 
   letter-spacing:
     0 !important;
@@ -7562,16 +7503,20 @@ a[aria-current="location"] {
 
   .specialist-v2-founder {
     margin-bottom:
-      8px !important;
+      11px !important;
+
+    padding:
+      6px
+      11px !important;
 
     font-size:
-      15px !important;
+      11px !important;
   }
 
 
   .specialist-v2-price {
     margin-top:
-      14px !important;
+      16px !important;
 
     gap:
       6px !important;
@@ -7580,13 +7525,13 @@ a[aria-current="location"] {
 
   .specialist-v2-price-label {
     font-size:
-      15px !important;
+      14px !important;
   }
 
 
   .specialist-v2-price-value {
     font-size:
-      16px !important;
+      15px !important;
   }
 
 }
