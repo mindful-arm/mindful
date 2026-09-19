@@ -6668,80 +6668,105 @@ a[aria-current="location"] {
 /* SPECIALIST_HERO_POSITION_FINAL_START */
 
 /*
-  Specialist hero layout
+  Specialist hero position only.
 
-  DESKTOP:
-  LEFT  = photo
-  RIGHT = text
+  Desktop:
+  LEFT  = text
+  RIGHT = photo
 
-  MOBILE:
-  photo first
-  text second
+  Mobile:
+  text first
+  photo second
 
-  Everything else stays unchanged.
+  No other visual properties are changed.
 */
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
 
 .specialist-v2-hero-grid {
   display: grid !important;
+
   grid-template-columns:
-    minmax(260px, 330px)
-    minmax(0, 1fr) !important;
-  align-items: center !important;
+    minmax(0, 1fr)
+    minmax(260px, 330px) !important;
 }
 
 
-/* PHOTO -> LEFT */
-.specialist-v2-photo {
+/* TEXT -> LEFT */
+
+.specialist-v2-intro {
   grid-column: 1 !important;
   grid-row: 1 !important;
-  justify-self: start !important;
-}
 
-
-/* TEXT -> RIGHT */
-.specialist-v2-intro {
-  grid-column: 2 !important;
-  grid-row: 1 !important;
   justify-self: stretch !important;
 }
 
 
+/* PHOTO -> RIGHT */
+
+.specialist-v2-photo {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+
+  justify-self: end !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 980px) {
+
   .specialist-v2-hero-grid {
     grid-template-columns:
-      minmax(230px, 280px)
-      minmax(0, 1fr) !important;
-  }
-
-  .specialist-v2-photo {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    justify-self: start !important;
+      minmax(0, 1fr)
+      minmax(230px, 280px) !important;
   }
 
   .specialist-v2-intro {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .specialist-v2-photo {
     grid-column: 2 !important;
     grid-row: 1 !important;
-    justify-self: stretch !important;
+
+    justify-self: end !important;
   }
 }
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 760px) {
+
   .specialist-v2-hero-grid {
     grid-template-columns: 1fr !important;
   }
 
-  .specialist-v2-photo {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    justify-self: start !important;
-  }
+  /* text first */
 
   .specialist-v2-intro {
     grid-column: 1 !important;
-    grid-row: 2 !important;
+    grid-row: 1 !important;
+
     justify-self: stretch !important;
+  }
+
+  /* photo below */
+
+  .specialist-v2-photo {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+
+    justify-self: start !important;
   }
 }
 
