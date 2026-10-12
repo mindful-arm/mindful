@@ -7668,3 +7668,68 @@ a[aria-current="location"] {
 }
 
 /* SPECIALIST_PHOTO_HOVER_FINAL_END */
+
+
+/* MINDFUL_STICKY_PAGE_MENU_START */
+
+/*
+   Left "On this page" navigation.
+
+   Desktop:
+   it scrolls normally until it reaches the viewport,
+   then stays visible while the article continues scrolling.
+*/
+
+@media (min-width: 901px) {
+
+  .mindful-sticky-toc {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+
+    top: 24px !important;
+
+    align-self: start !important;
+
+    height: max-content !important;
+    max-height: calc(100vh - 48px) !important;
+
+    z-index: 20 !important;
+
+    margin-bottom: 0 !important;
+
+    /* prevents small visual jumping during scroll */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+     Sticky cannot work correctly when a parent
+     cuts its overflow.
+  */
+  .article-layout,
+  .specialist-profile-content,
+  .specialist-profile-grid,
+  .specialist-v2-layout,
+  .specialist-v2-content,
+  .specialist-v2-grid {
+    overflow: visible !important;
+  }
+}
+
+
+/*
+   On tablets / mobile we keep normal document flow.
+   A tall fixed/sticky menu would take too much screen space.
+*/
+@media (max-width: 900px) {
+
+  .mindful-sticky-toc {
+    position: relative !important;
+    top: auto !important;
+    max-height: none !important;
+    transform: none !important;
+  }
+}
+
+/* MINDFUL_STICKY_PAGE_MENU_END */
