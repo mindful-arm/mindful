@@ -7733,3 +7733,116 @@ a[aria-current="location"] {
 }
 
 /* MINDFUL_STICKY_PAGE_MENU_END */
+
+
+/* SPECIALIST_V2_STICKY_FINAL_START */
+
+
+/*
+   Specialist left navigation.
+
+   Desktop:
+   menu scrolls normally until it reaches the viewport,
+   then remains visible while the specialist content
+   continues scrolling.
+*/
+
+@media (min-width: 901px) {
+
+  .specialist-v2-main {
+    overflow: visible !important;
+  }
+
+
+  .specialist-v2-layout {
+    overflow: visible !important;
+
+    align-items: start !important;
+  }
+
+
+  .specialist-v2-side,
+  .specialist-v2-side.mindful-sticky-toc {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+
+    top: 18px !important;
+
+    align-self: start !important;
+
+    height: fit-content !important;
+    height: max-content !important;
+
+    max-height: calc(100vh - 36px) !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    z-index: 30 !important;
+
+    transform: translateZ(0);
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    will-change: transform;
+  }
+
+
+  /*
+     Не даём article/grid ограничивать sticky.
+  */
+
+  .specialist-v2-article {
+    overflow: visible !important;
+  }
+
+
+  /*
+     Небольшой запас, чтобы последний пункт
+     меню не прилипал к нижнему краю.
+  */
+
+  .specialist-v2-side-nav {
+    padding-bottom: 4px;
+  }
+
+
+  /*
+     Scrollbar появляется только если высоты
+     окна реально недостаточно.
+  */
+
+  .specialist-v2-side {
+    scrollbar-width: thin;
+  }
+
+}
+
+
+/*
+   Mobile:
+   sidebar снова становится обычным блоком.
+*/
+
+@media (max-width: 900px) {
+
+  .specialist-v2-side,
+  .specialist-v2-side.mindful-sticky-toc {
+    position: relative !important;
+
+    top: auto !important;
+
+    max-height: none !important;
+
+    overflow: visible !important;
+
+    transform: none !important;
+
+    will-change: auto !important;
+  }
+
+}
+
+
+/* SPECIALIST_V2_STICKY_FINAL_END */
