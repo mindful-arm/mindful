@@ -7670,184 +7670,6 @@ a[aria-current="location"] {
 /* SPECIALIST_PHOTO_HOVER_FINAL_END */
 
 
-/* MINDFUL_STICKY_PAGE_MENU_START */
-
-/*
-   Left "On this page" navigation.
-
-   Desktop:
-   it scrolls normally until it reaches the viewport,
-   then stays visible while the article continues scrolling.
-*/
-
-@media (min-width: 901px) {
-
-  .mindful-sticky-toc {
-    position: -webkit-sticky !important;
-    position: sticky !important;
-
-    top: 24px !important;
-
-    align-self: start !important;
-
-    height: max-content !important;
-    max-height: calc(100vh - 48px) !important;
-
-    z-index: 20 !important;
-
-    margin-bottom: 0 !important;
-
-    /* prevents small visual jumping during scroll */
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /*
-     Sticky cannot work correctly when a parent
-     cuts its overflow.
-  */
-  .article-layout,
-  .specialist-profile-content,
-  .specialist-profile-grid,
-  .specialist-v2-layout,
-  .specialist-v2-content,
-  .specialist-v2-grid {
-    overflow: visible !important;
-  }
-}
-
-
-/*
-   On tablets / mobile we keep normal document flow.
-   A tall fixed/sticky menu would take too much screen space.
-*/
-@media (max-width: 900px) {
-
-  .mindful-sticky-toc {
-    position: relative !important;
-    top: auto !important;
-    max-height: none !important;
-    transform: none !important;
-  }
-}
-
-/* MINDFUL_STICKY_PAGE_MENU_END */
-
-
-/* SPECIALIST_V2_STICKY_FINAL_START */
-
-
-/*
-   Specialist left navigation.
-
-   Desktop:
-   menu scrolls normally until it reaches the viewport,
-   then remains visible while the specialist content
-   continues scrolling.
-*/
-
-@media (min-width: 901px) {
-
-  .specialist-v2-main {
-    overflow: visible !important;
-  }
-
-
-  .specialist-v2-layout {
-    overflow: visible !important;
-
-    align-items: start !important;
-  }
-
-
-  .specialist-v2-side,
-  .specialist-v2-side.mindful-sticky-toc {
-    position: -webkit-sticky !important;
-    position: sticky !important;
-
-    top: 18px !important;
-
-    align-self: start !important;
-
-    height: fit-content !important;
-    height: max-content !important;
-
-    max-height: calc(100vh - 36px) !important;
-
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-
-    z-index: 30 !important;
-
-    transform: translateZ(0);
-
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-    will-change: transform;
-  }
-
-
-  /*
-     Не даём article/grid ограничивать sticky.
-  */
-
-  .specialist-v2-article {
-    overflow: visible !important;
-  }
-
-
-  /*
-     Небольшой запас, чтобы последний пункт
-     меню не прилипал к нижнему краю.
-  */
-
-  .specialist-v2-side-nav {
-    padding-bottom: 4px;
-  }
-
-
-  /*
-     Scrollbar появляется только если высоты
-     окна реально недостаточно.
-  */
-
-  .specialist-v2-side {
-    scrollbar-width: thin;
-  }
-
-}
-
-
-/*
-   Mobile:
-   sidebar снова становится обычным блоком.
-*/
-
-@media (max-width: 900px) {
-
-  .specialist-v2-side,
-  .specialist-v2-side.mindful-sticky-toc {
-    position: relative !important;
-
-    top: auto !important;
-
-    max-height: none !important;
-
-    overflow: visible !important;
-
-    transform: none !important;
-
-    will-change: auto !important;
-  }
-
-}
-
-
-/* SPECIALIST_V2_STICKY_FINAL_END */
-
-
 /* SVETLANA_TEAM_CLICK_FIX_START */
 
 
@@ -7929,3 +7751,44 @@ a.team-card.mindful-clickable-specialist-card
 
 
 /* SVETLANA_TEAM_CLICK_FIX_END */
+
+
+/* SPECIALIST_V2_STATIC_SIDE_START */
+
+/*
+   Specialist left navigation.
+
+   STATIC variant:
+   the block stays in its normal place in the page.
+   It does NOT follow the viewport during scrolling.
+*/
+
+.specialist-v2-side,
+.specialist-v2-side.mindful-sticky-toc {
+  position: static !important;
+
+  top: auto !important;
+  bottom: auto !important;
+
+  align-self: start !important;
+
+  height: auto !important;
+  max-height: none !important;
+
+  overflow: visible !important;
+
+  transform: none !important;
+  will-change: auto !important;
+}
+
+
+/*
+   Keep normal two-column layout.
+*/
+
+.specialist-v2-layout {
+  align-items: start !important;
+}
+
+
+/* SPECIALIST_V2_STATIC_SIDE_END */
