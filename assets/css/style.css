@@ -7846,3 +7846,86 @@ a[aria-current="location"] {
 
 
 /* SPECIALIST_V2_STICKY_FINAL_END */
+
+
+/* SVETLANA_TEAM_CLICK_FIX_START */
+
+
+/*
+   Guarantees that specialist cards remain clickable
+   even if older CSS rules or inner elements intercept clicks.
+*/
+
+.team-card.mindful-clickable-specialist-card,
+.mindful-clickable-specialist-card {
+  position: relative !important;
+  cursor: pointer !important;
+
+  pointer-events: auto !important;
+}
+
+
+/*
+   If the team card itself is an <a>,
+   it must receive the click.
+*/
+
+a.team-card.mindful-clickable-specialist-card {
+  display: block !important;
+
+  text-decoration: none !important;
+
+  pointer-events: auto !important;
+
+  z-index: 1;
+}
+
+
+/*
+   Child text/photo should not steal the mouse event
+   from the parent anchor.
+*/
+
+a.team-card.mindful-clickable-specialist-card
+> * {
+  pointer-events: none !important;
+}
+
+
+/*
+   Fallback for cards implemented as div/article:
+   invisible link covers 100% of the card.
+*/
+
+.mindful-specialist-card-overlay {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  z-index: 50 !important;
+
+  cursor: pointer !important;
+
+  border-radius: inherit !important;
+
+  background: transparent !important;
+
+  pointer-events: auto !important;
+}
+
+
+/*
+   Preserve the existing visual hover.
+*/
+
+.mindful-clickable-specialist-card:hover {
+  cursor: pointer !important;
+}
+
+
+/* SVETLANA_TEAM_CLICK_FIX_END */
