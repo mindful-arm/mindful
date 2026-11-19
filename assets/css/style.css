@@ -7670,42 +7670,37 @@ a[aria-current="location"] {
 /* SPECIALIST_PHOTO_HOVER_FINAL_END */
 
 
-/* SPECIALIST_V2_STATIC_SIDE_START */
 
-/*
-   Specialist left navigation.
+/* MINDFUL_SPECIALIST_STICKY_NAV_START */
 
-   STATIC variant:
-   the block stays in its normal place in the page.
-   It does NOT follow the viewport during scrolling.
-*/
-
-.specialist-v2-side,
-.specialist-v2-side.mindful-sticky-toc {
-  position: static !important;
-
-  top: auto !important;
-  bottom: auto !important;
-
-  align-self: start !important;
-
-  height: auto !important;
-  max-height: none !important;
-
-  overflow: visible !important;
-
-  transform: none !important;
-  will-change: auto !important;
+/* Sticky sidebar for specialist profiles on desktop */
+@media (min-width: 761px) {
+  main.specialist-v2-main
+  .specialist-v2-layout > aside.specialist-v2-side {
+    position: sticky !important;
+    top: 24px !important;
+    align-self: start !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 48px) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    z-index: 20 !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
 }
 
-
-/*
-   Keep normal two-column layout.
-*/
-
-.specialist-v2-layout {
-  align-items: start !important;
+/* Mobile: normal document scrolling */
+@media (max-width: 760px) {
+  main.specialist-v2-main
+  .specialist-v2-layout > aside.specialist-v2-side {
+    position: static !important;
+    top: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
 }
 
+/* MINDFUL_SPECIALIST_STICKY_NAV_END */
 
-/* SPECIALIST_V2_STATIC_SIDE_END */
