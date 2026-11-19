@@ -1,0 +1,6 @@
+
+
+# Local backups
+backup-*/
+*.mindful-tmp
+.DS_Store
