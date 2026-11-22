@@ -7727,7 +7727,8 @@ a[aria-current="location"] {
   background: linear-gradient(165deg, #eef5f3, #fcfaf7 72%);
 }
 
-.service-card-grid {
+.service-card-grid,
+.service-description-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
@@ -7736,9 +7737,12 @@ a[aria-current="location"] {
   margin-inline: auto;
 }
 
+.service-description-grid {
+  margin-block-end: 1.25rem;
+}
+
 .service-psychological-intro {
-  max-width: 52rem;
-  margin: 0 auto 1.25rem;
+  grid-column: 2;
   padding-inline-start: 1rem;
   border-inline-start: 2px solid #8bb1a9;
   font-size: 0.9375rem;
@@ -7861,8 +7865,17 @@ a[aria-current="location"] {
 }
 
 @media (max-width: 700px) {
-  .service-card-grid {
+  .service-card-grid,
+  .service-description-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-psychological-intro {
+    grid-column: 1;
+  }
+
+  .service-card-grid > #psychological {
+    order: -1;
   }
 }
 
