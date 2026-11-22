@@ -363,6 +363,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* Stable SPA transition fixed relative assets */
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector("body > .site-footer");
+  if (!footer) return;
+
+  function updateFooterHeight() {
+    const height = Math.ceil(footer.getBoundingClientRect().height);
+    document.documentElement.style.setProperty("--site-footer-height", height + "px");
+  }
+
+  updateFooterHeight();
+  if (typeof ResizeObserver === "function") {
+    new ResizeObserver(updateFooterHeight).observe(footer);
+  }
+});
+
 (function () {
   const navOrder = [
     "index.html",

@@ -186,22 +186,39 @@ h2 {
    5. Footer
 ========================= */
 
+html:has(body > .site-footer) {
+  --site-footer-height: 4rem;
+  scroll-padding-bottom: var(--site-footer-height);
+}
+
 .site-footer {
-  padding: 36px 0;
-  background: var(--text);
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 999999;
+  padding: 0.625rem 0 calc(0.625rem + env(safe-area-inset-bottom, 0px));
+  background: #496d69;
   color: var(--white);
 }
 
 .site-footer p {
-  color: var(--white);
+  color: var(--white) !important;
   margin: 0;
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  gap: 0.15rem 1rem;
   flex-wrap: wrap;
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 520px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 
@@ -2122,7 +2139,7 @@ body {
   left: 0;
   right: 0;
   top: var(--spa-slide-top, 147px);
-  bottom: 0;
+  bottom: var(--site-footer-height, 0px);
   z-index: 999998;
   overflow: hidden;
   background: #f7f3ee;
@@ -2139,7 +2156,7 @@ body {
 
 .spa-slide-panel > main {
   width: 100%;
-  min-height: calc(100vh - var(--spa-slide-top, 147px));
+  min-height: calc(100vh - var(--spa-slide-top, 147px) - var(--site-footer-height, 0px));
   background: #f7f3ee;
 }
 
@@ -2888,7 +2905,7 @@ button[type="submit"]:hover {
 .floating-contact-btn {
   position: fixed !important;
   right: 24px !important;
-  bottom: 22px !important;
+  bottom: calc(22px + var(--site-footer-height, 0px)) !important;
   z-index: 999999 !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -2931,13 +2948,13 @@ button[type="submit"]:hover {
 }
 
 body.floating-contact-scroll-down .floating-contact-btn {
-  bottom: 16px !important;
+  bottom: calc(16px + var(--site-footer-height, 0px)) !important;
   transform: translate3d(0, 6px, 0) scale(0.98) !important;
   opacity: 0.82 !important;
 }
 
 body.floating-contact-scroll-up .floating-contact-btn {
-  bottom: 30px !important;
+  bottom: calc(30px + var(--site-footer-height, 0px)) !important;
   transform: translate3d(0, -4px, 0) scale(1.02) !important;
   opacity: 0.98 !important;
 }
@@ -2947,13 +2964,13 @@ body.spa-slide-running .floating-contact-btn {
 }
 
 body {
-  padding-bottom: 86px !important;
+  padding-bottom: calc(86px + var(--site-footer-height, 0px)) !important;
 }
 
 @media (max-width: 760px) {
   .floating-contact-btn {
     right: 14px !important;
-    bottom: 16px !important;
+    bottom: calc(16px + var(--site-footer-height, 0px)) !important;
     min-width: 126px !important;
     height: 44px !important;
     padding: 0 18px !important;
@@ -2961,15 +2978,15 @@ body {
   }
 
   body.floating-contact-scroll-up .floating-contact-btn {
-    bottom: 22px !important;
+    bottom: calc(22px + var(--site-footer-height, 0px)) !important;
   }
 
   body.floating-contact-scroll-down .floating-contact-btn {
-    bottom: 12px !important;
+    bottom: calc(12px + var(--site-footer-height, 0px)) !important;
   }
 
   body {
-    padding-bottom: 72px !important;
+    padding-bottom: calc(72px + var(--site-footer-height, 0px)) !important;
   }
 }
 
