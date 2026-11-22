@@ -540,7 +540,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function initServiceCards() {
-    document.querySelectorAll(".service-card-grid > details").forEach((card) => {
+    document.querySelectorAll(".service-card-grid .service-card").forEach((card) => {
       const summary = card.querySelector("summary");
       let openedByHover = false;
 
@@ -577,7 +577,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function openLinkedServiceCard() {
-    document.querySelectorAll(".service-card-grid > details").forEach((card) => {
+    document.querySelectorAll(".service-card-grid .service-card").forEach((card) => {
       if (location.hash === "#" + card.id) card.open = true;
     });
   }
