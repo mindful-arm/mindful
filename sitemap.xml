@@ -690,4 +690,23 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mindful-arm.github.io/mindful/am/services/psychological.html</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://mindful-arm.github.io/mindful/am/services/psychological.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mindful-arm.github.io/mindful/en/services/psychological.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mindful-arm.github.io/mindful/am/services/psychological.html" />
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mindful-arm.github.io/mindful/en/services/psychological.html</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://mindful-arm.github.io/mindful/am/services/psychological.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mindful-arm.github.io/mindful/en/services/psychological.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mindful-arm.github.io/mindful/am/services/psychological.html" />
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
