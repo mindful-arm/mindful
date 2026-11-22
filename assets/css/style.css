@@ -7706,34 +7706,26 @@ a[aria-current="location"] {
 
 /* Services overview */
 .services-overview {
-  min-height: 65vh;
-  padding: clamp(3rem, 8vw, 7rem) 0;
+  padding: clamp(1.5rem, 4vw, 3rem) 0;
   background: linear-gradient(165deg, #eef5f3, #fcfaf7 72%);
-}
-
-.services-overview h1 {
-  margin: 0 0 clamp(2rem, 5vw, 4rem);
-  color: #365e59;
-  font-size: clamp(1.8rem, 5.5vw, 4.2rem);
-  font-weight: 600;
-  line-height: 1.2;
-  overflow-wrap: anywhere;
 }
 
 .service-card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: clamp(1rem, 3vw, 2rem);
+  gap: 0.875rem;
+  max-width: 52rem;
+  margin-inline: auto;
 }
 
 .service-card {
   scroll-margin-top: 7rem;
   border: 1px solid #d2e2de;
-  border-radius: 1.25rem;
+  border-radius: 0.875rem;
   background: #fff;
   color: #274d48;
-  box-shadow: 0 8px 24px #274d480d;
+  box-shadow: 0 4px 12px #274d480d;
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
@@ -7747,8 +7739,8 @@ a[aria-current="location"] {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  min-height: 6rem;
-  padding: 1.15rem clamp(1rem, 2.5vw, 1.75rem);
+  min-height: 3.5rem;
+  padding: 0.75rem 1rem;
   border-radius: inherit;
   list-style: none;
   cursor: pointer;
@@ -7761,7 +7753,7 @@ a[aria-current="location"] {
 .service-card summary h2 {
   margin: 0;
   color: inherit;
-  font-size: clamp(1.15rem, 2.3vw, 1.9rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 650;
   line-height: 1.3;
   overflow-wrap: anywhere;
@@ -7769,9 +7761,9 @@ a[aria-current="location"] {
 
 .service-card-icon {
   display: grid;
-  flex: 0 0 2.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  flex: 0 0 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
   place-items: center;
   border-radius: 50%;
   background: #ebf4f1;
@@ -7802,6 +7794,10 @@ a[aria-current="location"] {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.service-card-menu li {
+  margin: 0;
 }
 
 .service-card-menu a {
