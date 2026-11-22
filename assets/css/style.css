@@ -7742,7 +7742,6 @@ a[aria-current="location"] {
 }
 
 .service-psychological-intro {
-  grid-column: 2;
   padding-inline-start: 1rem;
   border-inline-start: 2px solid #8bb1a9;
   font-size: 0.9375rem;
@@ -7868,14 +7867,6 @@ a[aria-current="location"] {
   .service-card-grid,
   .service-description-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .service-psychological-intro {
-    grid-column: 1;
-  }
-
-  .service-card-grid > #psychological {
-    order: -1;
   }
 }
 
