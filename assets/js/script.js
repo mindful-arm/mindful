@@ -524,8 +524,52 @@ document.addEventListener("DOMContentLoaded", function () {
     currentHeader.innerHTML = nextHeader.innerHTML;
   }
 
+  function initServiceCards() {
+    document.querySelectorAll(".service-card-grid > details").forEach((card) => {
+      const summary = card.querySelector("summary");
+      let openedByHover = false;
+
+      card.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse" && !card.open) {
+          card.open = true;
+          openedByHover = true;
+        }
+      });
+
+      function closeAfterHover() {
+        if (!openedByHover || card.matches(":hover") || card.contains(document.activeElement)) return;
+        if (location.hash === "#" + card.id) return;
+        card.open = false;
+        openedByHover = false;
+      }
+
+      card.addEventListener("pointerleave", closeAfterHover);
+      card.addEventListener("focusout", () => setTimeout(closeAfterHover, 0));
+
+      summary.addEventListener("click", () => {
+        openedByHover = false;
+      });
+
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && card.open) {
+          openedByHover = false;
+          card.open = false;
+          summary.focus();
+        }
+      });
+    });
+    openLinkedServiceCard();
+  }
+
+  function openLinkedServiceCard() {
+    document.querySelectorAll(".service-card-grid > details").forEach((card) => {
+      if (location.hash === "#" + card.id) card.open = true;
+    });
+  }
+
   function runPageScripts() {
-    
+    initServiceCards();
+
     if (typeof window.mindfulReloadVideos === "function") {
       window.mindfulReloadVideos();
     }
@@ -673,6 +717,8 @@ document.addEventListener("DOMContentLoaded", function () {
     isTransitioning = false;
   }
 
+  window.addEventListener("hashchange", openLinkedServiceCard);
+
   window.addEventListener("popstate", function () {
     window.location.reload();
   });
@@ -681,6 +727,7 @@ document.addEventListener("DOMContentLoaded", function () {
     absolutizeLinks(document, window.location.href);
     bindLinks();
     setActiveNav(window.location.href);
+    initServiceCards();
   });
 })();
 
@@ -1373,46 +1420,3 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 /* THERAPY_NAV_NATIVE_STICKY_FINAL_END */
-
-document.querySelectorAll(".service-card-grid > details").forEach((card) => {
-  const summary = card.querySelector("summary");
-  let openedByHover = false;
-
-  card.addEventListener("pointerenter", (event) => {
-    if (event.pointerType === "mouse" && !card.open) {
-      card.open = true;
-      openedByHover = true;
-    }
-  });
-
-  function closeAfterHover() {
-    if (!openedByHover || card.matches(":hover") || card.contains(document.activeElement)) return;
-    card.open = false;
-    openedByHover = false;
-  }
-
-  card.addEventListener("pointerleave", closeAfterHover);
-  card.addEventListener("focusout", () => setTimeout(closeAfterHover, 0));
-
-  summary.addEventListener("click", () => {
-    openedByHover = false;
-  });
-
-  card.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && card.open) {
-      openedByHover = false;
-      card.open = false;
-      summary.focus();
-    }
-  });
-
-  function openLinkedCard() {
-    if (location.hash === "#" + card.id) {
-      openedByHover = false;
-      card.open = true;
-    }
-  }
-
-  openLinkedCard();
-  window.addEventListener("hashchange", openLinkedCard);
-});
